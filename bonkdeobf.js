@@ -414,13 +414,24 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	returncode = makeSafe(returncode)
 	const ast = esprima.parseScript(returncode)
 	let newScopeCounter = 0
+	let esc = 0
 	const oldNames = []
 	const newNames = []
+	function add(node, a){
+		if (!(node.id && node.id.name)) return
+		oldNames.push(node.id.name)
+		node.id.name = a ? ("ef" + esc) : ("f" + newScopeCounter)
+		newNames.push(node.id.name)
+		return true
+	}
 	estraverse.traverse(ast, {enter(node){
 	    if (!node.type.endsWith("FunctionExpression") && node.type !== "FunctionDeclaration") return
 	    if (!node.body) return
 	    let blockNode = node.body
-	    if (!blockNode.body[0]) return
+	    if (!blockNode.body[0]) {
+			if (add(node, true)) esc++
+			return
+		}
 	    let scopeDecIndex = 0
 	    let scopeDec = blockNode.body[0]
 	    if (scopeDec.type === "ExpressionStatement") {
@@ -428,20 +439,12 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	        scopeDecIndex = 1
 	    }
 	    if (!(scopeDec && scopeDec.declarations && scopeDec.declarations.length === 1)) {
-			if (!node.id) return
-			oldNames.push(node.id.name)
-			node.id.name = "f" + newScopeCounter
-			newNames.push(node.id.name)
-			newScopeCounter++
+			if (add(node)) newScopeCounter++
 			return
 		}
 	    const dec = scopeDec.declarations[0]
 	    if (!(dec.init && dec.init.type === "ArrayExpression" && dec.init.elements.length === 1 && dec.init.elements[0].name === "arguments")) return
-	    if (node.id && node.id.name){
-			oldNames.push(node.id.name)
-	    	node.id.name = "f" + newScopeCounter
-			newNames.push(node.id.name)
-	    }
+	    add(node)
 	    const oldScopeName = dec.id.name
 	    const indexTable = []
 	    for (const i in node.params){
