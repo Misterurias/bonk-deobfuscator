@@ -732,36 +732,36 @@ function getRefCount(code, v){
 }
 {
 	log("Removing duplicate constants")
-	const knownConstants = ["730","500","365","1000","30"]
-	const ast = esprima.parseScript(returncode)
-	const v = []
-	const r = []
-	estraverse.traverse(ast, {enter(node, parent){
-		if (node.type !== "VariableDeclaration") return
-		for (let i = 0; i < node.declarations.length; i++){
-			const d = node.declarations[i]
-			if (d.init && d.init.type === "Literal"){
-				const index = knownConstants.indexOf(d.init.raw)
-				if (index === -1) continue
-				v.push(d.id.name)
-				r.push(d.init.raw)
-				node.declarations.splice(i,1)
-				i--
-			}
-		}
-		if (node.declarations.length === 0) node.declarations[0] = eo
-	}})
-	const rc = getRefCount(returncode, v)
-	const nv = []
-	const nr = []
-	for (let i = 0; i < rc.length; i++){
-		if (rc[i] === 2){
-			nv.push(v[i])
-			nr.push(r[i])
-		}
-	}
-	returncode = (escodegen.generate(ast, {format: {indent: {style: "\t"}}}))
-	returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+var (\S+) = \1;\n/g, "").replaceAll(/\t+var ZZZ;\n/g, "")
+	// const knownConstants = ["730","500","365","1000","30"]
+	// const ast = esprima.parseScript(returncode)
+	// const v = []
+	// const r = []
+	// estraverse.traverse(ast, {enter(node, parent){
+	// 	if (node.type !== "VariableDeclaration") return
+	// 	for (let i = 0; i < node.declarations.length; i++){
+	// 		const d = node.declarations[i]
+	// 		if (d.init && d.init.type === "Literal"){
+	// 			const index = knownConstants.indexOf(d.init.raw)
+	// 			if (index === -1) continue
+	// 			v.push(d.id.name)
+	// 			r.push(d.init.raw)
+	// 			node.declarations.splice(i,1)
+	// 			i--
+	// 		}
+	// 	}
+	// 	if (node.declarations.length === 0) node.declarations[0] = eo
+	// }})
+	// const rc = getRefCount(returncode, v)
+	// const nv = []
+	// const nr = []
+	// for (let i = 0; i < rc.length; i++){
+	// 	if (rc[i] === 2){
+	// 		nv.push(v[i])
+	// 		nr.push(r[i])
+	// 	}
+	// }
+	// returncode = (escodegen.generate(ast, {format: {indent: {style: "\t"}}}))
+	// returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+var (\S+) = \1;\n/g, "").replaceAll(/\t+var ZZZ;\n/g, "")
 	// const fnl = returncode.indexOf("\n") + 1
 	// returncode = returncode.slice(0, fnl) + "const worldWidth = 730;\nconst worldHeight = 500;\nconst aspectRatio = 1.46;\n" + returncode.slice(fnl)
 	// const ast = esprima.parseScript(returncode)
