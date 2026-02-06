@@ -110,6 +110,7 @@ The command line arguments have to be used like this: `node bonkdeobf.js nominif
 |-----------|-------------------------------------|
 | nominify  | Do not minify the deobfuscated code |
 | noflags   | Do not remove the flag check in code|
+| namesonly | Only change the variable names      |
 ## Size comparison
 Obfuscated code: 2636 KiB
 
