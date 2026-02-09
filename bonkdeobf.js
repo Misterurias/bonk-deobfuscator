@@ -104,6 +104,14 @@ function generateRandomString(letter){
 	strCount++
 	return str
 }
+const eo = {
+	type: "VariableDeclarator",
+	id: {
+		type: "Identifier",
+		name: "ZZZ"
+	}
+}
+let r = false
 function setVarNames(thisOnly, code){
 	if (thisOnly) {
 		process.stdout.write("-- [Bonk Deobfuscator] --")
@@ -127,10 +135,27 @@ function setVarNames(thisOnly, code){
 			replacements[fName + "v" + n] = funcr[n]
 		}
 	}
-	return replaceVarsObj(code, replacements)
+	code = replaceVarsObj(code, replacements)
+	const ast = esprima.parseScript(code)
+	estraverse.traverse(ast, {enter(node){
+		if (node.type !== "VariableDeclaration") return
+		for (let i = 0; i < node.declarations.length; i++) {
+			const dec = node.declarations[i]
+			if (dec.id.name === "deleteThis"){
+				node.declarations.splice(i, 1)
+				i--
+			}
+		}
+		if (node.declarations.length === 0) node.declarations[0] = eo
+	}})
+	r = true
+	return escodegen.generate(ast).replaceAll("var ZZZ;", "")
 }
 function finalCleanup(code){
 	log("Final cleanup")
+	if (r){
+		code = (minify(code, {compress: false, mangle: false})).code
+	}
 	code = js_beautify(code, {e4x: true, indent_with_tabs: true})
 	const tmp = code.split("\n")
 	for (const i in tmp){
@@ -139,13 +164,6 @@ function finalCleanup(code){
 	}
 	code = tmp.join("")
 	return code
-}
-const eo = {
-	type: "VariableDeclarator",
-	id: {
-		type: "Identifier",
-		name: "ZZZ"
-	}
 }
 if (process.argv[process.argv.length-1] === "namesonly"){
 	let code = finalCleanup(setVarNames(true))
@@ -172,12 +190,14 @@ function escapeRegExp(string) {
 log("Unminifing the code")
 let tmp = js_beautify(response, { e4x: true, unescape_strings: true, indent_with_tabs: true })
 const splitedText = tmp.split("requirejs")
+let returncode = `requirejs${splitedText[1]}`
+log("Checking for cache")
+if (!fs.existsSync("cache/1.js")){
 log("Setting up main variables")
 const MAINFUNCTION = splitedText[0].match(/[^\[]+/)[0]
 const MAINARRAY = splitedText[0].match(/^var ([^=^\s]+);/m)[1]
 log(`eval ${MAINFUNCTION} function`)
 eval(`var ${MAINFUNCTION};${response.split("requirejs")[0]}`)
-let returncode = `requirejs${splitedText[1]}`
 log(`Replacing "var a = ${MAINFUNCTION}; a.bcd(123)" to "${MAINFUNCTION}.bcd(123)"`)
 tmp = returncode.match(new RegExp(`var (\\S+) = ${escapeRegExp(MAINFUNCTION)};`, ""))[1]
 returncode = returncode.replaceAll(`${tmp}.`, `${MAINFUNCTION}.`)
@@ -338,6 +358,11 @@ for (const vars of returncode.matchAll(new RegExp(`^(\\t+)[a-zA-Z0-9_\\$\\[\\]]+
 }
 log("Removing useless for-loops")
 returncode = returncode.replaceAll(new RegExp(`^((\\t+)[a-zA-Z0-9_\\$\\[\\]]+ = -?\\d+;\\n){2}\\2for \\(.*${MAINFUNCTION}.*\\n.*\\n\\2\\}`, "gm"), "")
+writeToFile("cache/1.js", returncode)
+}
+else{
+	returncode = fs.readFileSync("cache/1.js", {encoding: "utf8"})
+}
 {
 	log("Removing dead code")
 	const entries = [...returncode.matchAll(/^(\t*)function [a-zA-Z0-9_\$]+\([a-zA-Z0-9_\$, ]*\) \{\n/gm)]
@@ -424,7 +449,76 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		newNames.push(node.id.name)
 		return true
 	}
+	const chr = 105 // i
+	let forLoopDepth = -1
+	const vl = []
 	estraverse.traverse(ast, {enter(node){
+		// if (node.type.startsWith("For")){
+		// 	forLoopDepth++
+		// 	if (node.type === "ForStatement" && node.init.type === "AssignmentExpression"){
+		// 		const initVal = node.init.right
+		// 		const newName = String.fromCharCode(chr + forLoopDepth)
+		// 		oldNames.push(node.init.left.name)
+		// 		newNames.push(newName)
+		// 		node.init = {
+		// 			type: "VariableDeclaration",
+        // 			declarations: [{
+        // 			    type: "VariableDeclarator",
+        // 			    id: {
+        // 			      type: "Identifier",
+        // 			      name: newName
+        // 			    },
+        // 			    init: initVal
+		// 			}],
+		// 			kind: "var"
+		// 		}
+		// 	}
+		// 	else if (node.left && node.left.type === "Identifier"){
+		// 		const newName = String.fromCharCode(chr + forLoopDepth)
+		// 		oldNames.push(node.left.name)
+		// 		newNames.push(newName)
+		// 		node.left = {
+		// 			type: "VariableDeclaration",
+        // 			declarations: [{
+        // 			    type: "VariableDeclarator",
+        // 			    id: {
+        // 			      type: "Identifier",
+        // 			      name: newName
+        // 			    },
+		// 			}],
+		// 			kind: "var"
+		// 		}
+		// 	}
+		// 	return
+		// }
+		if (node.type.startsWith("For")){
+			if (node.type === "ForStatement" && node.init.type === "AssignmentExpression"){
+				const initVal = node.init.right
+				const n = node.init.left.name
+				node.init = {
+					type: "VariableDeclaration",
+					declarations: [{
+						type: "VariableDeclarator",
+						id: node.init.left,
+						init: initVal
+					}],
+					kind: "var"
+				}
+				vl.push(n)
+			}
+			else if (node.left && node.left.type === "Identifier"){
+				node.left = {
+					type: "VariableDeclaration",
+					declarations: [{
+						type: "VariableDeclarator",
+						id: node.left
+					}],
+					kind: "var"
+				}
+				vl.push(node.left.name)
+			}
+			return
+		}
 	    if (!node.type.endsWith("FunctionExpression") && node.type !== "FunctionDeclaration") return
 	    if (!node.body) return
 	    let blockNode = node.body
@@ -490,7 +584,8 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	                            },
 	                            init: n.right
 	                        }
-	                    ]
+	                    ],
+						kind: "var"
 	                }
 	                indexTable.splice(index, 1)
 	            }
@@ -509,9 +604,29 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	        }
 	    }
 	    newScopeCounter++
+	},
+	leave(node){
+		if (node.type.startsWith("For")){
+			forLoopDepth--
+		}
 	}})
 	returncode = escodegen.generate(ast, {format: {indent: {style: "\t"}}})
 	returncode = replaceVars(returncode, oldNames, newNames)
+	const ast2 = esprima.parseScript(returncode)
+	estraverse.traverse(ast2, {enter(node, parent){
+		if (!(node.type === "VariableDeclaration" && !parent.type.startsWith("For"))) return
+		for (let i = 0; i < node.declarations.length; i++) {
+			const n = node.declarations[i].id.name
+			//if (n === "i" || n === "j" || n === "k"){
+			if (vl.includes(n)) {
+				node.declarations.splice(i, 1)
+				i--
+				continue
+			}
+		}
+		if (node.declarations.length === 0) node.declarations[0] = eo
+	}})
+	returncode = escodegen.generate(ast2, {format: {indent: {style: "\t"}}}).replaceAll("var ZZZ;", "")
 }
 {
 	log("Removing unnecessary variable initializations")
@@ -688,6 +803,10 @@ try{
 	returncode = returncode.replaceAll(/if \((.+)\) {\s*}\s*else {(.+)}/g, "if (!($1)) {$2}")
 }
 {
+	log('Replacing "catch (abc) {" with "catch (err) {')
+	returncode = returncode.replaceAll(/catch \([a-zA-Z0-9_\$]+\)/g, "catch (err)")
+}
+{
 	log("Removing useless code") // could become problematic in the future
 	returncode = returncode.replace(/[a-zA-Z0-9_\$]+\.keyUpFunctions[\s\S]+\};\s+moment/, "moment")
 }
@@ -735,57 +854,56 @@ function getRefCount(code, v){
 }
 {
 	log("Removing duplicate constants")
-	// const knownConstants = ["730","500","365","1000","30"]
-	// const ast = esprima.parseScript(returncode)
-	// const v = []
-	// const r = []
-	// estraverse.traverse(ast, {enter(node, parent){
-	// 	if (node.type !== "VariableDeclaration") return
-	// 	for (let i = 0; i < node.declarations.length; i++){
-	// 		const d = node.declarations[i]
-	// 		if (d.init && d.init.type === "Literal"){
-	// 			const index = knownConstants.indexOf(d.init.raw)
-	// 			if (index === -1) continue
-	// 			v.push(d.id.name)
-	// 			r.push(d.init.raw)
-	// 			node.declarations.splice(i,1)
-	// 			i--
-	// 		}
-	// 	}
-	// 	if (node.declarations.length === 0) node.declarations[0] = eo
-	// }})
-	// const rc = getRefCount(returncode, v)
-	// const nv = []
-	// const nr = []
-	// for (let i = 0; i < rc.length; i++){
-	// 	if (rc[i] === 2){
-	// 		nv.push(v[i])
-	// 		nr.push(r[i])
-	// 	}
-	// }
-	// returncode = (escodegen.generate(ast, {format: {indent: {style: "\t"}}}))
-	// returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+var (\S+) = \1;\n/g, "").replaceAll(/\t+var ZZZ;\n/g, "")
-	// const fnl = returncode.indexOf("\n") + 1
-	// returncode = returncode.slice(0, fnl) + "const worldWidth = 730;\nconst worldHeight = 500;\nconst aspectRatio = 1.46;\n" + returncode.slice(fnl)
-	// const ast = esprima.parseScript(returncode)
-	// const v = []
-	// const r = []
-	// estraverse.traverse(ast, {enter(node, parent){
-	// 	if (node.type !== "BlockStatement") return
-	// }})
-	// const rc = getRefCount(returncode, v)
-	// const nv = []
-	// const nr = []
-	// for (let i = 0; i < rc.length; i++){
-	// 	if (rc[i] === 2){
-	// 		nv.push(v[i])
-	// 		nr.push(r[i])
-	// 	}
-	// }
-	// returncode = (escodegen.generate(ast, {format: {indent: {style: "\t"}}}))
-	// console.log("[" + nv.join() + "]")
-	// console.log("[" + nr.join() + "]")
-	// returncode = replaceVars(returncode, nv, nr).replaceAll(/(-?\d)+\+\+/g, "$1").replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+var (\S+) = \1;\n/g, "")
+	const ast = esprima.parseScript(returncode)
+	const v = []
+	const r = []
+	const vd = []
+	estraverse.traverse(ast, {enter(node, parent){
+		if (node.type !== "VariableDeclaration") return
+		if (parent.type.startsWith("For")) return
+		for (let i = 0; i < node.declarations.length; i++){
+			const d = node.declarations[i]
+			if (d.init && d.init.type === "Literal"){
+				if (d.id.name.length === 1) return
+				v.push(d.id.name)
+				r.push(d.init.raw)
+				vd.push([node.declarations, i])
+			}
+		}
+		if (node.declarations.length === 0) node.declarations[0] = eo
+	}})
+	const rc = []
+	estraverse.traverse(ast, {enter(node, parent){
+		if (node.type === "Identifier" && (
+			parent.type === "UpdateExpression" || 
+			parent.type === "AssignmentExpression" || 
+			(parent.type === "VariableDeclarator" && parent.init))){
+			const i = v.indexOf(node.name)
+			if (i === -1) return
+			if (!rc[i]) {
+				rc[i] = 0
+			}
+			rc[i]++
+		}
+	}})
+	const nv = []
+	const nr = []
+	const nvd = []
+	for (let i = 0; i < rc.length; i++){
+		if (rc[i] === 1){
+			nv.push(v[i])
+			nr.push(r[i])
+			nvd.push(vd[i])
+		}
+	}
+	let io = 0
+	for (const a of nvd){
+		a[0].splice(a[1]-io,1)
+		if (a[0].length === 0) a[0][0] = eo
+		io++
+	}
+	returncode = (escodegen.generate(ast, {format: {indent: {style: "\t"}}}))
+	returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+var (\S+) = \1;\n/g, "").replaceAll(/\t+var ZZZ;\n/g, "")
 }
 function generateHash(string){
 	return (+string).toString(16)
