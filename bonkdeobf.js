@@ -515,6 +515,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	}
 	const vl = []
 	const xd = []
+	let cn
 	estraverse.traverse(ast, {enter(node, parent){
 		if (node.type === "VariableDeclarator" && !(node.init && node.init.elements && node.init.elements[0].name === "arguments") && !parent.unmarked){
 			// looks like the obfuscation failed there for some unknown reason, it mostly happens in render func
@@ -524,18 +525,21 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			node.id.name = "f" + newScopeCounter + "v" + unobfuscatedIndex
 			newNames.push(node.id.name)
 			unobfuscatedIndex++
+			if (!shouldCount){
+				for (let i = 0; i < cn.params.length; i++){
+					const param = cn.params[i]
+					oldNames.push(param.name)
+					param.name = "f" + newScopeCounter + "a" + i
+					newNames.push(param.name)
+				}
+			}
 			shouldCount = true
 			return
 		}
 	    if (!node.type.endsWith("FunctionExpression") && node.type !== "FunctionDeclaration") return
+		cn = node
 		if (shouldCount) {
 			shouldCount = false
-			for (let i = 0; i < node.params.length; i++){
-				const param = node.params[i]
-				oldNames.push(param.name)
-				param.name = "f" + newScopeCounter + "a" + i
-				newNames.push(param.name)
-			}
 			newScopeCounter++
 			unobfuscatedIndex = 0
 		}
