@@ -196,23 +196,25 @@ function setVarNames(thisOnly, code){
 		}
 		if (node.declarations.length === 0) node.declarations[0] = eo
 	}})
-	log("Most used variables")
-	let counts = []
-	for (const v of vl) {
-		counts[v] = counts[v] ? counts[v] + 1 : 1;
-	}
-	counts = Object.fromEntries(
-		Object.entries(counts).sort(([, a], [, b]) => b - a)
-	);
-	const l = Object.keys(counts)
-	for (let i = 0; i < l.length; i++){
-		if (!l[i].startsWith("f")){
-			l.splice(i, 1)
-			i--
+	if (process.argv.includes("showvarusage")){
+		log("Most used variables")
+		let counts = []
+		for (const v of vl) {
+			counts[v] = counts[v] ? counts[v] + 1 : 1;
 		}
-	}
-	for (let i = 0; i < 50; i++){
-		log(l[i] + ": " + counts[l[i]])
+		counts = Object.fromEntries(
+			Object.entries(counts).sort(([, a], [, b]) => b - a)
+		);
+		const l = Object.keys(counts)
+		for (let i = 0; i < l.length; i++){
+			if (!l[i].startsWith("f")){
+				l.splice(i, 1)
+				i--
+			}
+		}
+		for (let i = 0; i < 50; i++){
+			log(l[i] + ": " + counts[l[i]])
+		}
 	}
 	code = fromAst(ast).replaceAll("let ZZZ;", "")
 	r = true
@@ -232,7 +234,7 @@ function finalCleanup(code){
 	code = tmp.join("")
 	return code
 }
-if (process.argv[process.argv.length-1] === "namesonly"){
+if (process.argv.includes("namesonly")){
 	let code = finalCleanup(setVarNames(true))
 	const filename = "deobfuscated/alpha2s.js"
 	log("Saving deobfuscated code to " + filename)
@@ -247,6 +249,8 @@ if (!fs.existsSync(path)){
 	process.exit(1)
 }
 const response = fs.readFileSync(path, {encoding: "utf8"})
+const version = [...response.matchAll(/news:/g)].length
+log("Bonk version: " + version)
 log("Deobfuscation started")
 function noDuplicate(array) {
 	return [...new Set(array)]
@@ -692,7 +696,6 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 					refCount: 0,
 					modCount: -1
 				}
-				console.log(dec.id.name)
 				node.declarations = [eo]
 				return
 			}
@@ -766,6 +769,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		if (node.left.type !== "Identifier") return
 		if (!vars[node.left.name]) return
 		if (node.left.name === "f563v142"){
+			vars[node.left.name].scopes.pop()
 			// i'm honestly pretty tired so i'll put it there
 			return
 		}
@@ -809,7 +813,6 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	},
 	leave: blockLeave})
 	replaceVarsAstObj(ast, reps)
-	console.log(scopes.length)
 	// STAGE 4: put remaining variables at the start of a block
 	const remainingVarList = Object.keys(vars)
 	const vd = []
@@ -817,7 +820,6 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		const varName = remainingVarList[i]
 		const varInfo = vars[varName]
 		if (!varInfo.scopes){
-			console.log(varName)
 			continue
 		}
 		let scope = varInfo.scopes[varInfo.scopes.length-1]
@@ -853,7 +855,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	returncode = fromAst(ast).replaceAll(/(let|var) ZZZ;/g, "")
 }
 log('Replacing "let abc = anime({" with "anime({"')
-returncode = returncode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
+returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
 {
 	log("Removing unused arguments")
 	const regex = [
