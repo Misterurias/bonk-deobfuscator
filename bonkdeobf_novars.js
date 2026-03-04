@@ -130,20 +130,13 @@ const eo = {
 	}
 }
 let r = false
-let version
 function setVarNames(thisOnly, code){
 	if (thisOnly) {
 		process.stdout.write("-- [Bonk Deobfuscator] --")
 		code = fs.readFileSync("deobfuscated/alpha2s.js", {encoding: "utf8"})
-		version = [...code.matchAll(/news:/g)].length
 	}
 	log("Setting variable names")
 	const data = ini.decode(fs.readFileSync("variableNames.ini", {encoding: "ascii"}))
-	if (data.version != version){
-		log(`Error: version mismatch. Variable names version: ${data.version}, Bonk version: ${version}`)
-		if (thisOnly) process.exit(0)
-		else return code
-	}
 	const replacements = {}
 	for (const fName of Object.keys(data.f)){
 		const funcr = data.f[fName]
@@ -256,7 +249,7 @@ if (!fs.existsSync(path)){
 	process.exit(1)
 }
 const response = fs.readFileSync(path, {encoding: "utf8"})
-version = [...response.matchAll(/news:/g)].length
+const version = [...response.matchAll(/news:/g)].length
 log("Bonk version: " + version)
 log("Deobfuscation started")
 function noDuplicate(array) {
@@ -516,7 +509,6 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	}
 	returncode = makeSafe(returncode)
 	const ast = esprima.parseScript(returncode)
-{
 	let newScopeCounter = 0
 	let unobfuscatedIndex = 0
 	let hasFuncName = false
@@ -639,20 +631,18 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		}
 		if (node.declarations.length === 0) node.declarations[0] = eo
 	}})
-}
 	log('Replacing "abc" with "element" in "let abc = document.getElementById("element")"') // 80 characters damn, i barely managed to make it fit
-{
-	const r = []
-	estraverse.traverse(ast, {enter(node){
-		if (!(node.type === "AssignmentExpression" && node.left.type === "Identifier")) return
-		if (!(node.right.type === "CallExpression" && node.right.callee.type === "MemberExpression")) return
-		if (!(node.right.callee.object.name === "document" && node.right.callee.property.name === "getElementById")) return
-		r[node.left.name] = (node.right.arguments[0].value).replaceAll("-", "minus")
-	}})
-	replaceVarsAstObj(ast, r)
-}
+	{
+		const r = []
+		estraverse.traverse(ast, {enter(node){
+			if (!(node.type === "AssignmentExpression" && node.left.type === "Identifier")) return
+			if (!(node.right.type === "CallExpression" && node.right.callee.type === "MemberExpression")) return
+			if (!(node.right.callee.object.name === "document" && node.right.callee.property.name === "getElementById")) return
+			r[node.left.name] = (node.right.arguments[0].value).replaceAll("-", "minus")
+		}})
+		replaceVarsAstObj(ast, r)
+	}
 	log("Re-scoping variables")
-{
 	let forLoopDepth = -1
 	const scopes = []
 	const vars = {}
@@ -862,56 +852,55 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		}
 		vd[i].scope.unshift(obj)
 	}
-}
-	log("Removing unused arguments")
-{
-	const initialCharCode = "e".charCodeAt(0)
-	let afd = -1
-	const argList = []
-	const usedArgs = []
-	const unusedArgs = []
-	const funcs = []
-	estraverse.traverse(ast, {enter(node, parent){
-		if (node.type === "FunctionDeclaration" || node.type.endsWith("FunctionExpression")){
-			if (node.type === "ArrowFunctionExpression") afd++
-			if (node.params.length === 0) return
-			funcs.push(node)
-			for (const a of node.params){
-				argList.push(a.name)
-			}
-		}
-		else if (node.type === "Identifier"){
-			if (parent.type === "FunctionDeclaration" || parent.type.endsWith("FunctionExpression")) return
-			if (argList.includes(node.name) && !usedArgs.includes(node.name)) usedArgs.push(node.name)
-		}
-	},
-	leave(node){
-		if (node.type === "ArrowFunctionExpression") afd++
-	}})
-	log("Total args: " + argList.length)
-	for (const a of argList){
-		if (!usedArgs.includes(a)) unusedArgs.push(a)
-	}
-	log("Unused args: " + unusedArgs.length)
-	for (const f of funcs){
-		const p = f.params
-		let c = 1
-		for (let i = f.params.length-1; i >= 0; i--) {
-			if (f.params[i].type !== "Identifier") continue
-			if (!unusedArgs.includes(f.params[i].name)) continue
-			if (i === f.params.length-1){
-				f.params.pop()
-				continue
-			}
-			f.params[i].name = "_".repeat(c)
-			c++
-		}
-	}
 	returncode = fromAst(ast).replaceAll(/(let|var) ZZZ;/g, "")
-}
 }
 log('Replacing "let abc = anime({" with "anime({"')
 returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
+{
+	log("Removing unused arguments")
+	const regex = [
+		/\(([a-zA-Z0-9_\$, ]+)\) =>/g,
+		/function [a-zA-Z0-9_\$]+\(([a-zA-Z0-9_\$, ]+)\)/g,
+		/[a-zA-Z0-9_\$]+\(([a-zA-Z0-9_\$, ]+)\) \{/g
+	]
+	const argList = []
+	const unusedArgs = []
+	const argStrings = []
+	for (const a of regex){
+		for (const b of returncode.matchAll(a)){
+			const args = b[1].split(", ")
+			argList.push(...args)
+			argStrings.push(args)
+		}
+	}
+	log("Total args: " + argList.length)
+	let filteredCode = noStrings(returncode)
+	for (const a of regex){
+		filteredCode = filteredCode.replace(a, "")
+	}
+	for (const a of argList){
+		if (!filteredCode.includes(a)) unusedArgs.push(a)
+	}
+	log("Unused args: " + unusedArgs.length)
+	for (const a of argStrings){
+		const origArgs = a.join(", ")
+		let loop = true
+		let n = 1
+		for (let i = a.length-1; i >= 0; i--){
+			if (unusedArgs.includes(a[i])){
+				if (loop) a.length = i
+				else {
+					a[i] = "".padStart(n, "_")
+					n++
+				}
+			}
+			else{
+				loop = false
+			}
+		}
+		returncode = returncode.replace(origArgs, a.join(", "))
+	}
+}
 {
 	function getUnusedVars(code, v){
 		const refCount = getRefCount(code, v)
@@ -926,7 +915,7 @@ returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$
 	let varList = []
 	let filteredCode = returncode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (-?\d+);/gm, "$1$3")
 	filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
-	filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ((document\.getElementById|Date|JSON|SafeTrig|Math).*?\(\);)/gm, "") // safe func calls
+	filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ((document\.getElementById|Date|JSON).*?\(\);)/gm, "") // safe func calls
 	//filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (.+?;)/gm, "$1$3")
 	for (const a of returncode.matchAll(varDecs)){
 		const {code, decs} = replaceDecsWithExpr(a[2])
@@ -1160,7 +1149,7 @@ if (false){
 }
 
 // Comment this out to run without renaming vars
-returncode = setVarNames(false, returncode)
+// returncode = setVarNames(false, returncode)
 
 returncode = finalCleanup(returncode)
 {
@@ -1179,8 +1168,7 @@ returncode = finalCleanup(returncode)
 }
 {
 	// When don't want to rename vars
-	// const filename = "deobfuscated/alpha2_novarnames.js"
-	const filename = "deobfuscated/alpha2.js"
+	const filename = "deobfuscated/alpha2_novarnames.js"
 	log("Saving deobfuscated code to " + filename)
 	writeToFile(filename, returncode)
 }

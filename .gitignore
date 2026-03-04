@@ -4,3 +4,4 @@ invalid
 node_modules
 cache
 test
+.DS_store
