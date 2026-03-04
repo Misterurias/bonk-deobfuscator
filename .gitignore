@@ -5,3 +5,7 @@ node_modules
 cache
 test
 .DS_store
+
+# Personal Workspace Stuff
+bonkdeobf_novars.js
+alpha2_novarnames.js
