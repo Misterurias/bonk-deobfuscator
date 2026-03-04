@@ -1149,7 +1149,7 @@ if (false){
 }
 
 // Comment this out to run without renaming vars
-returncode = setVarNames(false, returncode)
+// returncode = setVarNames(false, returncode)
 
 returncode = finalCleanup(returncode)
 {
@@ -1168,8 +1168,7 @@ returncode = finalCleanup(returncode)
 }
 {
 	// When don't want to rename vars
-	// const filename = "deobfuscated/alpha2_novarnames.js"
-	const filename = "deobfuscated/alpha2.js"
+	const filename = "deobfuscated/alpha2_novarnames.js"
 	log("Saving deobfuscated code to " + filename)
 	writeToFile(filename, returncode)
 }
