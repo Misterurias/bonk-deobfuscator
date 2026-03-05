@@ -557,17 +557,17 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		}
 	    if (!node.type.endsWith("FunctionExpression") && node.type !== "FunctionDeclaration") return
 		cn = node
+		if (shouldCount) {
+			shouldCount = false
+			newScopeCounter++
+			unobfuscatedIndex = 0
+		}
 		for (const i in node.params){
 			const a = node.params[i]
 			oldNames.push(a.name)
 			a.name = `f${newScopeCounter}a${i}`
 			newNames.push(a.name)
 	    }
-		if (shouldCount) {
-			shouldCount = false
-			newScopeCounter++
-			unobfuscatedIndex = 0
-		}
 	    if (!node.body) return
 	    let blockNode = node.body
 	    if (!blockNode.body[0]) {
@@ -760,12 +760,12 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		if (node.type !== "Identifier") return
 		if (parent.type === "MemberExpression" && !parent.computed && parent.property === node) return
 		if (!vars[node.name]) return
-		if (parent.type !== "AssignmentExpression" && parent.type !== "UpdateExpression"){
-			vars[node.name].refCount++
-		}
-		else{
+		if ((parent.type === "AssignmentExpression" && parent.left === node) || parent.type === "UpdateExpression"){
 			vars[node.name].modCount++
 			vars[node.name].dec = parent.right
+		}
+		else{
+			vars[node.name].refCount++
 		}
 		if (!vars[node.name].scopes) {
 			vars[node.name].scopes = [...scopes]
@@ -1047,9 +1047,9 @@ try{
 	returncode = returncode.replace(/[a-zA-Z0-9_\$]+\.keyUpFunctions[\s\S]+\};\s+moment/, "moment")
 }
 {
-	log("Replacing \"let abc = class def\" with \"class abc\"")
-	const matches = [...returncode.matchAll(/let ([a-zA-Z0-9_\$\[\]]+) = class ([a-zA-Z0-9_\$]+)/g)]
-	returncode = returncode.replaceAll(/let ([a-zA-Z0-9_\$\[\]]+) = class [a-zA-Z0-9_\$]+/g, "class $1")
+	log("Replacing \"const abc = class def\" with \"class abc\"")
+	const matches = [...returncode.matchAll(/const ([a-zA-Z0-9_\$\[\]]+) = class ([a-zA-Z0-9_\$]+)/g)]
+	returncode = returncode.replaceAll(/const ([a-zA-Z0-9_\$\[\]]+) = class [a-zA-Z0-9_\$]+/g, "class $1")
 	const o = []
 	const n = []
 	for (const a of matches){
