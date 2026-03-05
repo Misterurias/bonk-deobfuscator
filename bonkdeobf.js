@@ -672,6 +672,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		}
 		if (node.type.startsWith("For")){
 			forLoopDepth++
+			node.parent = parent
 			// scopes.push(node)
 		}
 		else if (node.type === "BlockStatement"){
@@ -775,6 +776,18 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	const initialCharCode = "i".charCodeAt(0)
 	estraverse.traverse(ast, {enter(node, parent){
 		blockEnter(node, parent)
+		if (node.type === "Identifier" && parent.type === "ForInStatement" && parent.left === node){
+			const newName = String.fromCharCode(initialCharCode + forLoopDepth)
+			reps[node.name] = newName
+			parent.left = {
+				type: "VariableDeclaration",
+				declarations: [{
+					type: "VariableDeclarator",
+					id: node,
+				}],
+				kind: "let"
+			}
+		}
 		if (node.type !== "AssignmentExpression") return
 		if (node.left.type !== "Identifier") return
 		if (!vars[node.left.name]) return
@@ -802,12 +815,8 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 				vars[node.left.name] = xd // nevermind put it back
 				return
 			}
-			// it is not overflowing, must be a good sign or something, let's turn this into "var f123v123"
-			// "why not "let i"?" you may ask
-			// well it turns out that some of variables are reused
-			// i don't want to figure out which ones for now
-			// also newName is unused because of naming conflicts
 			const newName = String.fromCharCode(initialCharCode + forLoopDepth)
+			reps[node.left.name] = newName
 			parent.init = {
 				type: "VariableDeclaration",
 				declarations: [{
@@ -815,7 +824,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 					id: node.left,
 					init: node.right
 				}],
-				kind: "var"
+				kind: "let"
 			}
 			return
 		}
@@ -910,6 +919,8 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	returncode = fromAst(ast).replaceAll(/(let|var) ZZZ;/g, "")
 }
 }
+log('Replacing "(1, abc)()" with "abc()"') // shits useless unless it's eval
+returncode = returncode.replaceAll(/\(1, ([a-zA-Z0-9_\$]+)\)\(/g, "$1(")
 log('Replacing "let abc = anime({" with "anime({"')
 returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
 {
@@ -924,9 +935,7 @@ returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$
 	log("Removing unused variables")
 	const varDecs = /^(\t+)(let .+;)/gm
 	let varList = []
-	let filteredCode = returncode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (-?\d+);/gm, "$1$3")
-	filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
-	filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ((document\.getElementById|Date|JSON|SafeTrig|Math).*?\(\);)/gm, "") // safe func calls
+	let filteredCode = returncode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
 	//filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (.+?;)/gm, "$1$3")
 	for (const a of returncode.matchAll(varDecs)){
 		const {code, decs} = replaceDecsWithExpr(a[2])
