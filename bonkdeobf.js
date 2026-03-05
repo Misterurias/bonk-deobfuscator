@@ -557,6 +557,12 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		}
 	    if (!node.type.endsWith("FunctionExpression") && node.type !== "FunctionDeclaration") return
 		cn = node
+		for (const i in node.params){
+			const a = node.params[i]
+			oldNames.push(a.name)
+			a.name = `f${newScopeCounter}a${i}`
+			newNames.push(a.name)
+	    }
 		if (shouldCount) {
 			shouldCount = false
 			newScopeCounter++
@@ -583,11 +589,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	    add(node)
 		shouldCount = true
 	    const oldScopeName = dec.id.name
-	    const indexTable = []
-	    for (const i in node.params){
-			const a = node.params[i]
-			a.name = `f${newScopeCounter}a${i}`
-	    }
+	    const indexTable = [] 
 	    estraverse.traverse(blockNode, {enter(node, parent){
 	        if (node.type !== "MemberExpression") return
 	        if (!node.computed) return
@@ -1174,7 +1176,7 @@ if (false){
 	writeToFile("hashTable.json", JSON.stringify(hashes, null, 1))
 
 }
-returncode = setVarNames(false, returncode)
+if (!process.argv.includes("nonames"))returncode = setVarNames(false, returncode)
 returncode = finalCleanup(returncode)
 {
 	log("Validating the code")
