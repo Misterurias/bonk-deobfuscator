@@ -642,7 +642,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 }
 	log('Replacing "abc" with "element" in "let abc = document.getElementById("element")"') // 80 characters damn, i barely managed to make it fit
 {
-	const r = []
+	const r = {}
 	estraverse.traverse(ast, {enter(node){
 		if (!(node.type === "AssignmentExpression" && node.left.type === "Identifier")) return
 		if (!(node.right.type === "CallExpression" && node.right.callee.type === "MemberExpression")) return
@@ -673,7 +673,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		if (node.type.startsWith("For")){
 			forLoopDepth++
 			node.parent = parent
-			// scopes.push(node)
+			scopes.push(node)
 		}
 		else if (node.type === "BlockStatement"){
 			scopes.push(node)
@@ -682,7 +682,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	function blockLeave(node, parent){
 		if (node.type.startsWith("For")){
 			forLoopDepth--
-			// scopes.pop()
+			scopes.pop()
 		}
 		else if (node.type === "BlockStatement"){
 			scopes.pop()
@@ -756,7 +756,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	estraverse.traverse(ast, {enter(node, parent){
 		blockEnter(node, parent)
 		if (node.type !== "Identifier") return
-		if (parent.type === "MemberExpression" && parent.property === node) return
+		if (parent.type === "MemberExpression" && !parent.computed && parent.property === node) return
 		if (!vars[node.name]) return
 		if (parent.type !== "AssignmentExpression" && parent.type !== "UpdateExpression"){
 			vars[node.name].refCount++
@@ -814,9 +814,12 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
       		kind: xd.modCount === 0 ? "const" : "let"
 		}
 		if (parent.type.startsWith("For")){
+			if (node.left.name === "f315v7"){
+			}
 			if (parent.init !== node) {
 				// if it reached this point, it means that chaz did some lunacy that i have to fix
 				vars[node.left.name] = xd // nevermind put it back
+				xd.scopes.pop()
 				return
 			}
 			const newName = String.fromCharCode(initialCharCode + forLoopDepth)
