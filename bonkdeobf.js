@@ -223,7 +223,7 @@ function setVarNames(thisOnly, code){
 			log(l[i] + ": " + counts[l[i]])
 		}
 	}
-	code = fromAst(ast).replaceAll("let ZZZ;", "")
+	code = fromAst(ast).replaceAll("let ZZZ;", "").replaceAll("const ZZZ;", "")
 	r = true
 	return code
 }
@@ -758,7 +758,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		if (node.type !== "Identifier") return
 		if (parent.type === "MemberExpression" && parent.property === node) return
 		if (!vars[node.name]) return
-		if (parent.type !== "AssignmentExpression"){
+		if (parent.type !== "AssignmentExpression" && parent.type !== "UpdateExpression"){
 			vars[node.name].refCount++
 		}
 		else{
@@ -771,6 +771,10 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		vars[node.name].scopes.length = getNewLength(vars[node.name].scopes, scopes)
 	},
 	leave: blockLeave})
+	// const unusedVars = []
+	// for (const i in vars){
+	// 	if (vars[i].refCount === 0) unusedVars.push(i)
+	// }
 	// STAGE 3: put all variable declarations where they belong
 	const reps = {}
 	const initialCharCode = "i".charCodeAt(0)
@@ -807,7 +811,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
       		    id: node.left,
       		    init: node.right
       		}],
-      		kind: "let"
+      		kind: xd.modCount === 0 ? "const" : "let"
 		}
 		if (parent.type.startsWith("For")){
 			if (parent.init !== node) {
@@ -916,13 +920,13 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			c++
 		}
 	}
-	returncode = fromAst(ast).replaceAll(/(let|var) ZZZ;/g, "")
+	returncode = fromAst(ast).replaceAll(/(let|var|const) ZZZ;/g, "")
 }
 }
 log('Replacing "(1, abc)()" with "abc()"') // shits useless unless it's eval
 returncode = returncode.replaceAll(/\(1, ([a-zA-Z0-9_\$]+)\)\(/g, "$1(")
 log('Replacing "let abc = anime({" with "anime({"')
-returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
+returncode = returncode.replaceAll(/^(\t+)(let|const) [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
 {
 	function getUnusedVars(code, v){
 		const refCount = getRefCount(code, v)
@@ -933,9 +937,9 @@ returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$
 		return unusedVars
 	}
 	log("Removing unused variables")
-	const varDecs = /^(\t+)(let .+;)/gm
+	const varDecs = /^(\t+)((let|const) .+;)/gm
 	let varList = []
-	let filteredCode = returncode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
+	let filteredCode = returncode.replaceAll(/^(\t+)(let |var )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
 	//filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (.+?;)/gm, "$1$3")
 	for (const a of returncode.matchAll(varDecs)){
 		const {code, decs} = replaceDecsWithExpr(a[2])
@@ -970,7 +974,7 @@ returncode = returncode.replaceAll(/^(\t+)let [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$
 		}
 		if (node.declarations.length === 0) node.declarations[0] = eo
 	}})
-	returncode = (fromAst(ast)).replaceAll(/\t+(let )?ZZZ;\n/g, "")
+	returncode = (fromAst(ast)).replaceAll(/\t+(let |const )?ZZZ;\n/g, "")
 }
 if (!process.argv.includes("noflags")){
 	log("Removing useless nation check")
@@ -1119,7 +1123,7 @@ function getRefCount(code, v){
 		io++
 	}
 	returncode = fromAst(ast)
-	returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+let (\S+) = \1;\n/g, "").replaceAll(/\t+let ZZZ;\n/g, "")
+	returncode = replaceVars(returncode, nv, nr).replaceAll(/^(\t+)('.*?'|-?\d+) = (.+)/gm, "$1$3").replaceAll(/\t+let (\S+) = \1;\n/g, "").replaceAll(/\t+(let|const) ZZZ;\n/g, "")
 }
 function generateHash(string){
 	return (+string).toString(16)
