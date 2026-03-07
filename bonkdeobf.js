@@ -10,6 +10,7 @@ const esprima = require("esprima")
 const escodegen = require("escodegen")
 const estraverse = require("estraverse")
 const ini = require("ini")
+const util = require("util")
 let consoleText
 function fromAst(ast){
 	return escodegen.generate(ast, {format: {indent: {style: "\t"}}})
@@ -164,7 +165,7 @@ function setVarNames(thisOnly, code){
 	const ast = esprima.parseScript(code)
 	const vl = []
 	estraverse.traverse(ast, {enter(node, parent){
-		if (node.type === "Identifier" && (parent.type !== "MemberExpression" || parent.object === node)){
+		if (node.type === "Identifier"){
 			vl.push(node.name)
 			return
 		}
@@ -205,7 +206,7 @@ function setVarNames(thisOnly, code){
 	}})
 	if (process.argv.includes("showvarusage")){
 		log("Most used variables")
-		let counts = []
+		let counts = {}
 		for (const v of vl) {
 			counts[v] = counts[v] ? counts[v] + 1 : 1;
 		}
@@ -214,7 +215,7 @@ function setVarNames(thisOnly, code){
 		);
 		const l = Object.keys(counts)
 		for (let i = 0; i < l.length; i++){
-			if (!l[i].startsWith("f")){
+			if (!/^f\d/.test(l[i])){
 				l.splice(i, 1)
 				i--
 			}
@@ -522,6 +523,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	let hasFuncName = false
 	let shouldCount = false
 	let esc = 0
+	let af = 0
 	const oldNames = []
 	const newNames = []
 	function add(node, a){
@@ -535,6 +537,16 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	const vl = []
 	const xd = []
 	let cn
+	function renameArgs(node){
+		for (let i = 0; i < node.params.length; i++){
+			let param = node.params[i]
+			if (param.type === "RestElement") param = param.argument
+			else if (param.type === "AssignmentPattern") param = param.left
+			oldNames.push(param.name)
+			param.name = "f" + newScopeCounter + "a" + i
+			newNames.push(param.name)
+		}
+	}
 	estraverse.traverse(ast, {enter(node, parent){
 		if (node.type === "VariableDeclarator" && !(node.init && node.init.elements && node.init.elements[0].name === "arguments") && !parent.unmarked){
 			// looks like the obfuscation failed there for some unknown reason, it mostly happens in render func
@@ -545,12 +557,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			newNames.push(node.id.name)
 			unobfuscatedIndex++
 			if (!shouldCount){
-				for (let i = 0; i < cn.params.length; i++){
-					const param = cn.params[i]
-					oldNames.push(param.name)
-					param.name = "f" + newScopeCounter + "a" + i
-					newNames.push(param.name)
-				}
+				renameArgs(cn)
 			}
 			shouldCount = true
 			return
@@ -562,12 +569,6 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			newScopeCounter++
 			unobfuscatedIndex = 0
 		}
-		for (const i in node.params){
-			const a = node.params[i]
-			oldNames.push(a.name)
-			a.name = `f${newScopeCounter}a${i}`
-			newNames.push(a.name)
-	    }
 	    if (!node.body) return
 	    let blockNode = node.body
 	    if (!blockNode.body[0]) {
@@ -584,6 +585,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			if (add(node)) newScopeCounter++
 			return
 		}
+		renameArgs(node)
 	    const dec = scopeDec.declarations[0]
 	    if (!(dec.init && dec.init.type === "ArrayExpression" && dec.init.elements.length === 1 && dec.init.elements[0].name === "arguments")) return
 	    add(node)
@@ -652,6 +654,40 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		r[node.left.name] = (node.right.arguments[0].value).replaceAll("-", "minus")
 	}})
 	replaceVarsAstObj(ast, r)
+}
+	log("Removing unused functions")
+{
+	let unc = 1
+	while (unc > 0) {
+		unc = 0
+		const funcs = {}
+		const emptyFuncs = []
+		estraverse.traverse(ast, {enter(node, parent){
+			if (node.type === "FunctionDeclaration" && node.id.name){
+				funcs[node.id.name] = {node: node, parent: parent, used: false}
+				if (node.body.length === 0) {
+					emptyFuncs.push(node.id.name)
+				}
+			}
+		}})
+		estraverse.traverse(ast, {enter(node, parent){
+			if (node.type === "Identifier" && parent.type !== "FunctionDeclaration"){
+				if (funcs[node.name]) funcs[node.name].used = true
+			}
+			if (node.expression && node.expression.type === "CallExpression" && node.expression.callee.type === "Identifier"){
+				if (emptyFuncs.includes(node.expression.callee.name)) {
+					parent.splice(parent.indexOf(node), 1)
+					this.skip()
+				}
+			}
+		}})
+		for (const i of Object.keys(funcs)){
+			if (!funcs[i].used) {
+				unc++
+				funcs[i].parent.body.splice(funcs[i].parent.body.indexOf(funcs[i].node), 1)
+			}
+		}
+	}
 }
 	log("Re-scoping variables")
 {
