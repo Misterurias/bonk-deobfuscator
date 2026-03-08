@@ -743,7 +743,8 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			if (!dec.init){
 				if (!vars[dec.id.name]) vars[dec.id.name] = {
 					refCount: 0,
-					modCount: -1
+					modCount: -1,
+					decs: []
 				}
 				node.declarations = [eo]
 				return
@@ -752,7 +753,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 				scopes: [...scopes],
 				refCount: 0,
 				modCount: 0,
-				dec: dec.init
+				decs: [dec.init]
 			}
 			if (parent.type === "ForStatement"){
 				Object.assign(node, {
@@ -784,21 +785,32 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			const dec = node.declarations[i]
 			if (!vars[dec.id.name]) vars[dec.id.name] = {
 				refCount: 0,
-				modCount: -1
+				modCount: -1,
+				decs: []
 			}
 		}
 		node.declarations = [eo]
 	},
 	leave: blockLeave})
 	// STAGE 2: determine the scope of each variable
+	function chk(){
 	estraverse.traverse(ast, {enter(node, parent){
 		blockEnter(node, parent)
+		if (node.type === "UpdateExpression" && parent.type !== "ExpressionStatement" && parent.type !== "AssignmentExpression"){
+			if (!vars[node.argument.name]) return
+			vars[node.argument.name].modCount++
+			this.skip()
+		}
 		if (node.type !== "Identifier") return
 		if (parent.type === "MemberExpression" && !parent.computed && parent.property === node) return
 		if (!vars[node.name]) return
-		if ((parent.type === "AssignmentExpression" && parent.left === node) || parent.type === "UpdateExpression"){
+		if (parent.type === "AssignmentExpression" && parent.left === node){
 			vars[node.name].modCount++
-			vars[node.name].dec = parent.right
+			vars[node.name].decs.push(parent.right)
+		}
+		else if (parent.type === "UpdateExpression") {
+			vars[node.name].modCount++
+			vars[node.name].refCount++
 		}
 		else{
 			vars[node.name].refCount++
@@ -809,11 +821,87 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		vars[node.name].scopes.length = getNewLength(vars[node.name].scopes, scopes)
 	},
 	leave: blockLeave})
-	// const unusedVars = []
-	// for (const i in vars){
-	// 	if (vars[i].refCount === 0) unusedVars.push(i)
-	// }
-	// STAGE 3: put all variable declarations where they belong
+	}
+	function reset(){
+		for (const i of Object.keys(vars)) {
+			vars[i].refCount = 0
+			vars[i].modCount = -1
+		}
+	}
+	chk()
+	// STAGE 3: remove unused vars
+	log("Removing unused vars")
+	const unusedVars = []
+	const unsafeUnusedVars = []
+	const safeFuncGroups = ["Math", "SafeTrig", "Date", "JSON"]
+	const safeFuncs = {document: ["getElementById"], localStorage: ["getItem"]}
+	const safeTopLevelFuncs = ["parseInt"]
+	const safeProps = ["toString"]
+	let x = 1
+	let vl = 0
+	while (x > 0) {
+		x = 0
+		for (const i in vars){
+			if (i === "f249v7"){
+				continue
+			}
+			if (vars[i].modCount === -1){
+				unusedVars.push("")
+				delete vars[i]
+				continue
+			}
+			if (vars[i].refCount > 0) continue
+			x++
+			let unsafe = false
+			for (const a of vars[i].decs){
+				if (a.type === "Identifier" || a.type === "Literal" || a.type.endsWith("FunctionExpression")) break
+				estraverse.traverse(a, {enter(node){
+					if (node.type === "NewExpression"){
+						unsafe = true
+						this.break()
+						return
+					}
+					if (node.type === "CallExpression"){
+						const c = node.callee
+						if (c.type === "MemberExpression" && safeProps.includes(c.property.name)) return
+						if (c.type === "Identifier" && safeTopLevelFuncs.includes(c.name)) return
+						if (c.type !== "MemberExpression" || c.object.type === "MemberExpression") {
+							unsafe = true
+							return
+						}
+						if (safeFuncGroups.includes(c.object.name)) return
+						if (safeFuncs[c.object.name] && safeFuncs[c.object.name].includes(c.property.name)) return
+						unsafe = true
+					}
+				}})
+			}
+			unsafe ? unsafeUnusedVars.push(i) : unusedVars.push(i)
+		}
+		const l = Object.keys(vars).length
+		if (vl === 0) vl = l
+		for (const i of Object.keys(vars)){
+			if (unusedVars.includes(i) || unsafeUnusedVars.includes(i)) delete vars[i]
+		}
+		estraverse.traverse(ast, {enter(node,parent){
+			if (node.type === "ExpressionStatement" && node.expression.type === "AssignmentExpression"){
+				if (unusedVars.includes(node.expression.left.name)) {
+					Object.assign(node, {
+						type: "VariableDeclaration",
+						declarations: [eo],
+						kind: "let"
+					})
+				}
+				if (unsafeUnusedVars.includes(node.expression.left.name)){
+					node.expression = node.expression.right
+				}
+			}
+		}})
+		reset()
+		chk()
+	}
+	log("Total vars: " + vl)
+	log("Unused vars: " + unusedVars.length)
+	// STAGE 4: put all variable declarations where they belong
 	const reps = {}
 	const initialCharCode = "i".charCodeAt(0)
 	estraverse.traverse(ast, {enter(node, parent){
@@ -877,7 +965,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	},
 	leave: blockLeave})
 	replaceVarsAstObj(ast, reps)
-	// STAGE 4: put remaining variables at the start of a block
+	// STAGE 5: put remaining variables at the start of a block
 	const remainingVarList = Object.keys(vars)
 	const vd = []
 	for (let i = 0; i < remainingVarList.length; i++){
@@ -961,62 +1049,28 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 			c++
 		}
 	}
-	returncode = fromAst(ast).replaceAll(/(let|var|const) ZZZ;/g, "")
 }
+	log('removing "abc = abc;"')
+{
+	const r = {}
+	estraverse.traverse(ast, {enter(node,parent){
+		if (node.type === "ExpressionStatement" && node.expression.type === "AssignmentExpression" && node.expression.left.type === "Identifier" && 
+		node.expression.right.type === "Identifier" && node.expression.left.name === node.expression.right.name) {
+			Object.assign(node, {
+				type: "VariableDeclaration",
+				declarations: [eo],
+				kind: "let"
+			})
+		}
+	}})
+	replaceVarsAstObj(ast, r)
+}
+	returncode = fromAst(ast).replaceAll(/(let|var|const) ZZZ;/g, "")
 }
 log('Replacing "(1, abc)()" with "abc()"') // shits useless unless it's eval
 returncode = returncode.replaceAll(/\(1, ([a-zA-Z0-9_\$]+)\)\(/g, "$1(")
 log('Replacing "let abc = anime({" with "anime({"')
 returncode = returncode.replaceAll(/^(\t+)(let|const) [a-zA-Z0-9_\$]+ = anime\(\{/gm, "$1anime({")
-{
-	function getUnusedVars(code, v){
-		const refCount = getRefCount(code, v)
-		const unusedVars = []
-		for (let i = 0; i < v.length; i++){
-			if (refCount[i] === 0) unusedVars.push(v[i])
-		}
-		return unusedVars
-	}
-	log("Removing unused variables")
-	const varDecs = /^(\t+)((let|const) .+;)/gm
-	let varList = []
-	let filteredCode = returncode.replaceAll(/^(\t+)(let |var )?[a-zA-Z0-9_\$]+ = ([^\)\n]+;)/gm, "$1$3")
-	//filteredCode = filteredCode.replaceAll(/^(\t+)(let )?[a-zA-Z0-9_\$]+ = (.+?;)/gm, "$1$3")
-	for (const a of returncode.matchAll(varDecs)){
-		const {code, decs} = replaceDecsWithExpr(a[2])
-		varList.push(...decs)
-		changeStatus(varList.length + " Found")
-		filteredCode = filteredCode.replace(a[2], code)
-	}
-	varList = noDuplicate(varList)
-	log("Total vars: " + varList.length)
-	const unusedVars = getUnusedVars(filteredCode, varList)
-	log("Unused vars: " + unusedVars.length)
-	const ast = esprima.parseScript(returncode)
-	estraverse.traverse(ast, {enter(node){
-		if (node.type === "AssignmentExpression" && unusedVars.includes(node.left.name)){
-			Object.assign(node, eo)
-		}
-		if (node.type !== "VariableDeclaration") return
-		for (let i = 0; i < node.declarations.length; i++) {
-			const dec = node.declarations[i]
-			let x = false
-			if (dec.init){
-				estraverse.traverse(dec.init, {enter(node){
-					if (node.type === "NewExpression" || node.type === "CallExpression") {
-						x = true
-						this.break()
-					}
-				}})
-			}
-			if (!unusedVars.includes(dec.id.name) || x) continue
-			node.declarations.splice(i, 1)
-			i--
-		}
-		if (node.declarations.length === 0) node.declarations[0] = eo
-	}})
-	returncode = (fromAst(ast)).replaceAll(/\t+(let |const )?ZZZ;\n/g, "")
-}
 if (!process.argv.includes("noflags")){
 	log("Removing useless nation check")
 	const varName = ((returncode.match(/^\t+[a-zA-Z0-9_\$]+\.europeanunion = true;/gm)[0]).split(".")[0]).trim()
