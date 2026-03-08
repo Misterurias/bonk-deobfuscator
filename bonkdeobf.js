@@ -793,8 +793,14 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	},
 	leave: blockLeave})
 	// STAGE 2: determine the scope of each variable
+	function chk(){
 	estraverse.traverse(ast, {enter(node, parent){
 		blockEnter(node, parent)
+		if (node.type === "UpdateExpression" && parent.type !== "ExpressionStatement"){
+			if (!vars[node.argument.name]) return
+			vars[node.argument.name].modCount++
+			this.skip()
+		}
 		if (node.type !== "Identifier") return
 		if (parent.type === "MemberExpression" && !parent.computed && parent.property === node) return
 		if (!vars[node.name]) return
@@ -815,6 +821,14 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 		vars[node.name].scopes.length = getNewLength(vars[node.name].scopes, scopes)
 	},
 	leave: blockLeave})
+	}
+	function reset(){
+		for (const i of Object.keys(vars)) {
+			vars[i].refCount = 0
+			vars[i].modCount = -1
+		}
+	}
+	chk()
 	// STAGE 3: remove unused vars
 	log("Removing unused vars")
 	const unusedVars = []
@@ -823,52 +837,67 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	const safeFuncs = {document: ["getElementById"], localStorage: ["getItem"]}
 	const safeTopLevelFuncs = ["parseInt"]
 	const safeProps = ["toString"]
-	for (const i in vars){
-		if (vars[i].refCount !== 0) continue
-		let unsafe = false
-		for (const a of vars[i].decs){
-			if (a.type === "Identifier" || a.type === "Literal" || a.type.endsWith("FunctionExpression")) break
-			estraverse.traverse(a, {enter(node){
-				if (node.type === "NewExpression"){
-					unsafe = true
-					this.break()
-					return
-				}
-				if (node.type === "CallExpression"){
-					const c = node.callee
-					if (c.type === "MemberExpression" && safeProps.includes(c.property.name)) return
-					if (c.type === "Identifier" && safeTopLevelFuncs.includes(c.name)) return
-					if (c.type !== "MemberExpression" || c.object.type === "MemberExpression") {
+	let x = 1
+	let vl = 0
+	while (x > 0) {
+		x = 0
+		for (const i in vars){
+			if (vars[i].modCount === -1){
+				unusedVars.push("")
+				delete vars[i]
+				continue
+			}
+			if (vars[i].refCount > 0) continue
+			x++
+			let unsafe = false
+			for (const a of vars[i].decs){
+				if (a.type === "Identifier" || a.type === "Literal" || a.type.endsWith("FunctionExpression")) break
+				estraverse.traverse(a, {enter(node){
+					if (node.type === "NewExpression"){
 						unsafe = true
+						this.break()
 						return
 					}
-					if (safeFuncGroups.includes(c.object.name)) return
-					if (safeFuncs[c.object.name] && safeFuncs[c.object.name].includes(c.property.name)) return
-					unsafe = true
+					if (node.type === "CallExpression"){
+						const c = node.callee
+						if (c.type === "MemberExpression" && safeProps.includes(c.property.name)) return
+						if (c.type === "Identifier" && safeTopLevelFuncs.includes(c.name)) return
+						if (c.type !== "MemberExpression" || c.object.type === "MemberExpression") {
+							unsafe = true
+							return
+						}
+						if (safeFuncGroups.includes(c.object.name)) return
+						if (safeFuncs[c.object.name] && safeFuncs[c.object.name].includes(c.property.name)) return
+						unsafe = true
+					}
+				}})
+			}
+			unsafe ? unsafeUnusedVars.push(i) : unusedVars.push(i)
+		}
+		const l = Object.keys(vars).length
+		if (vl === 0) vl = l
+		for (const i of Object.keys(vars)){
+			if (unusedVars.includes(i) || unsafeUnusedVars.includes(i)) delete vars[i]
+		}
+		estraverse.traverse(ast, {enter(node,parent){
+			if (node.type === "ExpressionStatement" && node.expression.type === "AssignmentExpression"){
+				if (unusedVars.includes(node.expression.left.name)) {
+					Object.assign(node, {
+						type: "VariableDeclaration",
+						declarations: [eo],
+						kind: "let"
+					})
 				}
-			}})
-		}
-		unsafe ? unsafeUnusedVars.push(i) : unusedVars.push(i)
+				if (unsafeUnusedVars.includes(node.expression.left.name)){
+					node.expression = node.expression.right
+				}
+			}
+		}})
+		reset()
+		chk()
 	}
-	log("Total vars: " + Object.keys(vars).length)
+	log("Total vars: " + vl)
 	log("Unused vars: " + unusedVars.length)
-	for (const i of Object.keys(vars)){
-		if (unusedVars.includes(i) || unsafeUnusedVars.includes(i)) delete vars[i]
-	}
-	estraverse.traverse(ast, {enter(node,parent){
-		if (node.type === "ExpressionStatement" && node.expression.type === "AssignmentExpression"){
-			if (unusedVars.includes(node.expression.left.name)) {
-				Object.assign(node, {
-					type: "VariableDeclaration",
-					declarations: [eo],
-					kind: "let"
-				})
-			}
-			if (unsafeUnusedVars.includes(node.expression.left.name)){
-				node.expression = node.expression.right
-			}
-		}
-	}})
 	// STAGE 4: put all variable declarations where they belong
 	const reps = {}
 	const initialCharCode = "i".charCodeAt(0)
