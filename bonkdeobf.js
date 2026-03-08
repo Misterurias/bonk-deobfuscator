@@ -796,7 +796,7 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	function chk(){
 	estraverse.traverse(ast, {enter(node, parent){
 		blockEnter(node, parent)
-		if (node.type === "UpdateExpression" && parent.type !== "ExpressionStatement"){
+		if (node.type === "UpdateExpression" && parent.type !== "ExpressionStatement" && parent.type !== "AssignmentExpression"){
 			if (!vars[node.argument.name]) return
 			vars[node.argument.name].modCount++
 			this.skip()
@@ -842,6 +842,9 @@ returncode = js_beautify(returncode, {e4x: true, indent_with_tabs: true})
 	while (x > 0) {
 		x = 0
 		for (const i in vars){
+			if (i === "f249v7"){
+				continue
+			}
 			if (vars[i].modCount === -1){
 				unusedVars.push("")
 				delete vars[i]
