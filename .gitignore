@@ -4,3 +4,5 @@ invalid
 node_modules
 cache
 test
+utils/*
+.DS_Store
