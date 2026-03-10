@@ -1267,6 +1267,7 @@ if (false){
 
 }
 if (!process.argv.includes("nonames"))returncode = setVarNames(false, returncode)
+require("./mapping-addon").generateMapping(returncode, response)
 returncode = finalCleanup(returncode)
 {
 	log("Validating the code")

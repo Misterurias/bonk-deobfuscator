@@ -10,3 +10,4 @@ test
 bonkdeobf_novars.js
 alpha2_novarnames.js
 utils/*
+.vscode/*

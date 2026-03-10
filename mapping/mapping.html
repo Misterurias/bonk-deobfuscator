@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonk alpha2s.js Deobfuscation Map</title>
+<style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0d1117; color: #c9d1d9; font-family: Consolas, 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+header { background: #161b22; border-bottom: 1px solid #30363d; padding: 10px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+header h1 { font-size: 13px; color: #e6edf3; font-weight: 600; white-space: nowrap; }
+header .pill { background: #21262d; border: 1px solid #30363d; border-radius: 20px; padding: 2px 10px; font-size: 10px; color: #8b949e; white-space: nowrap; }
+#searchBar { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+#searchInput { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; padding: 4px 10px; font-size: 12px; width: 200px; outline: none; font-family: inherit; }
+#searchInput:focus { border-color: #58a6ff; }
+#searchBtn { background: #21262d; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; padding: 4px 10px; cursor: pointer; font-size: 12px; }
+#searchBtn:hover { background: #30363d; }
+.jump-group { display: flex; gap: 4px; align-items: center; }
+#jumpInput { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; padding: 4px 8px; font-size: 12px; width: 72px; outline: none; font-family: inherit; }
+#jumpInput:focus { border-color: #58a6ff; }
+#jumpBtn { background: #21262d; border: 1px solid #30363d; border-radius: 6px; color: #8b949e; padding: 4px 8px; cursor: pointer; font-size: 12px; }
+#jumpBtn:hover { background: #30363d; color: #c9d1d9; }
+.sync-group { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #8b949e; white-space: nowrap; }
+.sync-group input { cursor: pointer; accent-color: #58a6ff; }
+#stats { background: #0d1117; border-bottom: 1px solid #21262d; padding: 4px 16px; display: flex; gap: 20px; font-size: 10px; color: #8b949e; flex-shrink: 0; flex-wrap: wrap; }
+#stats b { color: #58a6ff; }
+.main { display: flex; flex: 1; min-height: 0; }
+.panels { display: flex; flex: 1; min-width: 0; }
+.panel { flex: 1; display: flex; flex-direction: column; min-width: 0; border-right: 1px solid #30363d; }
+.panel-header { background: #161b22; border-bottom: 1px solid #30363d; padding: 5px 12px; font-size: 10px; color: #8b949e; flex-shrink: 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; display: flex; align-items: center; gap: 8px; }
+.panel-header .badge { background: #21262d; border: 1px solid #30363d; border-radius: 3px; padding: 1px 6px; font-size: 9px; color: #58a6ff; }
+.vscroll { flex: 1; overflow-y: auto; overflow-x: auto; position: relative; }
+.vscroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.vscroll::-webkit-scrollbar-track { background: #0d1117; }
+.vscroll::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+.vscroll::-webkit-scrollbar-thumb:hover { background: #3d444d; }
+.vrow { position: absolute; left: 0; right: 0; display: flex; height: 20px; align-items: center; }
+.vrow:hover { background: rgba(255,255,255,0.03); }
+.ln { width: 52px; min-width: 52px; padding: 0 8px 0 0; text-align: right; color: #3d444d; user-select: none; border-right: 1px solid #21262d; line-height: 20px; flex-shrink: 0; font-size: 11px; }
+.code { padding: 0 12px; white-space: pre; line-height: 20px; flex: 1; }
+.hl-keyword { color: #ff7b72; }
+.hl-string  { color: #a5d6ff; }
+.hl-number  { color: #79c0ff; }
+.hl-comment { color: #8b949e; font-style: italic; }
+.hl-renamed { color: #7ee787; cursor: pointer; border-bottom: 1px dotted rgba(126,231,135,0.5); }
+.hl-renamed:hover { background: rgba(126,231,135,0.12); border-radius: 2px; }
+.highlight-row { background: rgba(88,166,255,0.1) !important; }
+.highlight-row .ln { color: #58a6ff; }
+#funcPanel { width: 210px; min-width: 210px; border-left: 1px solid #30363d; display: flex; flex-direction: column; background: #0d1117; }
+#funcList { flex: 1; overflow-y: auto; }
+#funcList::-webkit-scrollbar { width: 6px; }
+#funcList::-webkit-scrollbar-track { background: #0d1117; }
+#funcList::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+.func-item { padding: 5px 10px; cursor: pointer; border-bottom: 1px solid rgba(48,54,61,0.5); display: flex; flex-direction: column; gap: 1px; }
+.func-item:hover { background: #161b22; }
+.func-item .fname { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.func-item .fmeta { color: #8b949e; font-size: 9px; }
+#tooltip { position: fixed; background: #1c2128; border: 1px solid #30363d; border-radius: 6px; padding: 6px 10px; font-size: 11px; color: #e6edf3; pointer-events: none; display: none; z-index: 9999; max-width: 340px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+.t-obf   { color: #ff7b72; }
+.t-arr   { color: #8b949e; margin: 0 5px; }
+.t-deobf { color: #7ee787; }
+#searchResults { position: fixed; top: 44px; right: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 6px 0; display: none; z-index: 500; min-width: 260px; max-height: 280px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
+.sr-item { padding: 6px 12px; cursor: pointer; font-size: 11px; display: flex; align-items: baseline; gap: 6px; }
+.sr-item:hover { background: #21262d; }
+.sr-item b { color: #d2a8ff; }
+.sr-item span { color: #8b949e; font-size: 10px; }</style>
+</head>
+<body>
+<header>
+  <h1>&#128293; Bonk Deobfuscation Map</h1>
+  <span class="pill" id="gen-date"></span>
+  <div id="searchBar">
+    <input id="searchInput" placeholder="Search function or identifier&hellip;" autocomplete="off" />
+    <button id="searchBtn">Search</button>
+  </div>
+  <div class="jump-group">
+    <input id="jumpInput" placeholder="Line #" type="number" min="1" />
+    <button id="jumpBtn">Go</button>
+  </div>
+  <div class="sync-group">
+    <input type="checkbox" id="syncToggle" />
+    <label for="syncToggle">Sync scroll</label>
+  </div>
+</header>
+<div id="stats">
+  <span>Renamed: <b id="stat-renamed"></b></span>
+  <span>Functions: <b id="stat-funcs"></b></span>
+  <span>Classes: <b id="stat-classes"></b></span>
+  <span>Obf lines: <b id="stat-obf-total"></b></span>
+  <span>Deobf lines: <b id="stat-deobf-total"></b></span>
+  <span>Max: <b id="stat-lines"></b></span>
+</div>
+<div class="main">
+  <div class="panels">
+    <div class="panel">
+      <div class="panel-header">
+        <span>Obfuscated</span>
+        <span class="badge">alpha2s.js &mdash; split + indented</span>
+      </div>
+      <div class="vscroll" id="obfScroll"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-header">
+        <span>Deobfuscated</span>
+        <span class="badge">readable</span>
+      </div>
+      <div class="vscroll" id="deobfScroll"></div>
+    </div>
+  </div>
+  <div id="funcPanel">
+    <div class="panel-header">Functions &amp; Classes</div>
+    <div id="funcList"></div>
+  </div>
+</div>
+<div id="tooltip"></div>
+<div id="searchResults"></div>
+<script src="mapping-data.js"></script>
+<script src="mapping-viewer.js"></script>
+</body>
+</html>

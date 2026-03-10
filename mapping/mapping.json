@@ -1,0 +1,7805 @@
+{
+  "generated": "2026-03-10T06:45:26.496Z",
+  "summary": {
+    "renamedIdentifiers": 237,
+    "functions": 529,
+    "classes": 28,
+    "stringTableSize": 0
+  },
+  "stringTable": {
+    "arrayVar": null,
+    "entries": []
+  },
+  "identifierMap": [
+    {
+      "obfuscated": "B3jF8",
+      "deobfuscated": "requirejs"
+    },
+    {
+      "obfuscated": "v3rs9h",
+      "deobfuscated": "flipX"
+    },
+    {
+      "obfuscated": "e23",
+      "deobfuscated": "skineditor_layerbox_scrollcontainer"
+    },
+    {
+      "obfuscated": "V8f",
+      "deobfuscated": "e"
+    },
+    {
+      "obfuscated": "M3n",
+      "deobfuscated": "e"
+    },
+    {
+      "obfuscated": "x3788a",
+      "deobfuscated": "scale"
+    },
+    {
+      "obfuscated": "k1W",
+      "deobfuscated": "editSkin"
+    },
+    {
+      "obfuscated": "X_14OtK",
+      "deobfuscated": "onmousedown"
+    },
+    {
+      "obfuscated": "f_fpV2a",
+      "deobfuscated": "onmousedown"
+    },
+    {
+      "obfuscated": "apply",
+      "deobfuscated": "onmousedown"
+    },
+    {
+      "obfuscated": "W0RqtoB",
+      "deobfuscated": "bc"
+    },
+    {
+      "obfuscated": "L9Og6RO",
+      "deobfuscated": "layers"
+    },
+    {
+      "obfuscated": "m2Y",
+      "deobfuscated": "skineditor_propertiesbox_colorrect"
+    },
+    {
+      "obfuscated": "K2O",
+      "deobfuscated": "skineditor_propertiesbox_colorrect"
+    },
+    {
+      "obfuscated": "i3W",
+      "deobfuscated": "e"
+    },
+    {
+      "obfuscated": "i3w",
+      "deobfuscated": "isNaN"
+    },
+    {
+      "obfuscated": "i4i",
+      "deobfuscated": "val"
+    },
+    {
+      "obfuscated": "d$W",
+      "deobfuscated": "e"
+    },
+    {
+      "obfuscated": "Q0_VdT0",
+      "deobfuscated": "onclick"
+    },
+    {
+      "obfuscated": "B4osgs8",
+      "deobfuscated": "fromString"
+    },
+    {
+      "obfuscated": "U3l",
+      "deobfuscated": "eventName"
+    },
+    {
+      "obfuscated": "k_s",
+      "deobfuscated": "callback"
+    },
+    {
+      "obfuscated": "C28",
+      "deobfuscated": "editSkin"
+    },
+    {
+      "obfuscated": "J0V",
+      "deobfuscated": "x"
+    },
+    {
+      "obfuscated": "R_W",
+      "deobfuscated": "skinLayerSelectWindow"
+    },
+    {
+      "obfuscated": "undefined",
+      "deobfuscated": "game"
+    },
+    {
+      "obfuscated": "C7LNBc",
+      "deobfuscated": "splice"
+    },
+    {
+      "obfuscated": "B28",
+      "deobfuscated": "editSkinLayer"
+    },
+    {
+      "obfuscated": "Z6x",
+      "deobfuscated": "removeCursorGrab"
+    },
+    {
+      "obfuscated": "z9vOXF",
+      "deobfuscated": "add"
+    },
+    {
+      "obfuscated": "a5z",
+      "deobfuscated": "color"
+    },
+    {
+      "obfuscated": "u6P",
+      "deobfuscated": "editSkinLayer"
+    },
+    {
+      "obfuscated": "substring",
+      "deobfuscated": "footOffsetY"
+    },
+    {
+      "obfuscated": "H3o",
+      "deobfuscated": "prototype"
+    },
+    {
+      "obfuscated": "j1i",
+      "deobfuscated": "f51a0"
+    },
+    {
+      "obfuscated": "I$1",
+      "deobfuscated": "playerList"
+    },
+    {
+      "obfuscated": "f2U",
+      "deobfuscated": "playerList"
+    },
+    {
+      "obfuscated": "length",
+      "deobfuscated": "networkEngine"
+    },
+    {
+      "obfuscated": "Y7i",
+      "deobfuscated": "commandSplit"
+    },
+    {
+      "obfuscated": "f1hBWc",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "s5t",
+      "deobfuscated": "commandSplit"
+    },
+    {
+      "obfuscated": "L4V",
+      "deobfuscated": "f125a1"
+    },
+    {
+      "obfuscated": "p1F",
+      "deobfuscated": "flagCell"
+    },
+    {
+      "obfuscated": "Y8x",
+      "deobfuscated": "flagCell"
+    },
+    {
+      "obfuscated": "R9g",
+      "deobfuscated": "roomlistjoinpasswordwindowcontainer"
+    },
+    {
+      "obfuscated": "set",
+      "deobfuscated": "createElement"
+    },
+    {
+      "obfuscated": "w$e",
+      "deobfuscated": "Physics"
+    },
+    {
+      "obfuscated": "S76",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "arguments",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "Array",
+      "deobfuscated": "shapes"
+    },
+    {
+      "obfuscated": "w65",
+      "deobfuscated": "c"
+    },
+    {
+      "obfuscated": "U3q",
+      "deobfuscated": "type"
+    },
+    {
+      "obfuscated": "N7I",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "G2Y",
+      "deobfuscated": "playerInputs"
+    },
+    {
+      "obfuscated": "A6k",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "r54",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "document",
+      "deobfuscated": "sounds"
+    },
+    {
+      "obfuscated": "i9P",
+      "deobfuscated": "f184v177"
+    },
+    {
+      "obfuscated": "k7V",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "o0B",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "H0n",
+      "deobfuscated": "fz"
+    },
+    {
+      "obfuscated": "w_c",
+      "deobfuscated": "s"
+    },
+    {
+      "obfuscated": "C4E",
+      "deobfuscated": "newMap"
+    },
+    {
+      "obfuscated": "t8H",
+      "deobfuscated": "syv"
+    },
+    {
+      "obfuscated": "y4j",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "d1M",
+      "deobfuscated": "xv"
+    },
+    {
+      "obfuscated": "I5u",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "S_z",
+      "deobfuscated": "value"
+    },
+    {
+      "obfuscated": "r2p",
+      "deobfuscated": "value"
+    },
+    {
+      "obfuscated": "i8P",
+      "deobfuscated": "value"
+    },
+    {
+      "obfuscated": "o_S",
+      "deobfuscated": "f228v6"
+    },
+    {
+      "obfuscated": "Q1A",
+      "deobfuscated": "f226v2"
+    },
+    {
+      "obfuscated": "a2w",
+      "deobfuscated": "view"
+    },
+    {
+      "obfuscated": "Y8P",
+      "deobfuscated": "controls"
+    },
+    {
+      "obfuscated": "J7I",
+      "deobfuscated": "view"
+    },
+    {
+      "obfuscated": "n6e",
+      "deobfuscated": "heavy3"
+    },
+    {
+      "obfuscated": "R6c",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "t$V",
+      "deobfuscated": "replayPlayerArray"
+    },
+    {
+      "obfuscated": "S2G",
+      "deobfuscated": "Date"
+    },
+    {
+      "obfuscated": "window",
+      "deobfuscated": "loadReplay"
+    },
+    {
+      "obfuscated": "I71",
+      "deobfuscated": "replayIndex"
+    },
+    {
+      "obfuscated": "Q5$",
+      "deobfuscated": "author"
+    },
+    {
+      "obfuscated": "W4g",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "v$q",
+      "deobfuscated": "j"
+    },
+    {
+      "obfuscated": "ready",
+      "deobfuscated": "forceTeams"
+    },
+    {
+      "obfuscated": "team",
+      "deobfuscated": "forceTeamCount"
+    },
+    {
+      "obfuscated": "e7t",
+      "deobfuscated": "Maps"
+    },
+    {
+      "obfuscated": "E4v",
+      "deobfuscated": "Maps"
+    },
+    {
+      "obfuscated": "D2n",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "parseFloat",
+      "deobfuscated": "view"
+    },
+    {
+      "obfuscated": "B7$",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "y5f",
+      "deobfuscated": "physics"
+    },
+    {
+      "obfuscated": "r0y",
+      "deobfuscated": "distJoint"
+    },
+    {
+      "obfuscated": "l1w",
+      "deobfuscated": "bu"
+    },
+    {
+      "obfuscated": "s35",
+      "deobfuscated": "ba"
+    },
+    {
+      "obfuscated": "K$x",
+      "deobfuscated": "ba"
+    },
+    {
+      "obfuscated": "l9c",
+      "deobfuscated": "d"
+    },
+    {
+      "obfuscated": "N72",
+      "deobfuscated": "bf"
+    },
+    {
+      "obfuscated": "b7Y",
+      "deobfuscated": "r"
+    },
+    {
+      "obfuscated": "V$X",
+      "deobfuscated": "shape"
+    },
+    {
+      "obfuscated": "L75",
+      "deobfuscated": "MapParser"
+    },
+    {
+      "obfuscated": "b2$",
+      "deobfuscated": "j"
+    },
+    {
+      "obfuscated": "M$QCc",
+      "deobfuscated": "shape"
+    },
+    {
+      "obfuscated": "t$X",
+      "deobfuscated": "map"
+    },
+    {
+      "obfuscated": "h74",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "d4J",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "G9N",
+      "deobfuscated": "body"
+    },
+    {
+      "obfuscated": "t$e",
+      "deobfuscated": "body"
+    },
+    {
+      "obfuscated": "c5S",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "R5J",
+      "deobfuscated": "f307a1"
+    },
+    {
+      "obfuscated": "C87",
+      "deobfuscated": "newMap"
+    },
+    {
+      "obfuscated": "w$h",
+      "deobfuscated": "newBody"
+    },
+    {
+      "obfuscated": "action",
+      "deobfuscated": "v5"
+    },
+    {
+      "obfuscated": "Y0h",
+      "deobfuscated": "index"
+    },
+    {
+      "obfuscated": "n6E",
+      "deobfuscated": "newBody"
+    },
+    {
+      "obfuscated": "M9q",
+      "deobfuscated": "f317a7"
+    },
+    {
+      "obfuscated": "f3a",
+      "deobfuscated": "f320v3"
+    },
+    {
+      "obfuscated": "X29",
+      "deobfuscated": "f321v26"
+    },
+    {
+      "obfuscated": "v8u",
+      "deobfuscated": "f324v0"
+    },
+    {
+      "obfuscated": "M0M",
+      "deobfuscated": "f324v0"
+    },
+    {
+      "obfuscated": "R3W",
+      "deobfuscated": "f324v10"
+    },
+    {
+      "obfuscated": "h3c",
+      "deobfuscated": "f331v12"
+    },
+    {
+      "obfuscated": "k9W",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "f8X",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "L$j",
+      "deobfuscated": "establishPeer"
+    },
+    {
+      "obfuscated": "h7j",
+      "deobfuscated": "connection"
+    },
+    {
+      "obfuscated": "d4d",
+      "deobfuscated": "networkEvent"
+    },
+    {
+      "obfuscated": "N9W",
+      "deobfuscated": "f381a0"
+    },
+    {
+      "obfuscated": "s2f",
+      "deobfuscated": "f361v12"
+    },
+    {
+      "obfuscated": "f9Z",
+      "deobfuscated": "f382a0"
+    },
+    {
+      "obfuscated": "h1U",
+      "deobfuscated": "f407v0"
+    },
+    {
+      "obfuscated": "I1s",
+      "deobfuscated": "connection"
+    },
+    {
+      "obfuscated": "autoplay",
+      "deobfuscated": "targetTeam"
+    },
+    {
+      "obfuscated": "M_N",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "M$a",
+      "deobfuscated": "f361v13"
+    },
+    {
+      "obfuscated": "targets",
+      "deobfuscated": "constructor"
+    },
+    {
+      "obfuscated": "opacity",
+      "deobfuscated": "f491a2"
+    },
+    {
+      "obfuscated": "p8K",
+      "deobfuscated": "f494a1"
+    },
+    {
+      "obfuscated": "I7k",
+      "deobfuscated": "f494v6"
+    },
+    {
+      "obfuscated": "h3Q",
+      "deobfuscated": "f494v6"
+    },
+    {
+      "obfuscated": "t$4",
+      "deobfuscated": "Easing"
+    },
+    {
+      "obfuscated": "g7y",
+      "deobfuscated": "bgGradient"
+    },
+    {
+      "obfuscated": "Y00",
+      "deobfuscated": "f511a0"
+    },
+    {
+      "obfuscated": "x",
+      "deobfuscated": "scale"
+    },
+    {
+      "obfuscated": "y",
+      "deobfuscated": "f542a1"
+    },
+    {
+      "obfuscated": "Math",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "z0M",
+      "deobfuscated": "f559v26"
+    },
+    {
+      "obfuscated": "e7N",
+      "deobfuscated": "f559v29"
+    },
+    {
+      "obfuscated": "X1w",
+      "deobfuscated": "Math"
+    },
+    {
+      "obfuscated": "z",
+      "deobfuscated": "game"
+    },
+    {
+      "obfuscated": "f8y",
+      "deobfuscated": "saveControls"
+    },
+    {
+      "obfuscated": "k6N",
+      "deobfuscated": "f625v2"
+    },
+    {
+      "obfuscated": "C5L",
+      "deobfuscated": "f625v1"
+    },
+    {
+      "obfuscated": "P0y",
+      "deobfuscated": "news"
+    },
+    {
+      "obfuscated": "SafeTrig",
+      "deobfuscated": "document"
+    },
+    {
+      "obfuscated": "type",
+      "deobfuscated": "transition"
+    },
+    {
+      "obfuscated": "l3z",
+      "deobfuscated": "game"
+    },
+    {
+      "obfuscated": "v_p",
+      "deobfuscated": "f777a0"
+    },
+    {
+      "obfuscated": "n1",
+      "deobfuscated": "isEditor"
+    },
+    {
+      "obfuscated": "a8J",
+      "deobfuscated": "f782v9"
+    },
+    {
+      "obfuscated": "J0Y",
+      "deobfuscated": "padding"
+    },
+    {
+      "obfuscated": "Z_D",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "c8Z",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "i",
+      "deobfuscated": "f812v297"
+    },
+    {
+      "obfuscated": "Q1g",
+      "deobfuscated": "f812v67"
+    },
+    {
+      "obfuscated": "registerClassAlias",
+      "deobfuscated": "f766v61"
+    },
+    {
+      "obfuscated": "P$t",
+      "deobfuscated": "renderer"
+    },
+    {
+      "obfuscated": "E3j",
+      "deobfuscated": "f817v32"
+    },
+    {
+      "obfuscated": "w28",
+      "deobfuscated": "f847v1"
+    },
+    {
+      "obfuscated": "T1n",
+      "deobfuscated": "m"
+    },
+    {
+      "obfuscated": "F9g",
+      "deobfuscated": "f847v2"
+    },
+    {
+      "obfuscated": "P0R",
+      "deobfuscated": "f850v3"
+    },
+    {
+      "obfuscated": "r9_",
+      "deobfuscated": "f850v4"
+    },
+    {
+      "obfuscated": "I4$",
+      "deobfuscated": "maploadwindowhotnessslider"
+    },
+    {
+      "obfuscated": "Q8A",
+      "deobfuscated": "f858a0"
+    },
+    {
+      "obfuscated": "t6V",
+      "deobfuscated": "f817v25"
+    },
+    {
+      "obfuscated": "U$e",
+      "deobfuscated": "maploadwindow"
+    },
+    {
+      "obfuscated": "h89",
+      "deobfuscated": "f868v16"
+    },
+    {
+      "obfuscated": "m4$",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "w6S",
+      "deobfuscated": "maploadwindowcontainer"
+    },
+    {
+      "obfuscated": "K1M",
+      "deobfuscated": "f818"
+    },
+    {
+      "obfuscated": "b03",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "S5r",
+      "deobfuscated": "f890v8"
+    },
+    {
+      "obfuscated": "v0T",
+      "deobfuscated": "document"
+    },
+    {
+      "obfuscated": "x8q",
+      "deobfuscated": "newbonklobby_tooltip"
+    },
+    {
+      "obfuscated": "K1_",
+      "deobfuscated": "newbonklobby_teambuttonscontainer"
+    },
+    {
+      "obfuscated": "x$a",
+      "deobfuscated": "f929v0"
+    },
+    {
+      "obfuscated": "w7d",
+      "deobfuscated": "f903v9"
+    },
+    {
+      "obfuscated": "l9p",
+      "deobfuscated": "networkEngine"
+    },
+    {
+      "obfuscated": "e0j",
+      "deobfuscated": "f952v0"
+    },
+    {
+      "obfuscated": "U56",
+      "deobfuscated": "f952v10"
+    },
+    {
+      "obfuscated": "b0D",
+      "deobfuscated": "f960v12"
+    },
+    {
+      "obfuscated": "o6M",
+      "deobfuscated": "f961v8"
+    },
+    {
+      "obfuscated": "G6Y",
+      "deobfuscated": "f965v5"
+    },
+    {
+      "obfuscated": "D0j",
+      "deobfuscated": "f974v0"
+    },
+    {
+      "obfuscated": "y9f",
+      "deobfuscated": "game"
+    },
+    {
+      "obfuscated": "Date",
+      "deobfuscated": "f960a0"
+    },
+    {
+      "obfuscated": "e1P",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "U4y",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "Y4A",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "g8k",
+      "deobfuscated": "newbonklobby_bluebutton"
+    },
+    {
+      "obfuscated": "C$h",
+      "deobfuscated": "document"
+    },
+    {
+      "obfuscated": "d12",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "Q2j",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "s8I",
+      "deobfuscated": "f1025v8"
+    },
+    {
+      "obfuscated": "tutorialTitle",
+      "deobfuscated": "settings"
+    },
+    {
+      "obfuscated": "forceTeamCount",
+      "deobfuscated": "settings"
+    },
+    {
+      "obfuscated": "V5k",
+      "deobfuscated": "f1037v8"
+    },
+    {
+      "obfuscated": "H4p",
+      "deobfuscated": "Object"
+    },
+    {
+      "obfuscated": "E5d",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "M0P",
+      "deobfuscated": "mapeditor_leftbox_createmenucontainerright"
+    },
+    {
+      "obfuscated": "getRandomOrder",
+      "deobfuscated": "f1100a0"
+    },
+    {
+      "obfuscated": "getOrderedRandomMap",
+      "deobfuscated": "screenRatioToPhysicsCoordinate"
+    },
+    {
+      "obfuscated": "q0b",
+      "deobfuscated": "f1100v8"
+    },
+    {
+      "obfuscated": "K4R",
+      "deobfuscated": "f1100v10"
+    },
+    {
+      "obfuscated": "f6q",
+      "deobfuscated": "editorHelp"
+    },
+    {
+      "obfuscated": "recvRandomOrder",
+      "deobfuscated": "m"
+    },
+    {
+      "obfuscated": "L7s",
+      "deobfuscated": "editorHelp"
+    },
+    {
+      "obfuscated": "P",
+      "deobfuscated": "editorHelp"
+    },
+    {
+      "obfuscated": "Y2b",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "n9a",
+      "deobfuscated": "i"
+    },
+    {
+      "obfuscated": "D$_",
+      "deobfuscated": "f1162"
+    },
+    {
+      "obfuscated": "rxdb",
+      "deobfuscated": "yv"
+    },
+    {
+      "obfuscated": "cr",
+      "deobfuscated": "sx"
+    },
+    {
+      "obfuscated": "av",
+      "deobfuscated": "r"
+    },
+    {
+      "obfuscated": "I$7",
+      "deobfuscated": "mapeditor_rightbox_table_cfy"
+    },
+    {
+      "obfuscated": "Y",
+      "deobfuscated": "f1214v1"
+    },
+    {
+      "obfuscated": "x_c",
+      "deobfuscated": "f1214v1"
+    },
+    {
+      "obfuscated": "cc",
+      "deobfuscated": "f1215v2"
+    },
+    {
+      "obfuscated": "ba",
+      "deobfuscated": "f1215v2"
+    },
+    {
+      "obfuscated": "p9w",
+      "deobfuscated": "f1217v0"
+    },
+    {
+      "obfuscated": "a6t",
+      "deobfuscated": "f1215v2"
+    },
+    {
+      "obfuscated": "dl",
+      "deobfuscated": "y"
+    },
+    {
+      "obfuscated": "E80",
+      "deobfuscated": "f1035v191"
+    },
+    {
+      "obfuscated": "bf",
+      "deobfuscated": "f1279v6"
+    },
+    {
+      "obfuscated": "F2U",
+      "deobfuscated": "f1348v8"
+    },
+    {
+      "obfuscated": "x4T",
+      "deobfuscated": "newPlayerGuideContainer"
+    }
+  ],
+  "functions": [
+    {
+      "kind": "function",
+      "name": "SkinManager",
+      "args": "",
+      "line": 8
+    },
+    {
+      "kind": "function",
+      "name": "skinLayerZoom",
+      "args": "e",
+      "line": 10
+    },
+    {
+      "kind": "function",
+      "name": "getLayerName",
+      "args": "i",
+      "line": 49
+    },
+    {
+      "kind": "function",
+      "name": "layerSliderTickHandle",
+      "args": "e",
+      "line": 59
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 64
+    },
+    {
+      "kind": "function",
+      "name": "loadShape",
+      "args": "",
+      "line": 70
+    },
+    {
+      "kind": "function",
+      "name": "setShortSliderTimeout",
+      "args": "",
+      "line": 97
+    },
+    {
+      "kind": "function",
+      "name": "layerSliderHandler",
+      "args": "",
+      "line": 103
+    },
+    {
+      "kind": "function",
+      "name": "setSkinBackground",
+      "args": "color",
+      "line": 154
+    },
+    {
+      "kind": "function",
+      "name": "moveLayerUp",
+      "args": "",
+      "line": 164
+    },
+    {
+      "kind": "function",
+      "name": "redrawLayer",
+      "args": "",
+      "line": 190
+    },
+    {
+      "kind": "function",
+      "name": "changeLayerColor",
+      "args": "color",
+      "line": 197
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_savebutton.onclick",
+      "args": "",
+      "line": 209
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_cancelbutton.onclick",
+      "args": "",
+      "line": 212
+    },
+    {
+      "kind": "function",
+      "name": "showSkinBackgroundColorPicker",
+      "args": "",
+      "line": 222
+    },
+    {
+      "kind": "function",
+      "name": "openLayerProperties",
+      "args": "",
+      "line": 229
+    },
+    {
+      "kind": "function",
+      "name": "boolToString",
+      "args": "bool",
+      "line": 254
+    },
+    {
+      "kind": "function",
+      "name": "changeLayerProperty",
+      "args": "e",
+      "line": 264
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_propertiesbox_colorrect.onclick",
+      "args": "",
+      "line": 304
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "skin",
+      "line": 322
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 343
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "eventName, callback",
+      "line": 363
+    },
+    {
+      "kind": "function",
+      "name": "dispatchSkinEvent",
+      "args": "?",
+      "line": 370
+    },
+    {
+      "kind": "function",
+      "name": "selectLayer",
+      "args": "",
+      "line": 378
+    },
+    {
+      "kind": "function",
+      "name": "hideTeamColorDropdown",
+      "args": "",
+      "line": 387
+    },
+    {
+      "kind": "function",
+      "name": "flipLayer",
+      "args": "layer",
+      "line": 394
+    },
+    {
+      "kind": "function",
+      "name": "setCursorGrab",
+      "args": "",
+      "line": 408
+    },
+    {
+      "kind": "function",
+      "name": "setLayerXY",
+      "args": "e",
+      "line": 411
+    },
+    {
+      "kind": "function",
+      "name": "round",
+      "args": "number",
+      "line": 421
+    },
+    {
+      "kind": "function",
+      "name": "openSkinLayerSelectWindow",
+      "args": "",
+      "line": 427
+    },
+    {
+      "kind": "function",
+      "name": "removeLayer",
+      "args": "",
+      "line": 460
+    },
+    {
+      "kind": "function",
+      "name": "hideLayerSelect",
+      "args": "",
+      "line": 475
+    },
+    {
+      "kind": "function",
+      "name": "setSkinTeam",
+      "args": "e",
+      "line": 479
+    },
+    {
+      "kind": "function",
+      "name": "hexToString",
+      "args": "hex",
+      "line": 504
+    },
+    {
+      "kind": "function",
+      "name": "setLayerNames",
+      "args": "",
+      "line": 508
+    },
+    {
+      "kind": "function",
+      "name": "moveLayerDown",
+      "args": "",
+      "line": 553
+    },
+    {
+      "kind": "function",
+      "name": "highlightLayer",
+      "args": "",
+      "line": 567
+    },
+    {
+      "kind": "function",
+      "name": "redrawIfNeeded",
+      "args": "",
+      "line": 578
+    },
+    {
+      "kind": "function",
+      "name": "removeCursorGrab",
+      "args": "",
+      "line": 583
+    },
+    {
+      "kind": "function",
+      "name": "setColorFieldBackground",
+      "args": "",
+      "line": 586
+    },
+    {
+      "kind": "function",
+      "name": "grabLayer",
+      "args": "e",
+      "line": 594
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 601
+    },
+    {
+      "kind": "function",
+      "name": "teamColorDropdown",
+      "args": "e",
+      "line": 608
+    },
+    {
+      "kind": "function",
+      "name": "ThumbMaker",
+      "args": "",
+      "line": 629
+    },
+    {
+      "kind": "function",
+      "name": "IngameManager",
+      "args": "info, token",
+      "line": 640
+    },
+    {
+      "kind": "function",
+      "name": "setUsername",
+      "args": "id, username",
+      "line": 645
+    },
+    {
+      "kind": "function",
+      "name": "hostMapSuggestHandler",
+      "args": "map, playerId",
+      "line": 652
+    },
+    {
+      "kind": "function",
+      "name": "readyResetHandler",
+      "args": "",
+      "line": 732
+    },
+    {
+      "kind": "function",
+      "name": "playerJoinHandler",
+      "args": "id, username, guest, level, team, skinObj",
+      "line": 746
+    },
+    {
+      "kind": "function",
+      "name": "passwordChangeHandler",
+      "args": "hasPassword",
+      "line": 783
+    },
+    {
+      "kind": "function",
+      "name": "tabbedHandler",
+      "args": "playerId, tabbed",
+      "line": 790
+    },
+    {
+      "kind": "function",
+      "name": "unfavoriteMap",
+      "args": "",
+      "line": 800
+    },
+    {
+      "kind": "function",
+      "name": "mapAddHandler",
+      "args": "map",
+      "line": 832
+    },
+    {
+      "kind": "function",
+      "name": "p2pRevertHandler",
+      "args": "stepGroup, step",
+      "line": 843
+    },
+    {
+      "kind": "function",
+      "name": "curateReset",
+      "args": "",
+      "line": 848
+    },
+    {
+      "kind": "function",
+      "name": "hostLeaveHandler",
+      "args": "oldHostId, newHostId, leaveStep",
+      "line": 854
+    },
+    {
+      "kind": "function",
+      "name": "commandHandler",
+      "args": "f64a0",
+      "line": 874
+    },
+    {
+      "kind": "function",
+      "name": "readyHandler",
+      "args": "playerId, isReady",
+      "line": 1216
+    },
+    {
+      "kind": "function",
+      "name": "friendHandler",
+      "args": "playerId",
+      "line": 1232
+    },
+    {
+      "kind": "function",
+      "name": "teamLockHandler",
+      "args": "isLocked",
+      "line": 1238
+    },
+    {
+      "kind": "function",
+      "name": "mapDeleteHandler",
+      "args": "",
+      "line": 1250
+    },
+    {
+      "kind": "function",
+      "name": "nerfBuffHandler",
+      "args": "playerId, balance",
+      "line": 1254
+    },
+    {
+      "kind": "function",
+      "name": "serverMessageHandler",
+      "args": "message",
+      "line": 1260
+    },
+    {
+      "kind": "function",
+      "name": "gameStartHandler",
+      "args": "f71a0, f71a1, f71a2",
+      "line": 1266
+    },
+    {
+      "kind": "function",
+      "name": "_startGame",
+      "args": "",
+      "line": 1323
+    },
+    {
+      "kind": "function",
+      "name": "curateHandler",
+      "args": "success, reason",
+      "line": 1326
+    },
+    {
+      "kind": "function",
+      "name": "mapSuggestHandler",
+      "args": "mapName, mapAuthor, playerId",
+      "line": 1375
+    },
+    {
+      "kind": "function",
+      "name": "setXPProgress",
+      "args": "percent, hasAnimation",
+      "line": 1380
+    },
+    {
+      "kind": "function",
+      "name": "playerLeaveHandler",
+      "args": "playerId, leaveStep",
+      "line": 1402
+    },
+    {
+      "kind": "function",
+      "name": "teamToggleHandler",
+      "args": "hasTeams",
+      "line": 1423
+    },
+    {
+      "kind": "function",
+      "name": "XPGainHandler",
+      "args": "newXP",
+      "line": 1442
+    },
+    {
+      "kind": "function",
+      "name": "disconnectHandler",
+      "args": "",
+      "line": 1446
+    },
+    {
+      "kind": "function",
+      "name": "leaveConfirm",
+      "args": "",
+      "line": 1451
+    },
+    {
+      "kind": "function",
+      "name": "showConfirmNoHost",
+      "args": "",
+      "line": 1452
+    },
+    {
+      "kind": "function",
+      "name": "confirmNoHost",
+      "args": "",
+      "line": 1465
+    },
+    {
+      "kind": "function",
+      "name": "confirm",
+      "args": "",
+      "line": 1469
+    },
+    {
+      "kind": "function",
+      "name": "_cancel",
+      "args": "",
+      "line": 1473
+    },
+    {
+      "kind": "function",
+      "name": "endRoom",
+      "args": "",
+      "line": 1476
+    },
+    {
+      "kind": "function",
+      "name": "showConfirm",
+      "args": "",
+      "line": 1505
+    },
+    {
+      "kind": "function",
+      "name": "cancel",
+      "args": "",
+      "line": 1519
+    },
+    {
+      "kind": "function",
+      "name": "cancelNoHost",
+      "args": "",
+      "line": 1531
+    },
+    {
+      "kind": "function",
+      "name": "_cancelNoHost",
+      "args": "",
+      "line": 1543
+    },
+    {
+      "kind": "function",
+      "name": "fillXPBar",
+      "args": "hasAnimation",
+      "line": 1549
+    },
+    {
+      "kind": "function",
+      "name": "physicsChangeHandler",
+      "args": "mode, physics",
+      "line": 1585
+    },
+    {
+      "kind": "function",
+      "name": "gameEnd",
+      "args": "",
+      "line": 1595
+    },
+    {
+      "kind": "function",
+      "name": "showGameHandler",
+      "args": "gameState",
+      "line": 1602
+    },
+    {
+      "kind": "function",
+      "name": "gameEndHandler",
+      "args": "",
+      "line": 1699
+    },
+    {
+      "kind": "function",
+      "name": "gameCompleteHandler",
+      "args": "",
+      "line": 1712
+    },
+    {
+      "kind": "function",
+      "name": "unmuteHandler",
+      "args": "playerId",
+      "line": 1720
+    },
+    {
+      "kind": "function",
+      "name": "lobbyMapHandler",
+      "args": "",
+      "line": 1727
+    },
+    {
+      "kind": "function",
+      "name": "teamChangeHandler",
+      "args": "playerId, team",
+      "line": 1729
+    },
+    {
+      "kind": "function",
+      "name": "startGame",
+      "args": "",
+      "line": 1735
+    },
+    {
+      "kind": "function",
+      "name": "displayStatus",
+      "args": "f102a0, f102a1, f102a2, f102a3",
+      "line": 1787
+    },
+    {
+      "kind": "function",
+      "name": "afkWarnHandler",
+      "args": "",
+      "line": 1802
+    },
+    {
+      "kind": "function",
+      "name": "sessionEvent",
+      "args": "?",
+      "line": 1808
+    },
+    {
+      "kind": "function",
+      "name": "recordResponseHandler",
+      "args": "f105a0",
+      "line": 1816
+    },
+    {
+      "kind": "function",
+      "name": "showLobbyHandler",
+      "args": "f106a0",
+      "line": 1822
+    },
+    {
+      "kind": "function",
+      "name": "f107",
+      "args": "f107a0",
+      "line": 1832
+    },
+    {
+      "kind": "function",
+      "name": "levelUpHandler",
+      "args": "f108a0, f108a1",
+      "line": 1843
+    },
+    {
+      "kind": "function",
+      "name": "favoriteMap",
+      "args": "",
+      "line": 1851
+    },
+    {
+      "kind": "function",
+      "name": "nameChangeHandler",
+      "args": "f111a0",
+      "line": 1877
+    },
+    {
+      "kind": "function",
+      "name": "pingDataHandler",
+      "args": "f112a0",
+      "line": 1880
+    },
+    {
+      "kind": "function",
+      "name": "debugWinnerHandler",
+      "args": "f113a0, f113a1",
+      "line": 1895
+    },
+    {
+      "kind": "function",
+      "name": "f114",
+      "args": "f114a0",
+      "line": 1901
+    },
+    {
+      "kind": "function",
+      "name": "hostChangeHandler",
+      "args": "f115a0",
+      "line": 1906
+    },
+    {
+      "kind": "function",
+      "name": "localRevertHandler",
+      "args": "f116a0",
+      "line": 1911
+    },
+    {
+      "kind": "function",
+      "name": "muteHandler",
+      "args": "f117a0",
+      "line": 1929
+    },
+    {
+      "kind": "function",
+      "name": "kickBanHandler",
+      "args": "_, f118a1",
+      "line": 1936
+    },
+    {
+      "kind": "function",
+      "name": "roomCreateHandler",
+      "args": "f119a0, f119a1",
+      "line": 1945
+    },
+    {
+      "kind": "function",
+      "name": "roomJoinHandler",
+      "args": "f120a0, f120a1, _, f120a3, f120a4",
+      "line": 1975
+    },
+    {
+      "kind": "function",
+      "name": "modeChangeHandler",
+      "args": "mode",
+      "line": 1992
+    },
+    {
+      "kind": "method",
+      "name": "?.getGameSettings",
+      "args": "",
+      "line": 1998
+    },
+    {
+      "kind": "method",
+      "name": "?.closeClicked",
+      "args": "",
+      "line": 2001
+    },
+    {
+      "kind": "function",
+      "name": "winAmountChangeHandler",
+      "args": "winAmount",
+      "line": 2004
+    },
+    {
+      "kind": "function",
+      "name": "f123",
+      "args": "",
+      "line": 2010
+    },
+    {
+      "kind": "function",
+      "name": "mapReorderHandler",
+      "args": "",
+      "line": 2017
+    },
+    {
+      "kind": "method",
+      "name": "?.recvInputs",
+      "args": "f125a0, f125a1, f125a2",
+      "line": 2019
+    },
+    {
+      "kind": "function",
+      "name": "typingHandler",
+      "args": "",
+      "line": 2032
+    },
+    {
+      "kind": "method",
+      "name": "?.updateLocalInputKeys",
+      "args": "",
+      "line": 2034
+    },
+    {
+      "kind": "method",
+      "name": "?.tabbed",
+      "args": "f128a0",
+      "line": 2039
+    },
+    {
+      "kind": "function",
+      "name": "newTokenHandler",
+      "args": "token",
+      "line": 2044
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 2050
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f131a0, f131a1",
+      "line": 2079
+    },
+    {
+      "kind": "function",
+      "name": "chatMessageHandler",
+      "args": "playerId, message",
+      "line": 2085
+    },
+    {
+      "kind": "function",
+      "name": "RoomList",
+      "args": "",
+      "line": 2110
+    },
+    {
+      "kind": "method",
+      "name": "roomlist_close.onclick",
+      "args": "",
+      "line": 2127
+    },
+    {
+      "kind": "function",
+      "name": "f135",
+      "args": "",
+      "line": 2144
+    },
+    {
+      "kind": "method",
+      "name": "roomRow.onmouseover",
+      "args": "",
+      "line": 2197
+    },
+    {
+      "kind": "method",
+      "name": "roomRow.onmouseover",
+      "args": "f138a0",
+      "line": 2205
+    },
+    {
+      "kind": "function",
+      "name": "f140",
+      "args": "",
+      "line": 2297
+    },
+    {
+      "kind": "function",
+      "name": "f142",
+      "args": "",
+      "line": 2334
+    },
+    {
+      "kind": "function",
+      "name": "f143",
+      "args": "",
+      "line": 2354
+    },
+    {
+      "kind": "function",
+      "name": "f144",
+      "args": "f144a0, f144a1",
+      "line": 2359
+    },
+    {
+      "kind": "method",
+      "name": "roomlistrefreshbutton.onclick",
+      "args": "",
+      "line": 2378
+    },
+    {
+      "kind": "function",
+      "name": "f146",
+      "args": "",
+      "line": 2382
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterbutton.onclick",
+      "args": "",
+      "line": 2397
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_classic.onchange",
+      "args": "",
+      "line": 2411
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_arrows.onchange",
+      "args": "",
+      "line": 2415
+    },
+    {
+      "kind": "function",
+      "name": "f150",
+      "args": "",
+      "line": 2419
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_deatharrows.onchange",
+      "args": "",
+      "line": 2434
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_grapple.onchange",
+      "args": "",
+      "line": 2438
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_football.onchange",
+      "args": "",
+      "line": 2442
+    },
+    {
+      "kind": "method",
+      "name": "roomlistfilterwindow_check_vtol.onchange",
+      "args": "",
+      "line": 2446
+    },
+    {
+      "kind": "method",
+      "name": "?.recvToken",
+      "args": "token",
+      "line": 2452
+    },
+    {
+      "kind": "function",
+      "name": "f156",
+      "args": "",
+      "line": 2455
+    },
+    {
+      "kind": "function",
+      "name": "f157",
+      "args": "f157a0, f157a1, f157a2",
+      "line": 2464
+    },
+    {
+      "kind": "method",
+      "name": "?.clearToken",
+      "args": "",
+      "line": 2471
+    },
+    {
+      "kind": "method",
+      "name": "?.reset",
+      "args": "",
+      "line": 2488
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "",
+      "line": 2496
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 2506
+    },
+    {
+      "kind": "method",
+      "name": "?.refresh",
+      "args": "",
+      "line": 2531
+    },
+    {
+      "kind": "method",
+      "name": "?.refreshIfNecessary",
+      "args": "",
+      "line": 2534
+    },
+    {
+      "kind": "method",
+      "name": "?.disableMouseEvents",
+      "args": "",
+      "line": 2539
+    },
+    {
+      "kind": "method",
+      "name": "?.enableMouseEvents",
+      "args": "",
+      "line": 2542
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f165a0, f165a1",
+      "line": 2546
+    },
+    {
+      "kind": "function",
+      "name": "f166",
+      "args": "",
+      "line": 2553
+    },
+    {
+      "kind": "function",
+      "name": "f169",
+      "args": "",
+      "line": 2604
+    },
+    {
+      "kind": "function",
+      "name": "f171",
+      "args": "f171a0",
+      "line": 2619
+    },
+    {
+      "kind": "function",
+      "name": "f172",
+      "args": "",
+      "line": 2625
+    },
+    {
+      "kind": "function",
+      "name": "f173",
+      "args": "",
+      "line": 2640
+    },
+    {
+      "kind": "function",
+      "name": "f174",
+      "args": "_, f174a1",
+      "line": 2643
+    },
+    {
+      "kind": "function",
+      "name": "f175",
+      "args": "?",
+      "line": 2655
+    },
+    {
+      "kind": "function",
+      "name": "f176",
+      "args": "",
+      "line": 2663
+    },
+    {
+      "kind": "function",
+      "name": "f177",
+      "args": "f177a0",
+      "line": 2668
+    },
+    {
+      "kind": "function",
+      "name": "f178",
+      "args": "",
+      "line": 2677
+    },
+    {
+      "kind": "function",
+      "name": "f179",
+      "args": "",
+      "line": 2682
+    },
+    {
+      "kind": "function",
+      "name": "f180",
+      "args": "",
+      "line": 2687
+    },
+    {
+      "kind": "method",
+      "name": "Physics.createNewState",
+      "args": "f181a0, f181a1, f181a2, f181a3, f181a4, f181a5, f181a6",
+      "line": 2696
+    },
+    {
+      "kind": "function",
+      "name": "f182",
+      "args": "f182a0, f182a1, f182a2",
+      "line": 2699
+    },
+    {
+      "kind": "method",
+      "name": "Physics.prototype.step",
+      "args": "map, playerInputs, playerActions, stepDuration, data, numPasses, isTutorial, quickMaps",
+      "line": 3178
+    },
+    {
+      "kind": "function",
+      "name": "teamGoalEvent",
+      "args": "f185a0",
+      "line": 3192
+    },
+    {
+      "kind": "function",
+      "name": "f186",
+      "args": "f186a0",
+      "line": 3198
+    },
+    {
+      "kind": "method",
+      "name": "Physics.contactListener.BeginContact",
+      "args": "f187a0",
+      "line": 3226
+    },
+    {
+      "kind": "method",
+      "name": "Physics.contactListener.EndContact",
+      "args": "",
+      "line": 3324
+    },
+    {
+      "kind": "method",
+      "name": "Physics.contactListener.PreSolve",
+      "args": "",
+      "line": 3326
+    },
+    {
+      "kind": "method",
+      "name": "Physics.contactListener.PostSolve",
+      "args": "f189a0, f189a1",
+      "line": 3328
+    },
+    {
+      "kind": "function",
+      "name": "capEvent",
+      "args": "f192a0, f192a1",
+      "line": 3566
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f184v153",
+      "args": "",
+      "line": 3972
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f193v0",
+      "args": "f194a0, f194a1, f194a2",
+      "line": 3975
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f184v154",
+      "args": "f195a0",
+      "line": 4127
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f193v23",
+      "args": "f196a0",
+      "line": 4152
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f193v31",
+      "args": "",
+      "line": 4170
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f197v7",
+      "args": "f198a0, f198a1, f198a2",
+      "line": 4193
+    },
+    {
+      "kind": "function",
+      "name": "f200",
+      "args": "f200a0",
+      "line": 4427
+    },
+    {
+      "kind": "function",
+      "name": "f201",
+      "args": "f201a0, f201a1, f201a2, f201a3",
+      "line": 4503
+    },
+    {
+      "kind": "class",
+      "name": "BonkView",
+      "args": "",
+      "line": 4878
+    },
+    {
+      "kind": "function",
+      "name": "f225",
+      "args": "f225a0",
+      "line": 5090
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f226v0",
+      "args": "",
+      "line": 5095
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f226v1",
+      "args": "",
+      "line": 5123
+    },
+    {
+      "kind": "class",
+      "name": "Skin",
+      "args": "",
+      "line": 5270
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "parseLayer",
+      "args": "view",
+      "line": 5369
+    },
+    {
+      "kind": "class",
+      "name": "Controls",
+      "args": "",
+      "line": 5434
+    },
+    {
+      "kind": "class",
+      "name": "PeerClass",
+      "args": "",
+      "line": 5568
+    },
+    {
+      "kind": "class",
+      "name": "Map",
+      "args": "",
+      "line": 5583
+    },
+    {
+      "kind": "function",
+      "name": "ReplayRenderer",
+      "args": "",
+      "line": 5812
+    },
+    {
+      "kind": "function",
+      "name": "loadReplay",
+      "args": "",
+      "line": 5816
+    },
+    {
+      "kind": "function",
+      "name": "fetchReplays",
+      "args": "",
+      "line": 5858
+    },
+    {
+      "kind": "method",
+      "name": "bgreplay_timescrub.onmouseover",
+      "args": "",
+      "line": 5927
+    },
+    {
+      "kind": "method",
+      "name": "bgreplay_timescrub.onmouseout",
+      "args": "",
+      "line": 5930
+    },
+    {
+      "kind": "method",
+      "name": "bgreplay_timescrub.oninput",
+      "args": "",
+      "line": 5933
+    },
+    {
+      "kind": "function",
+      "name": "fadeInMenu",
+      "args": "",
+      "line": 5935
+    },
+    {
+      "kind": "method",
+      "name": "bgreplay_timescrub.onchange",
+      "args": "",
+      "line": 5945
+    },
+    {
+      "kind": "function",
+      "name": "getInputs",
+      "args": "step",
+      "line": 5954
+    },
+    {
+      "kind": "function",
+      "name": "fadeOutMenu",
+      "args": "",
+      "line": 5969
+    },
+    {
+      "kind": "function",
+      "name": "replayFrameAdvance",
+      "args": "",
+      "line": 5979
+    },
+    {
+      "kind": "method",
+      "name": "?.nextReplay",
+      "args": "",
+      "line": 6034
+    },
+    {
+      "kind": "method",
+      "name": "?.prevReplay",
+      "args": "",
+      "line": 6038
+    },
+    {
+      "kind": "method",
+      "name": "?.reportReplay",
+      "args": "",
+      "line": 6045
+    },
+    {
+      "kind": "function",
+      "name": "replayEvent",
+      "args": "?",
+      "line": 6055
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "eventName, callback",
+      "line": 6065
+    },
+    {
+      "kind": "method",
+      "name": "?.blur",
+      "args": "",
+      "line": 6071
+    },
+    {
+      "kind": "method",
+      "name": "?.unblur",
+      "args": "",
+      "line": 6074
+    },
+    {
+      "kind": "method",
+      "name": "?.stop",
+      "args": "",
+      "line": 6077
+    },
+    {
+      "kind": "method",
+      "name": "?.resume",
+      "args": "",
+      "line": 6081
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 6095
+    },
+    {
+      "kind": "function",
+      "name": "performStep",
+      "args": "stepLength",
+      "line": 6105
+    },
+    {
+      "kind": "class",
+      "name": "Map2",
+      "args": "",
+      "line": 6116
+    },
+    {
+      "kind": "function",
+      "name": "MapParser",
+      "args": "",
+      "line": 6196
+    },
+    {
+      "kind": "function",
+      "name": "countFPS",
+      "args": "",
+      "line": 6198
+    },
+    {
+      "kind": "class",
+      "name": "BonkObject",
+      "args": "",
+      "line": 6205
+    },
+    {
+      "kind": "class",
+      "name": "Shape",
+      "args": "",
+      "line": 6353
+    },
+    {
+      "kind": "class",
+      "name": "Spawn",
+      "args": "",
+      "line": 6367
+    },
+    {
+      "kind": "class",
+      "name": "CaptureZone",
+      "args": "",
+      "line": 6393
+    },
+    {
+      "kind": "class",
+      "name": "Game",
+      "args": "",
+      "line": 6432
+    },
+    {
+      "kind": "class",
+      "name": "Maps",
+      "args": "",
+      "line": 6525
+    },
+    {
+      "kind": "function",
+      "name": "f286",
+      "args": "f286a0",
+      "line": 6819
+    },
+    {
+      "kind": "method",
+      "name": "ThumbMaker.createImage",
+      "args": "f290a0, f290a1, ?",
+      "line": 6944
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.encodeToDatabase",
+      "args": "f291a0",
+      "line": 6988
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.decodeFromDatabase",
+      "args": "mapString",
+      "line": 7213
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getBlankMap",
+      "args": "",
+      "line": 7494
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewBody",
+      "args": "",
+      "line": 7532
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewFixture",
+      "args": "f295a0",
+      "line": 7583
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewBoxShape",
+      "args": "",
+      "line": 7598
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewCircleShape",
+      "args": "",
+      "line": 7612
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewPolyShape",
+      "args": "",
+      "line": 7624
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewChainShape",
+      "args": "",
+      "line": 7637
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewRevoluteJoint",
+      "args": "f300a0, f300a1",
+      "line": 7652
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewDistanceJoint",
+      "args": "f301a0, f301a1",
+      "line": 7674
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewLPJJoint",
+      "args": "f302a0, f302a1",
+      "line": 7696
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewLSJJoint",
+      "args": "f303a0, f303a1",
+      "line": 7716
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewGearJoint",
+      "args": "",
+      "line": 7732
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewCapZone",
+      "args": "",
+      "line": 7741
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.getNewSpawn",
+      "args": "",
+      "line": 7749
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.encode",
+      "args": "f304a0",
+      "line": 7764
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.decode",
+      "args": "f305a0",
+      "line": 7768
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.mergeIntoNewMap",
+      "args": "map",
+      "line": 7772
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.fromOldString",
+      "args": "f314a0",
+      "line": 8438
+    },
+    {
+      "kind": "method",
+      "name": "MapParser.fromOldFormat",
+      "args": "map",
+      "line": 8446
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "convertPlatform",
+      "args": "",
+      "line": 8473
+    },
+    {
+      "kind": "method",
+      "name": "AvatarRenderer.createImage",
+      "args": "f317a0, f317a1, f317a2, f317a3, f317a4, f317a5, f317a6, f317a7, f317a8, ?, f317a10, f317a11",
+      "line": 8676
+    },
+    {
+      "kind": "function",
+      "name": "f318",
+      "args": "",
+      "line": 8683
+    },
+    {
+      "kind": "method",
+      "name": "AvatarRenderer.HSLToHex",
+      "args": "f320a0, f320a1, f320a2",
+      "line": 8826
+    },
+    {
+      "kind": "method",
+      "name": "AvatarRenderer.hexToHSL",
+      "args": "f321a0",
+      "line": 8868
+    },
+    {
+      "kind": "method",
+      "name": "AvatarRenderer.hueify",
+      "args": "f322a0, f322a1",
+      "line": 8913
+    },
+    {
+      "kind": "method",
+      "name": "AvatarRenderer.teamify",
+      "args": "f323a0, f323a1",
+      "line": 8920
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.createNewState",
+      "args": "f324a0, _, f324a2",
+      "line": 8935
+    },
+    {
+      "kind": "function",
+      "name": "SkinRenderer",
+      "args": "",
+      "line": 8999
+    },
+    {
+      "kind": "function",
+      "name": "f326",
+      "args": "f326a0",
+      "line": 9008
+    },
+    {
+      "kind": "function",
+      "name": "f327",
+      "args": "",
+      "line": 9018
+    },
+    {
+      "kind": "function",
+      "name": "f328",
+      "args": "f328a0, _, f328a2",
+      "line": 9022
+    },
+    {
+      "kind": "function",
+      "name": "f329",
+      "args": "f329a0, f329a1, f329a2",
+      "line": 9046
+    },
+    {
+      "kind": "function",
+      "name": "f330",
+      "args": "f330a0",
+      "line": 9084
+    },
+    {
+      "kind": "function",
+      "name": "f331",
+      "args": "f331a0, f331a1, f331a2",
+      "line": 9118
+    },
+    {
+      "kind": "function",
+      "name": "f332",
+      "args": "f332a0",
+      "line": 9156
+    },
+    {
+      "kind": "function",
+      "name": "f333",
+      "args": "f333a0",
+      "line": 9168
+    },
+    {
+      "kind": "method",
+      "name": "f333v8.onmousedown",
+      "args": "",
+      "line": 9206
+    },
+    {
+      "kind": "function",
+      "name": "f336",
+      "args": "__, f336a1, _, f336a3",
+      "line": 9215
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_colorpicker_brightness_slider.onchange",
+      "args": "",
+      "line": 9236
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_colorpicker_brightness_slider.oninput",
+      "args": "",
+      "line": 9240
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_colorpicker_canvas.onmousedown",
+      "args": "f339a0",
+      "line": 9244
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 9247
+    },
+    {
+      "kind": "function",
+      "name": "f341",
+      "args": "",
+      "line": 9253
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_colorpicker_canvas.onmousemove",
+      "args": "f342a0",
+      "line": 9265
+    },
+    {
+      "kind": "method",
+      "name": "?.showColorPicker",
+      "args": "f343a0, f343a1, f343a2, f343a3",
+      "line": 9271
+    },
+    {
+      "kind": "method",
+      "name": "?.wipeColorHistory",
+      "args": "",
+      "line": 9284
+    },
+    {
+      "kind": "function",
+      "name": "f344",
+      "args": "",
+      "line": 9287
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.prototype.step",
+      "args": "f345a0, f345a1, f345a2, f345a3",
+      "line": 9291
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.contactListener.PostSolve",
+      "args": "f346a0, f346a1",
+      "line": 9298
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.contactListener.EndContact",
+      "args": "",
+      "line": 9314
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.contactListener.PreSolve",
+      "args": "",
+      "line": 9316
+    },
+    {
+      "kind": "method",
+      "name": "FootballPhysics.contactListener.BeginContact",
+      "args": "",
+      "line": 9318
+    },
+    {
+      "kind": "function",
+      "name": "f349",
+      "args": "f349a0",
+      "line": 9387
+    },
+    {
+      "kind": "class",
+      "name": "Ball",
+      "args": "",
+      "line": 9449
+    },
+    {
+      "kind": "class",
+      "name": "FootballPlayer",
+      "args": "",
+      "line": 9489
+    },
+    {
+      "kind": "class",
+      "name": "FootballWall",
+      "args": "",
+      "line": 9602
+    },
+    {
+      "kind": "function",
+      "name": "NetworkEngine",
+      "args": "f361a0, f361a1, f361a2",
+      "line": 9713
+    },
+    {
+      "kind": "function",
+      "name": "f362",
+      "args": "",
+      "line": 9715
+    },
+    {
+      "kind": "function",
+      "name": "synchronize",
+      "args": "",
+      "line": 9724
+    },
+    {
+      "kind": "method",
+      "name": "f361v2.send",
+      "args": "f366a0, f366a1, f366a2",
+      "line": 9750
+    },
+    {
+      "kind": "function",
+      "name": "networkEvent",
+      "args": "?",
+      "line": 9767
+    },
+    {
+      "kind": "function",
+      "name": "f370",
+      "args": "",
+      "line": 9775
+    },
+    {
+      "kind": "function",
+      "name": "connectToPeer",
+      "args": "id",
+      "line": 9808
+    },
+    {
+      "kind": "method",
+      "name": "?.testPing",
+      "args": "",
+      "line": 9866
+    },
+    {
+      "kind": "method",
+      "name": "?.getLSID",
+      "args": "",
+      "line": 9869
+    },
+    {
+      "kind": "function",
+      "name": "establishPeer",
+      "args": "peer",
+      "line": 10024
+    },
+    {
+      "kind": "method",
+      "name": "?.getDebug",
+      "args": "",
+      "line": 10133
+    },
+    {
+      "kind": "method",
+      "name": "?.sendInputs",
+      "args": "f431a0",
+      "line": 10136
+    },
+    {
+      "kind": "method",
+      "name": "?.triggerStart",
+      "args": "f432a0, f432a1",
+      "line": 10149
+    },
+    {
+      "kind": "method",
+      "name": "?.changeOwnTeam",
+      "args": "f433a0",
+      "line": 10155
+    },
+    {
+      "kind": "method",
+      "name": "?.changeOtherTeam",
+      "args": "f434a0, f434a1",
+      "line": 10158
+    },
+    {
+      "kind": "method",
+      "name": "?.doTeamLock",
+      "args": "f435a0",
+      "line": 10164
+    },
+    {
+      "kind": "method",
+      "name": "?.silencePlayer",
+      "args": "f436a0, f436a1, f436a2",
+      "line": 10167
+    },
+    {
+      "kind": "method",
+      "name": "?.banPlayer",
+      "args": "f437a0",
+      "line": 10174
+    },
+    {
+      "kind": "method",
+      "name": "?.kickPlayer",
+      "args": "f438a0",
+      "line": 10180
+    },
+    {
+      "kind": "method",
+      "name": "?.chatMessage",
+      "args": "f439a0",
+      "line": 10186
+    },
+    {
+      "kind": "method",
+      "name": "?.informInLobby",
+      "args": "f440a0, f440a1",
+      "line": 10189
+    },
+    {
+      "kind": "method",
+      "name": "?.informInGame",
+      "args": "f441a0, f441a1",
+      "line": 10195
+    },
+    {
+      "kind": "method",
+      "name": "?.sendMapReorder",
+      "args": "f442a0, f442a1",
+      "line": 10201
+    },
+    {
+      "kind": "function",
+      "name": "f443",
+      "args": "",
+      "line": 10207
+    },
+    {
+      "kind": "method",
+      "name": "?.sendMapDelete",
+      "args": "f444a0",
+      "line": 10233
+    },
+    {
+      "kind": "method",
+      "name": "?.sendMapAdd",
+      "args": "f445a0",
+      "line": 10236
+    },
+    {
+      "kind": "method",
+      "name": "?.sendMapSuggest",
+      "args": "f446a0",
+      "line": 10240
+    },
+    {
+      "kind": "method",
+      "name": "?.sendGAMO",
+      "args": "f447a0, f447a1",
+      "line": 10250
+    },
+    {
+      "kind": "method",
+      "name": "?.sendWL",
+      "args": "f448a0",
+      "line": 10256
+    },
+    {
+      "kind": "method",
+      "name": "?.sendTyping",
+      "args": "",
+      "line": 10259
+    },
+    {
+      "kind": "method",
+      "name": "?.sendAdminInputs",
+      "args": "f450a0",
+      "line": 10262
+    },
+    {
+      "kind": "method",
+      "name": "?.sendChangeMode",
+      "args": "f451a0",
+      "line": 10265
+    },
+    {
+      "kind": "function",
+      "name": "f452",
+      "args": "",
+      "line": 10268
+    },
+    {
+      "kind": "method",
+      "name": "?.sendBalance",
+      "args": "f453a0, f453a1",
+      "line": 10271
+    },
+    {
+      "kind": "method",
+      "name": "?.versionCheck",
+      "args": "",
+      "line": 10277
+    },
+    {
+      "kind": "method",
+      "name": "?.sendArmRecord",
+      "args": "",
+      "line": 10280
+    },
+    {
+      "kind": "method",
+      "name": "?.sendHostChange",
+      "args": "f456a0",
+      "line": 10283
+    },
+    {
+      "kind": "method",
+      "name": "?.sendStartCountdown",
+      "args": "f457a0",
+      "line": 10286
+    },
+    {
+      "kind": "method",
+      "name": "?.sendAbortCountdown",
+      "args": "",
+      "line": 10289
+    },
+    {
+      "kind": "method",
+      "name": "?.sendReqXP",
+      "args": "",
+      "line": 10292
+    },
+    {
+      "kind": "method",
+      "name": "?.sendMapVote",
+      "args": "f460a0, f460a1",
+      "line": 10295
+    },
+    {
+      "kind": "method",
+      "name": "?.getPreVote",
+      "args": "f461a0",
+      "line": 10301
+    },
+    {
+      "kind": "method",
+      "name": "?.getMoreQuickPlayMaps",
+      "args": "f462a0",
+      "line": 10304
+    },
+    {
+      "kind": "method",
+      "name": "?.updateRC",
+      "args": "f463a0",
+      "line": 10307
+    },
+    {
+      "kind": "method",
+      "name": "?.desyncTest",
+      "args": "f464a0, f464a1",
+      "line": 10310
+    },
+    {
+      "kind": "method",
+      "name": "?.sendDesyncRes",
+      "args": "f465a0, f465a1, f465a2, f465a3",
+      "line": 10316
+    },
+    {
+      "kind": "method",
+      "name": "?.roundComplete",
+      "args": "f466a0, f466a1",
+      "line": 10324
+    },
+    {
+      "kind": "method",
+      "name": "?.sendNoHostSwap",
+      "args": "",
+      "line": 10330
+    },
+    {
+      "kind": "method",
+      "name": "?.sendCurate",
+      "args": "f468a0, f468a1, f468a2",
+      "line": 10333
+    },
+    {
+      "kind": "method",
+      "name": "?.sendRoomNameUpdate",
+      "args": "f469a0",
+      "line": 10340
+    },
+    {
+      "kind": "method",
+      "name": "?.sendRoomPassUpdate",
+      "args": "f470a0",
+      "line": 10343
+    },
+    {
+      "kind": "method",
+      "name": "game.testDebug",
+      "args": "",
+      "line": 10346
+    },
+    {
+      "kind": "method",
+      "name": "?.reportP2PMessageIgnored",
+      "args": "f471a0, f471a1",
+      "line": 10349
+    },
+    {
+      "kind": "method",
+      "name": "?.createRoom",
+      "args": "f472a0, f472a1",
+      "line": 10352
+    },
+    {
+      "kind": "method",
+      "name": "?.joinRoom",
+      "args": "f473a0, f473a1, f473a2",
+      "line": 10409
+    },
+    {
+      "kind": "method",
+      "name": "?.sendReturnToLobby",
+      "args": "",
+      "line": 10439
+    },
+    {
+      "kind": "method",
+      "name": "?.getConnectedPlayers",
+      "args": "",
+      "line": 10442
+    },
+    {
+      "kind": "method",
+      "name": "?.setReady",
+      "args": "f476a0",
+      "line": 10451
+    },
+    {
+      "kind": "method",
+      "name": "?.allReadyReset",
+      "args": "",
+      "line": 10454
+    },
+    {
+      "kind": "method",
+      "name": "?.sendDebugWinner",
+      "args": "f478a0",
+      "line": 10457
+    },
+    {
+      "kind": "method",
+      "name": "?.sendTeamSettingsChange",
+      "args": "f479a0",
+      "line": 10460
+    },
+    {
+      "kind": "method",
+      "name": "?.sendFriended",
+      "args": "f480a0",
+      "line": 10463
+    },
+    {
+      "kind": "method",
+      "name": "?.tabbed",
+      "args": "f481a0",
+      "line": 10466
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f482a0, f482a1",
+      "line": 10470
+    },
+    {
+      "kind": "method",
+      "name": "?.unOn",
+      "args": "f483a0",
+      "line": 10476
+    },
+    {
+      "kind": "method",
+      "name": "?.getTS",
+      "args": "",
+      "line": 10487
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 10490
+    },
+    {
+      "kind": "class",
+      "name": "GameCountdown",
+      "args": "",
+      "line": 10504
+    },
+    {
+      "kind": "class",
+      "name": "QuickMaps",
+      "args": "",
+      "line": 10591
+    },
+    {
+      "kind": "class",
+      "name": "BodyGraphics",
+      "args": "",
+      "line": 10657
+    },
+    {
+      "kind": "class",
+      "name": "CanvasHandler",
+      "args": "",
+      "line": 10888
+    },
+    {
+      "kind": "function",
+      "name": "makeGradient",
+      "args": "color1, color2",
+      "line": 11076
+    },
+    {
+      "kind": "class",
+      "name": "RoundGraphics",
+      "args": "",
+      "line": 11174
+    },
+    {
+      "kind": "class",
+      "name": "MapRenderer",
+      "args": "",
+      "line": 11229
+    },
+    {
+      "kind": "function",
+      "name": "f518",
+      "args": "f518a0, f518a1",
+      "line": 11370
+    },
+    {
+      "kind": "function",
+      "name": "InputHandler",
+      "args": "",
+      "line": 11530
+    },
+    {
+      "kind": "method",
+      "name": "left1.press",
+      "args": "",
+      "line": 11558
+    },
+    {
+      "kind": "method",
+      "name": "left1.release",
+      "args": "",
+      "line": 11561
+    },
+    {
+      "kind": "method",
+      "name": "left2.press",
+      "args": "",
+      "line": 11564
+    },
+    {
+      "kind": "method",
+      "name": "left2.release",
+      "args": "",
+      "line": 11567
+    },
+    {
+      "kind": "method",
+      "name": "left3.press",
+      "args": "",
+      "line": 11570
+    },
+    {
+      "kind": "method",
+      "name": "left3.release",
+      "args": "",
+      "line": 11573
+    },
+    {
+      "kind": "method",
+      "name": "up1.press",
+      "args": "",
+      "line": 11576
+    },
+    {
+      "kind": "method",
+      "name": "up1.release",
+      "args": "",
+      "line": 11579
+    },
+    {
+      "kind": "method",
+      "name": "up2.press",
+      "args": "",
+      "line": 11582
+    },
+    {
+      "kind": "method",
+      "name": "up2.release",
+      "args": "",
+      "line": 11585
+    },
+    {
+      "kind": "method",
+      "name": "up3.press",
+      "args": "",
+      "line": 11588
+    },
+    {
+      "kind": "method",
+      "name": "up3.release",
+      "args": "",
+      "line": 11591
+    },
+    {
+      "kind": "method",
+      "name": "right1.press",
+      "args": "",
+      "line": 11594
+    },
+    {
+      "kind": "method",
+      "name": "right1.release",
+      "args": "",
+      "line": 11597
+    },
+    {
+      "kind": "method",
+      "name": "right2.press",
+      "args": "",
+      "line": 11600
+    },
+    {
+      "kind": "function",
+      "name": "registerKeybind",
+      "args": "keyCode",
+      "line": 11603
+    },
+    {
+      "kind": "method",
+      "name": "keybind.downHandler",
+      "args": "f528a0",
+      "line": 11610
+    },
+    {
+      "kind": "method",
+      "name": "keybind.upHandler",
+      "args": "f529a0",
+      "line": 11625
+    },
+    {
+      "kind": "method",
+      "name": "right2.release",
+      "args": "",
+      "line": 11643
+    },
+    {
+      "kind": "method",
+      "name": "right3.press",
+      "args": "",
+      "line": 11646
+    },
+    {
+      "kind": "method",
+      "name": "right3.release",
+      "args": "",
+      "line": 11649
+    },
+    {
+      "kind": "method",
+      "name": "down1.press",
+      "args": "",
+      "line": 11652
+    },
+    {
+      "kind": "method",
+      "name": "down1.release",
+      "args": "",
+      "line": 11655
+    },
+    {
+      "kind": "method",
+      "name": "down2.press",
+      "args": "",
+      "line": 11658
+    },
+    {
+      "kind": "method",
+      "name": "down2.release",
+      "args": "",
+      "line": 11661
+    },
+    {
+      "kind": "method",
+      "name": "down3.press",
+      "args": "",
+      "line": 11664
+    },
+    {
+      "kind": "method",
+      "name": "down3.release",
+      "args": "",
+      "line": 11667
+    },
+    {
+      "kind": "method",
+      "name": "heavy1.press",
+      "args": "",
+      "line": 11670
+    },
+    {
+      "kind": "method",
+      "name": "heavy1.release",
+      "args": "",
+      "line": 11673
+    },
+    {
+      "kind": "method",
+      "name": "heavy2.press",
+      "args": "",
+      "line": 11676
+    },
+    {
+      "kind": "method",
+      "name": "heavy2.release",
+      "args": "",
+      "line": 11679
+    },
+    {
+      "kind": "method",
+      "name": "heavy3.press",
+      "args": "",
+      "line": 11682
+    },
+    {
+      "kind": "method",
+      "name": "heavy3.release",
+      "args": "",
+      "line": 11685
+    },
+    {
+      "kind": "method",
+      "name": "swing1.press",
+      "args": "",
+      "line": 11688
+    },
+    {
+      "kind": "method",
+      "name": "swing1.release",
+      "args": "",
+      "line": 11691
+    },
+    {
+      "kind": "method",
+      "name": "swing2.press",
+      "args": "",
+      "line": 11694
+    },
+    {
+      "kind": "method",
+      "name": "swing2.release",
+      "args": "",
+      "line": 11697
+    },
+    {
+      "kind": "method",
+      "name": "swing3.press",
+      "args": "",
+      "line": 11700
+    },
+    {
+      "kind": "method",
+      "name": "swing3.release",
+      "args": "",
+      "line": 11703
+    },
+    {
+      "kind": "method",
+      "name": "?.getInputs",
+      "args": "",
+      "line": 11706
+    },
+    {
+      "kind": "method",
+      "name": "?.lockKeyboard",
+      "args": "",
+      "line": 11716
+    },
+    {
+      "kind": "method",
+      "name": "?.unlockKeyboard",
+      "args": "",
+      "line": 11719
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 11722
+    },
+    {
+      "kind": "class",
+      "name": "PlayerRenderer",
+      "args": "",
+      "line": 11732
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f538v2",
+      "args": "f539a0",
+      "line": 11941
+    },
+    {
+      "kind": "class",
+      "name": "AvatarManager",
+      "args": "",
+      "line": 12446
+    },
+    {
+      "kind": "class",
+      "name": "Player",
+      "args": "",
+      "line": 12519
+    },
+    {
+      "kind": "function",
+      "name": "MainMenu",
+      "args": "",
+      "line": 12797
+    },
+    {
+      "kind": "function",
+      "name": "tabOut",
+      "args": "",
+      "line": 12820
+    },
+    {
+      "kind": "function",
+      "name": "f565",
+      "args": "",
+      "line": 12826
+    },
+    {
+      "kind": "function",
+      "name": "f568",
+      "args": "",
+      "line": 12898
+    },
+    {
+      "kind": "function",
+      "name": "f569",
+      "args": "f569a0",
+      "line": 12903
+    },
+    {
+      "kind": "function",
+      "name": "f570",
+      "args": "",
+      "line": 12941
+    },
+    {
+      "kind": "function",
+      "name": "f572",
+      "args": "",
+      "line": 12963
+    },
+    {
+      "kind": "function",
+      "name": "f573",
+      "args": "f573a0, f573a1, f573a2",
+      "line": 12990
+    },
+    {
+      "kind": "function",
+      "name": "f574",
+      "args": "",
+      "line": 13009
+    },
+    {
+      "kind": "function",
+      "name": "f575",
+      "args": "",
+      "line": 13022
+    },
+    {
+      "kind": "function",
+      "name": "f576",
+      "args": "",
+      "line": 13027
+    },
+    {
+      "kind": "function",
+      "name": "f577",
+      "args": "",
+      "line": 13039
+    },
+    {
+      "kind": "function",
+      "name": "f578",
+      "args": "",
+      "line": 13050
+    },
+    {
+      "kind": "function",
+      "name": "f580",
+      "args": "",
+      "line": 13068
+    },
+    {
+      "kind": "method",
+      "name": "pretty_playbutton.onclick",
+      "args": "",
+      "line": 13127
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_volume.onclick",
+      "args": "f583a0",
+      "line": 13135
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_volume_music.onclick",
+      "args": "",
+      "line": 13143
+    },
+    {
+      "kind": "function",
+      "name": "f585",
+      "args": "",
+      "line": 13155
+    },
+    {
+      "kind": "function",
+      "name": "f587",
+      "args": "",
+      "line": 13202
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_help.onclick",
+      "args": "",
+      "line": 13212
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay.onmouseenter",
+      "args": "",
+      "line": 13218
+    },
+    {
+      "kind": "function",
+      "name": "f590",
+      "args": "",
+      "line": 13229
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay.onmouseleave",
+      "args": "",
+      "line": 13242
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_back.onclick",
+      "args": "",
+      "line": 13250
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_next.onclick",
+      "args": "",
+      "line": 13253
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay.onclick",
+      "args": "",
+      "line": 13256
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_fav.onmouseover",
+      "args": "",
+      "line": 13261
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_fav.onmouseout",
+      "args": "",
+      "line": 13265
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_fav.onclick",
+      "args": "",
+      "line": 13268
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_report.onmouseover",
+      "args": "",
+      "line": 13285
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_report.onmouseout",
+      "args": "",
+      "line": 13289
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_replay_report.onclick",
+      "args": "",
+      "line": 13292
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_volume.onmouseover",
+      "args": "",
+      "line": 13295
+    },
+    {
+      "kind": "function",
+      "name": "f603",
+      "args": "",
+      "line": 13298
+    },
+    {
+      "kind": "method",
+      "name": "pretty_top_volume.onmouseout",
+      "args": "",
+      "line": 13317
+    },
+    {
+      "kind": "function",
+      "name": "f605",
+      "args": "f605a0, f605a1, f605a2",
+      "line": 13333
+    },
+    {
+      "kind": "method",
+      "name": "f605v3.onclick",
+      "args": "",
+      "line": 13352
+    },
+    {
+      "kind": "function",
+      "name": "f608",
+      "args": "",
+      "line": 13383
+    },
+    {
+      "kind": "function",
+      "name": "f609",
+      "args": "f609a0, f609a1, f609a2, f609a3, f609a4, f609a5",
+      "line": 13392
+    },
+    {
+      "kind": "function",
+      "name": "f610",
+      "args": "",
+      "line": 13416
+    },
+    {
+      "kind": "function",
+      "name": "f611",
+      "args": "f611a0",
+      "line": 13425
+    },
+    {
+      "kind": "function",
+      "name": "f612",
+      "args": "",
+      "line": 13439
+    },
+    {
+      "kind": "method",
+      "name": "guest_skinbox.onclick",
+      "args": "",
+      "line": 13453
+    },
+    {
+      "kind": "function",
+      "name": "f613",
+      "args": "",
+      "line": 13460
+    },
+    {
+      "kind": "function",
+      "name": "f614",
+      "args": "",
+      "line": 13469
+    },
+    {
+      "kind": "function",
+      "name": "f615",
+      "args": "",
+      "line": 13515
+    },
+    {
+      "kind": "function",
+      "name": "f616",
+      "args": "",
+      "line": 13526
+    },
+    {
+      "kind": "function",
+      "name": "f617",
+      "args": "f617a0",
+      "line": 13531
+    },
+    {
+      "kind": "function",
+      "name": "tabIn",
+      "args": "",
+      "line": 13579
+    },
+    {
+      "kind": "function",
+      "name": "f619",
+      "args": "",
+      "line": 13590
+    },
+    {
+      "kind": "function",
+      "name": "f620",
+      "args": "",
+      "line": 13610
+    },
+    {
+      "kind": "function",
+      "name": "f622",
+      "args": "f622a0",
+      "line": 13636
+    },
+    {
+      "kind": "function",
+      "name": "f623",
+      "args": "",
+      "line": 13654
+    },
+    {
+      "kind": "function",
+      "name": "f625",
+      "args": "",
+      "line": 13662
+    },
+    {
+      "kind": "function",
+      "name": "f626",
+      "args": "f626a0",
+      "line": 13710
+    },
+    {
+      "kind": "function",
+      "name": "f629",
+      "args": "",
+      "line": 13735
+    },
+    {
+      "kind": "function",
+      "name": "f631",
+      "args": "",
+      "line": 13748
+    },
+    {
+      "kind": "function",
+      "name": "f632",
+      "args": "",
+      "line": 13773
+    },
+    {
+      "kind": "function",
+      "name": "f633",
+      "args": "",
+      "line": 13826
+    },
+    {
+      "kind": "function",
+      "name": "f634",
+      "args": "",
+      "line": 13837
+    },
+    {
+      "kind": "function",
+      "name": "f635",
+      "args": "f635a0",
+      "line": 13845
+    },
+    {
+      "kind": "function",
+      "name": "f636",
+      "args": "",
+      "line": 13863
+    },
+    {
+      "kind": "function",
+      "name": "f637",
+      "args": "",
+      "line": 13876
+    },
+    {
+      "kind": "function",
+      "name": "f638",
+      "args": "",
+      "line": 13900
+    },
+    {
+      "kind": "function",
+      "name": "f639",
+      "args": "f639a0, f639a1",
+      "line": 13915
+    },
+    {
+      "kind": "function",
+      "name": "f642",
+      "args": "",
+      "line": 13957
+    },
+    {
+      "kind": "function",
+      "name": "f644",
+      "args": "",
+      "line": 13987
+    },
+    {
+      "kind": "function",
+      "name": "f645",
+      "args": "",
+      "line": 14004
+    },
+    {
+      "kind": "function",
+      "name": "f646",
+      "args": "",
+      "line": 14008
+    },
+    {
+      "kind": "function",
+      "name": "f648",
+      "args": "",
+      "line": 14063
+    },
+    {
+      "kind": "function",
+      "name": "f651",
+      "args": "",
+      "line": 14097
+    },
+    {
+      "kind": "function",
+      "name": "f652",
+      "args": "f652a0",
+      "line": 14106
+    },
+    {
+      "kind": "method",
+      "name": "game.activateButtonSpinner",
+      "args": "f653a0",
+      "line": 14118
+    },
+    {
+      "kind": "method",
+      "name": "game.deactivateButtonSpinner",
+      "args": "f655a0",
+      "line": 14130
+    },
+    {
+      "kind": "function",
+      "name": "f656",
+      "args": "",
+      "line": 14145
+    },
+    {
+      "kind": "function",
+      "name": "f658",
+      "args": "",
+      "line": 14165
+    },
+    {
+      "kind": "function",
+      "name": "showHint",
+      "args": "f660a0, f660a1, f660a2, f660a3",
+      "line": 14201
+    },
+    {
+      "kind": "function",
+      "name": "unfriend",
+      "args": "",
+      "line": 14616
+    },
+    {
+      "kind": "function",
+      "name": "f663",
+      "args": "fastOrSlow",
+      "line": 14629
+    },
+    {
+      "kind": "function",
+      "name": "saveControls",
+      "args": "",
+      "line": 14651
+    },
+    {
+      "kind": "function",
+      "name": "f667",
+      "args": "",
+      "line": 14659
+    },
+    {
+      "kind": "function",
+      "name": "f668",
+      "args": "",
+      "line": 14689
+    },
+    {
+      "kind": "function",
+      "name": "f669",
+      "args": "roomInfo",
+      "line": 14728
+    },
+    {
+      "kind": "function",
+      "name": "f670",
+      "args": "",
+      "line": 14758
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f670v2",
+      "args": "f671a0",
+      "line": 14801
+    },
+    {
+      "kind": "method",
+      "name": "f671v2.onclick",
+      "args": "",
+      "line": 14818
+    },
+    {
+      "kind": "method",
+      "name": "f671v3.onclick",
+      "args": "",
+      "line": 14824
+    },
+    {
+      "kind": "method",
+      "name": "f671v4.onclick",
+      "args": "",
+      "line": 14830
+    },
+    {
+      "kind": "function",
+      "name": "f675",
+      "args": "",
+      "line": 14841
+    },
+    {
+      "kind": "function",
+      "name": "animateGuestOrAccountScreen",
+      "args": "",
+      "line": 14858
+    },
+    {
+      "kind": "function",
+      "name": "f678",
+      "args": "",
+      "line": 14882
+    },
+    {
+      "kind": "function",
+      "name": "f679",
+      "args": "",
+      "line": 14897
+    },
+    {
+      "kind": "function",
+      "name": "f680",
+      "args": "",
+      "line": 14901
+    },
+    {
+      "kind": "function",
+      "name": "f681",
+      "args": "f681a0",
+      "line": 14906
+    },
+    {
+      "kind": "function",
+      "name": "f682",
+      "args": "",
+      "line": 14932
+    },
+    {
+      "kind": "function",
+      "name": "f683",
+      "args": "",
+      "line": 14939
+    },
+    {
+      "kind": "function",
+      "name": "f684",
+      "args": "",
+      "line": 14953
+    },
+    {
+      "kind": "function",
+      "name": "f686",
+      "args": "",
+      "line": 14968
+    },
+    {
+      "kind": "function",
+      "name": "f688",
+      "args": "",
+      "line": 14981
+    },
+    {
+      "kind": "function",
+      "name": "f689",
+      "args": "",
+      "line": 14986
+    },
+    {
+      "kind": "function",
+      "name": "f692",
+      "args": "",
+      "line": 15000
+    },
+    {
+      "kind": "function",
+      "name": "f693",
+      "args": "",
+      "line": 15003
+    },
+    {
+      "kind": "function",
+      "name": "f695",
+      "args": "",
+      "line": 15023
+    },
+    {
+      "kind": "function",
+      "name": "f696",
+      "args": "",
+      "line": 15036
+    },
+    {
+      "kind": "function",
+      "name": "f697",
+      "args": "",
+      "line": 15043
+    },
+    {
+      "kind": "function",
+      "name": "f698",
+      "args": "",
+      "line": 15066
+    },
+    {
+      "kind": "method",
+      "name": "?.showGuestOrAccount",
+      "args": "",
+      "line": 15342
+    },
+    {
+      "kind": "function",
+      "name": "f700",
+      "args": "",
+      "line": 15345
+    },
+    {
+      "kind": "method",
+      "name": "?.showGuest",
+      "args": "",
+      "line": 15352
+    },
+    {
+      "kind": "function",
+      "name": "f701",
+      "args": "",
+      "line": 15354
+    },
+    {
+      "kind": "method",
+      "name": "?.returnToMain",
+      "args": "",
+      "line": 15357
+    },
+    {
+      "kind": "function",
+      "name": "f703",
+      "args": "",
+      "line": 15373
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 15382
+    },
+    {
+      "kind": "method",
+      "name": "?.showing",
+      "args": "",
+      "line": 15387
+    },
+    {
+      "kind": "function",
+      "name": "f706",
+      "args": "",
+      "line": 15390
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f706v4",
+      "args": "f707a0",
+      "line": 15402
+    },
+    {
+      "kind": "method",
+      "name": "f707v3.onclick",
+      "args": "",
+      "line": 15414
+    },
+    {
+      "kind": "function",
+      "name": "f709",
+      "args": "f709a0",
+      "line": 15433
+    },
+    {
+      "kind": "method",
+      "name": "?.startMusic",
+      "args": "",
+      "line": 15465
+    },
+    {
+      "kind": "method",
+      "name": "?.stopMusic",
+      "args": "",
+      "line": 15496
+    },
+    {
+      "kind": "method",
+      "name": "?.straightIntoTutorial",
+      "args": "",
+      "line": 15502
+    },
+    {
+      "kind": "function",
+      "name": "f712",
+      "args": "f712a0",
+      "line": 15506
+    },
+    {
+      "kind": "function",
+      "name": "f713",
+      "args": "?",
+      "line": 15526
+    },
+    {
+      "kind": "function",
+      "name": "f715",
+      "args": "",
+      "line": 15557
+    },
+    {
+      "kind": "function",
+      "name": "f717",
+      "args": "f717a0",
+      "line": 15568
+    },
+    {
+      "kind": "method",
+      "name": "settings_filterprofanity_checkbox.onchange",
+      "args": "",
+      "line": 15584
+    },
+    {
+      "kind": "method",
+      "name": "settings_graphicsquality.onchange",
+      "args": "",
+      "line": 15587
+    },
+    {
+      "kind": "method",
+      "name": "settings_fps_checkbox.onchange",
+      "args": "",
+      "line": 15590
+    },
+    {
+      "kind": "method",
+      "name": "settings_change_password_label.onclick",
+      "args": "",
+      "line": 15593
+    },
+    {
+      "kind": "function",
+      "name": "f722",
+      "args": "",
+      "line": 15601
+    },
+    {
+      "kind": "function",
+      "name": "f723",
+      "args": "",
+      "line": 15640
+    },
+    {
+      "kind": "function",
+      "name": "f724",
+      "args": "",
+      "line": 15647
+    },
+    {
+      "kind": "function",
+      "name": "f725",
+      "args": "",
+      "line": 15657
+    },
+    {
+      "kind": "function",
+      "name": "f726",
+      "args": "",
+      "line": 15669
+    },
+    {
+      "kind": "function",
+      "name": "f729",
+      "args": "",
+      "line": 15682
+    },
+    {
+      "kind": "function",
+      "name": "f730",
+      "args": "",
+      "line": 15692
+    },
+    {
+      "kind": "function",
+      "name": "openFriendList",
+      "args": "e",
+      "line": 15703
+    },
+    {
+      "kind": "function",
+      "name": "f732",
+      "args": "",
+      "line": 15811
+    },
+    {
+      "kind": "function",
+      "name": "f733",
+      "args": "",
+      "line": 15828
+    },
+    {
+      "kind": "function",
+      "name": "f734",
+      "args": "",
+      "line": 15850
+    },
+    {
+      "kind": "function",
+      "name": "createQuickGame",
+      "args": "",
+      "line": 15865
+    },
+    {
+      "kind": "class",
+      "name": "SnowRenderer",
+      "args": "",
+      "line": 15891
+    },
+    {
+      "kind": "class",
+      "name": "Arrow",
+      "args": "",
+      "line": 15968
+    },
+    {
+      "kind": "class",
+      "name": "GameMessages",
+      "args": "",
+      "line": 16030
+    },
+    {
+      "kind": "class",
+      "name": "FPS",
+      "args": "",
+      "line": 16584
+    },
+    {
+      "kind": "method",
+      "name": "game.getDayOfYear",
+      "args": "",
+      "line": 16792
+    },
+    {
+      "kind": "method",
+      "name": "game.isItChristmas",
+      "args": "",
+      "line": 16798
+    },
+    {
+      "kind": "function",
+      "name": "SoundHandler",
+      "args": "",
+      "line": 16802
+    },
+    {
+      "kind": "method",
+      "name": "?.playSound",
+      "args": "type, stereoPosition, volume, step",
+      "line": 16815
+    },
+    {
+      "kind": "method",
+      "name": "?.resetSumVols",
+      "args": "",
+      "line": 16879
+    },
+    {
+      "kind": "function",
+      "name": "AvatarRenderer",
+      "args": "",
+      "line": 16887
+    },
+    {
+      "kind": "function",
+      "name": "GraphicsHandler",
+      "args": "canvas, type",
+      "line": 16889
+    },
+    {
+      "kind": "function",
+      "name": "f767",
+      "args": "",
+      "line": 16896
+    },
+    {
+      "kind": "function",
+      "name": "f768",
+      "args": "f768a0",
+      "line": 16909
+    },
+    {
+      "kind": "function",
+      "name": "setTutorialText",
+      "args": "",
+      "line": 16920
+    },
+    {
+      "kind": "function",
+      "name": "tutorialText",
+      "args": "text, subText, position, x, y",
+      "line": 16921
+    },
+    {
+      "kind": "function",
+      "name": "f771",
+      "args": "f771a0, f771a1, f771a2",
+      "line": 17039
+    },
+    {
+      "kind": "function",
+      "name": "destroyOneSkin",
+      "args": "f772a0",
+      "line": 17071
+    },
+    {
+      "kind": "method",
+      "name": "?.getCanvas",
+      "args": "",
+      "line": 17086
+    },
+    {
+      "kind": "function",
+      "name": "f774",
+      "args": "index, balance, ppm",
+      "line": 17108
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f774v3",
+      "args": "f775a0",
+      "line": 17119
+    },
+    {
+      "kind": "function",
+      "name": "f777",
+      "args": "f777a0",
+      "line": 17280
+    },
+    {
+      "kind": "function",
+      "name": "f778",
+      "args": "f778a0, f778a1",
+      "line": 17350
+    },
+    {
+      "kind": "function",
+      "name": "destroySkins",
+      "args": "",
+      "line": 17382
+    },
+    {
+      "kind": "function",
+      "name": "f780",
+      "args": "f780a0",
+      "line": 17400
+    },
+    {
+      "kind": "function",
+      "name": "f781",
+      "args": "",
+      "line": 17420
+    },
+    {
+      "kind": "function",
+      "name": "f782",
+      "args": "f782a0",
+      "line": 17475
+    },
+    {
+      "kind": "method",
+      "name": "?.blur",
+      "args": "",
+      "line": 17587
+    },
+    {
+      "kind": "method",
+      "name": "?.unblur",
+      "args": "",
+      "line": 17600
+    },
+    {
+      "kind": "method",
+      "name": "?.panStage",
+      "args": "f785a0, f785a1",
+      "line": 17613
+    },
+    {
+      "kind": "method",
+      "name": "?.scaleStage",
+      "args": "f786a0",
+      "line": 17617
+    },
+    {
+      "kind": "method",
+      "name": "?.getStageScale",
+      "args": "",
+      "line": 17630
+    },
+    {
+      "kind": "method",
+      "name": "?.resetStage",
+      "args": "",
+      "line": 17633
+    },
+    {
+      "kind": "method",
+      "name": "?.screenRatioToPhysicsCoordinate",
+      "args": "f789a0, f789a1",
+      "line": 17639
+    },
+    {
+      "kind": "method",
+      "name": "?.highlightPlatform",
+      "args": "f790a0",
+      "line": 17657
+    },
+    {
+      "kind": "method",
+      "name": "?.highlightFixture",
+      "args": "f791a0",
+      "line": 17660
+    },
+    {
+      "kind": "method",
+      "name": "?.clearHighlightPlatform",
+      "args": "",
+      "line": 17663
+    },
+    {
+      "kind": "method",
+      "name": "?.clearHighlightFixture",
+      "args": "",
+      "line": 17666
+    },
+    {
+      "kind": "method",
+      "name": "?.highlightSpawn",
+      "args": "f792a0",
+      "line": 17669
+    },
+    {
+      "kind": "method",
+      "name": "?.clearHighlightSpawn",
+      "args": "",
+      "line": 17672
+    },
+    {
+      "kind": "method",
+      "name": "?.highlightJoint",
+      "args": "f793a0",
+      "line": 17675
+    },
+    {
+      "kind": "method",
+      "name": "?.clearHighlightJoint",
+      "args": "",
+      "line": 17678
+    },
+    {
+      "kind": "method",
+      "name": "?.hideSnapGrid",
+      "args": "",
+      "line": 17681
+    },
+    {
+      "kind": "method",
+      "name": "?.showSnapGrid",
+      "args": "f795a0",
+      "line": 17684
+    },
+    {
+      "kind": "method",
+      "name": "?.drawPolygonPreview",
+      "args": "f796a0, f796a1, f796a2, f796a3, f796a4",
+      "line": 17716
+    },
+    {
+      "kind": "method",
+      "name": "?.clearPolygonPreview",
+      "args": "",
+      "line": 17745
+    },
+    {
+      "kind": "method",
+      "name": "?.checkAndResizeRenderer",
+      "args": "",
+      "line": 17751
+    },
+    {
+      "kind": "method",
+      "name": "?.resizeRenderer",
+      "args": "",
+      "line": 17756
+    },
+    {
+      "kind": "method",
+      "name": "?.forceRendererSize",
+      "args": "f800a0, f800a1",
+      "line": 17796
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 17801
+    },
+    {
+      "kind": "method",
+      "name": "?.replayFadeOut",
+      "args": "",
+      "line": 17813
+    },
+    {
+      "kind": "method",
+      "name": "?.replayFadeIn",
+      "args": "",
+      "line": 17823
+    },
+    {
+      "kind": "method",
+      "name": "?.setPlayerArray",
+      "args": "f804a0",
+      "line": 17834
+    },
+    {
+      "kind": "method",
+      "name": "?.setLocalPlayerID",
+      "args": "f805a0",
+      "line": 17837
+    },
+    {
+      "kind": "method",
+      "name": "?.enableTutorialText",
+      "args": "",
+      "line": 17840
+    },
+    {
+      "kind": "method",
+      "name": "?.setCameraPans",
+      "args": "",
+      "line": 17844
+    },
+    {
+      "kind": "method",
+      "name": "?.showAfkWarn",
+      "args": "",
+      "line": 17847
+    },
+    {
+      "kind": "method",
+      "name": "?.clearAfkWarn",
+      "args": "",
+      "line": 17850
+    },
+    {
+      "kind": "method",
+      "name": "?.screenShake",
+      "args": "f809a0, f809a1",
+      "line": 17861
+    },
+    {
+      "kind": "method",
+      "name": "?.tutorialTextSwitchLastScreen",
+      "args": "",
+      "line": 17881
+    },
+    {
+      "kind": "method",
+      "name": "?.render",
+      "args": "prevStep, currentStep, t, gameSettings, inputs, stepIndex",
+      "line": 17890
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f812v456",
+      "args": "f814a0",
+      "line": 19362
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f812v457",
+      "args": "",
+      "line": 19380
+    },
+    {
+      "kind": "function",
+      "name": "checkIfHidden",
+      "args": "",
+      "line": 19722
+    },
+    {
+      "kind": "function",
+      "name": "MapLoadWindow",
+      "args": "f817a0",
+      "line": 19727
+    },
+    {
+      "kind": "function",
+      "name": "f818",
+      "args": "",
+      "line": 19729
+    },
+    {
+      "kind": "function",
+      "name": "f819",
+      "args": "",
+      "line": 19741
+    },
+    {
+      "kind": "function",
+      "name": "f820",
+      "args": "f820a0",
+      "line": 19767
+    },
+    {
+      "kind": "function",
+      "name": "f822",
+      "args": "f822a0",
+      "line": 19813
+    },
+    {
+      "kind": "function",
+      "name": "f823",
+      "args": "f823a0, f823a1",
+      "line": 19820
+    },
+    {
+      "kind": "function",
+      "name": "f846",
+      "args": "f846a0, f846a1, f846a2, f846a3",
+      "line": 20102
+    },
+    {
+      "kind": "function",
+      "name": "f847",
+      "args": "f847a0, f847a1",
+      "line": 20179
+    },
+    {
+      "kind": "method",
+      "name": "f847v2.onclick",
+      "args": "",
+      "line": 20230
+    },
+    {
+      "kind": "function",
+      "name": "f849",
+      "args": "",
+      "line": 20245
+    },
+    {
+      "kind": "function",
+      "name": "f850",
+      "args": "f850a0",
+      "line": 20279
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f850v0",
+      "args": "",
+      "line": 20285
+    },
+    {
+      "kind": "method",
+      "name": "f850v6.onclick",
+      "args": "f852a0",
+      "line": 20341
+    },
+    {
+      "kind": "method",
+      "name": "f851v4.onclick",
+      "args": "",
+      "line": 20360
+    },
+    {
+      "kind": "method",
+      "name": "f851v4.onmouseenter",
+      "args": "",
+      "line": 20365
+    },
+    {
+      "kind": "method",
+      "name": "f851v4.onmouseleave",
+      "args": "",
+      "line": 20369
+    },
+    {
+      "kind": "function",
+      "name": "f856",
+      "args": "",
+      "line": 20380
+    },
+    {
+      "kind": "function",
+      "name": "f857",
+      "args": "f857a0",
+      "line": 20387
+    },
+    {
+      "kind": "function",
+      "name": "f858",
+      "args": "f858a0, f858a1",
+      "line": 20452
+    },
+    {
+      "kind": "method",
+      "name": "f858v2.onclick",
+      "args": "",
+      "line": 20510
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindow_close.onclick",
+      "args": "",
+      "line": 20532
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowsearchoptions_sortby.onclick",
+      "args": "",
+      "line": 20537
+    },
+    {
+      "kind": "function",
+      "name": "f862",
+      "args": "",
+      "line": 20546
+    },
+    {
+      "kind": "function",
+      "name": "f863",
+      "args": "f863a0",
+      "line": 20556
+    },
+    {
+      "kind": "method",
+      "name": "f863v5.onclick",
+      "args": "",
+      "line": 20607
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowsearchoptions_namelabel.onclick",
+      "args": "",
+      "line": 20617
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowsearchoptions_authorlabel.onclick",
+      "args": "",
+      "line": 20629
+    },
+    {
+      "kind": "function",
+      "name": "f867",
+      "args": "f867a0",
+      "line": 20641
+    },
+    {
+      "kind": "function",
+      "name": "f868",
+      "args": "f868a0, f868a1",
+      "line": 20658
+    },
+    {
+      "kind": "method",
+      "name": "f868v2.onclick",
+      "args": "",
+      "line": 20727
+    },
+    {
+      "kind": "function",
+      "name": "f870",
+      "args": "",
+      "line": 20737
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowsearchinput.oninput",
+      "args": "",
+      "line": 20740
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowsearchbutton.onclick",
+      "args": "",
+      "line": 20744
+    },
+    {
+      "kind": "function",
+      "name": "f872",
+      "args": "?",
+      "line": 20747
+    },
+    {
+      "kind": "method",
+      "name": "?.enterKeySearch",
+      "args": "",
+      "line": 20755
+    },
+    {
+      "kind": "method",
+      "name": "?.enterKeyUnknown",
+      "args": "",
+      "line": 20758
+    },
+    {
+      "kind": "function",
+      "name": "f874",
+      "args": "f874a0",
+      "line": 20765
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f874v0",
+      "args": "",
+      "line": 20771
+    },
+    {
+      "kind": "method",
+      "name": "f874v6.onclick",
+      "args": "f876a0",
+      "line": 20823
+    },
+    {
+      "kind": "method",
+      "name": "f875v4.onclick",
+      "args": "",
+      "line": 20844
+    },
+    {
+      "kind": "method",
+      "name": "f875v4.onmouseenter",
+      "args": "",
+      "line": 20849
+    },
+    {
+      "kind": "method",
+      "name": "f875v4.onmouseleave",
+      "args": "",
+      "line": 20853
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 20863
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "f882a0, ?",
+      "line": 20883
+    },
+    {
+      "kind": "method",
+      "name": "maploadwindowhotnesssliderinput.onchange",
+      "args": "",
+      "line": 20908
+    },
+    {
+      "kind": "function",
+      "name": "f884",
+      "args": "f884a0",
+      "line": 20934
+    },
+    {
+      "kind": "method",
+      "name": "f884v8.onclick",
+      "args": "",
+      "line": 21039
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f886a0, f886a1",
+      "line": 21049
+    },
+    {
+      "kind": "function",
+      "name": "f887",
+      "args": "f887a0",
+      "line": 21055
+    },
+    {
+      "kind": "method",
+      "name": "?.off",
+      "args": "f888a0, f888a1",
+      "line": 21059
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 21070
+    },
+    {
+      "kind": "function",
+      "name": "FootballPhysics",
+      "args": "",
+      "line": 21077
+    },
+    {
+      "kind": "function",
+      "name": "SkinManagerElementHandler",
+      "args": "",
+      "line": 21079
+    },
+    {
+      "kind": "function",
+      "name": "f891",
+      "args": "",
+      "line": 21084
+    },
+    {
+      "kind": "method",
+      "name": "skinmanager_close.onclick",
+      "args": "",
+      "line": 21097
+    },
+    {
+      "kind": "function",
+      "name": "f892",
+      "args": "",
+      "line": 21105
+    },
+    {
+      "kind": "function",
+      "name": "f894",
+      "args": "",
+      "line": 21134
+    },
+    {
+      "kind": "function",
+      "name": "f895",
+      "args": "",
+      "line": 21158
+    },
+    {
+      "kind": "function",
+      "name": "f896",
+      "args": "",
+      "line": 21162
+    },
+    {
+      "kind": "function",
+      "name": "f897",
+      "args": "",
+      "line": 21179
+    },
+    {
+      "kind": "function",
+      "name": "f898",
+      "args": "?",
+      "line": 21190
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "f899a0",
+      "line": 21198
+    },
+    {
+      "kind": "method",
+      "name": "?.hideEditorIfShowing",
+      "args": "",
+      "line": 21212
+    },
+    {
+      "kind": "function",
+      "name": "f900",
+      "args": "f900a0",
+      "line": 21218
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f902a0, f902a1",
+      "line": 21233
+    },
+    {
+      "kind": "function",
+      "name": "Lobby",
+      "args": "_networkEngine, playerList, room, token",
+      "line": 21240
+    },
+    {
+      "kind": "function",
+      "name": "f904",
+      "args": "f904a0",
+      "line": 21244
+    },
+    {
+      "kind": "function",
+      "name": "f905",
+      "args": "",
+      "line": 21251
+    },
+    {
+      "kind": "function",
+      "name": "f906",
+      "args": "",
+      "line": 21259
+    },
+    {
+      "kind": "function",
+      "name": "f907",
+      "args": "",
+      "line": 21263
+    },
+    {
+      "kind": "function",
+      "name": "f908",
+      "args": "",
+      "line": 21274
+    },
+    {
+      "kind": "function",
+      "name": "f909",
+      "args": "",
+      "line": 21279
+    },
+    {
+      "kind": "function",
+      "name": "f910",
+      "args": "",
+      "line": 21283
+    },
+    {
+      "kind": "function",
+      "name": "f911",
+      "args": "",
+      "line": 21342
+    },
+    {
+      "kind": "function",
+      "name": "f912",
+      "args": "",
+      "line": 21346
+    },
+    {
+      "kind": "function",
+      "name": "f913",
+      "args": "",
+      "line": 21354
+    },
+    {
+      "kind": "function",
+      "name": "f914",
+      "args": "",
+      "line": 21359
+    },
+    {
+      "kind": "function",
+      "name": "f915",
+      "args": "f915a0",
+      "line": 21365
+    },
+    {
+      "kind": "function",
+      "name": "f916",
+      "args": "",
+      "line": 21371
+    },
+    {
+      "kind": "function",
+      "name": "f917",
+      "args": "",
+      "line": 21374
+    },
+    {
+      "kind": "function",
+      "name": "f918",
+      "args": "",
+      "line": 21382
+    },
+    {
+      "kind": "function",
+      "name": "f919",
+      "args": "f919a0, f919a1, f919a2",
+      "line": 21401
+    },
+    {
+      "kind": "function",
+      "name": "f920",
+      "args": "f920a0",
+      "line": 21411
+    },
+    {
+      "kind": "function",
+      "name": "f921",
+      "args": "",
+      "line": 21417
+    },
+    {
+      "kind": "function",
+      "name": "f922",
+      "args": "",
+      "line": 21435
+    },
+    {
+      "kind": "function",
+      "name": "f923",
+      "args": "",
+      "line": 21453
+    },
+    {
+      "kind": "function",
+      "name": "f924",
+      "args": "f924a0",
+      "line": 21463
+    },
+    {
+      "kind": "function",
+      "name": "f925",
+      "args": "",
+      "line": 21482
+    },
+    {
+      "kind": "function",
+      "name": "f926",
+      "args": "",
+      "line": 21491
+    },
+    {
+      "kind": "function",
+      "name": "f927",
+      "args": "",
+      "line": 21496
+    },
+    {
+      "kind": "function",
+      "name": "showStatusMessage",
+      "args": "f929a0, f929a1, f929a2, f929a3, f929a4, f929a5",
+      "line": 21508
+    },
+    {
+      "kind": "function",
+      "name": "f930",
+      "args": "",
+      "line": 21560
+    },
+    {
+      "kind": "function",
+      "name": "f931",
+      "args": "f931a0",
+      "line": 21592
+    },
+    {
+      "kind": "function",
+      "name": "f932",
+      "args": "",
+      "line": 21613
+    },
+    {
+      "kind": "function",
+      "name": "f933",
+      "args": "",
+      "line": 21631
+    },
+    {
+      "kind": "function",
+      "name": "f934",
+      "args": "?",
+      "line": 21644
+    },
+    {
+      "kind": "function",
+      "name": "f935",
+      "args": "",
+      "line": 21654
+    },
+    {
+      "kind": "function",
+      "name": "f936",
+      "args": "f936a0",
+      "line": 21681
+    },
+    {
+      "kind": "function",
+      "name": "f937",
+      "args": "",
+      "line": 21697
+    },
+    {
+      "kind": "function",
+      "name": "f938",
+      "args": "",
+      "line": 21700
+    },
+    {
+      "kind": "function",
+      "name": "f939",
+      "args": "f939a0",
+      "line": 21709
+    },
+    {
+      "kind": "function",
+      "name": "f940",
+      "args": "",
+      "line": 21725
+    },
+    {
+      "kind": "function",
+      "name": "f941",
+      "args": "f941a0",
+      "line": 21732
+    },
+    {
+      "kind": "function",
+      "name": "f944",
+      "args": "",
+      "line": 21749
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f945a0, f945a1",
+      "line": 21754
+    },
+    {
+      "kind": "function",
+      "name": "f946",
+      "args": "f946a0",
+      "line": 21760
+    },
+    {
+      "kind": "method",
+      "name": "?.recvMapSuggest",
+      "args": "f949a0, f949a1",
+      "line": 21782
+    },
+    {
+      "kind": "method",
+      "name": "f949v13.onclick",
+      "args": "",
+      "line": 21813
+    },
+    {
+      "kind": "method",
+      "name": "?.recvMapSuggestClient",
+      "args": "mapName, mapAuthor, playerId",
+      "line": 21838
+    },
+    {
+      "kind": "method",
+      "name": "?.recvChatMessage",
+      "args": "f952a0, f952a1, f952a2",
+      "line": 21874
+    },
+    {
+      "kind": "function",
+      "name": "f953",
+      "args": "",
+      "line": 21909
+    },
+    {
+      "kind": "method",
+      "name": "?.handlePlayerJoined",
+      "args": "f954a0",
+      "line": 21914
+    },
+    {
+      "kind": "function",
+      "name": "f955",
+      "args": "",
+      "line": 21918
+    },
+    {
+      "kind": "method",
+      "name": "?.handlePlayerLeft",
+      "args": "f956a0",
+      "line": 21938
+    },
+    {
+      "kind": "method",
+      "name": "?.handleHostLeft",
+      "args": "f957a0, f957a1",
+      "line": 21942
+    },
+    {
+      "kind": "method",
+      "name": "?.handleHostChange",
+      "args": "f958a0, f958a1",
+      "line": 21958
+    },
+    {
+      "kind": "method",
+      "name": "?.updatePlayers",
+      "args": "",
+      "line": 21974
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f959v1",
+      "args": "f960a0",
+      "line": 21985
+    },
+    {
+      "kind": "method",
+      "name": "f960v0.onclick",
+      "args": "",
+      "line": 22064
+    },
+    {
+      "kind": "method",
+      "name": "f961v7.onclick",
+      "args": "",
+      "line": 22093
+    },
+    {
+      "kind": "method",
+      "name": "f961v8.onclick",
+      "args": "",
+      "line": 22110
+    },
+    {
+      "kind": "method",
+      "name": "f961v9.onclick",
+      "args": "",
+      "line": 22134
+    },
+    {
+      "kind": "method",
+      "name": "f961v10.onclick",
+      "args": "",
+      "line": 22158
+    },
+    {
+      "kind": "method",
+      "name": "f965v1.onclick",
+      "args": "",
+      "line": 22172
+    },
+    {
+      "kind": "method",
+      "name": "f965v2.onclick",
+      "args": "",
+      "line": 22185
+    },
+    {
+      "kind": "method",
+      "name": "f965v3.onclick",
+      "args": "",
+      "line": 22198
+    },
+    {
+      "kind": "method",
+      "name": "f965v4.onclick",
+      "args": "",
+      "line": 22211
+    },
+    {
+      "kind": "method",
+      "name": "f965v5.onclick",
+      "args": "",
+      "line": 22224
+    },
+    {
+      "kind": "method",
+      "name": "f965v6.onclick",
+      "args": "",
+      "line": 22237
+    },
+    {
+      "kind": "method",
+      "name": "f961v11.onclick",
+      "args": "",
+      "line": 22261
+    },
+    {
+      "kind": "method",
+      "name": "f961v17.onclick",
+      "args": "",
+      "line": 22322
+    },
+    {
+      "kind": "method",
+      "name": "f961v17.onclick",
+      "args": "",
+      "line": 22341
+    },
+    {
+      "kind": "function",
+      "name": "f978",
+      "args": "f978a0",
+      "line": 22349
+    },
+    {
+      "kind": "method",
+      "name": "?.updatePings",
+      "args": "",
+      "line": 22380
+    },
+    {
+      "kind": "method",
+      "name": "?.setGameSettings",
+      "args": "f980a0",
+      "line": 22430
+    },
+    {
+      "kind": "method",
+      "name": "?.updateGameSettings",
+      "args": "",
+      "line": 22433
+    },
+    {
+      "kind": "method",
+      "name": "?.updateSmallMapThumb",
+      "args": "",
+      "line": 22539
+    },
+    {
+      "kind": "method",
+      "name": "?.maybeShowVoteWindow",
+      "args": "",
+      "line": 22553
+    },
+    {
+      "kind": "function",
+      "name": "f984",
+      "args": "f984a0",
+      "line": 22558
+    },
+    {
+      "kind": "method",
+      "name": "?.showVoteWindow",
+      "args": "",
+      "line": 22570
+    },
+    {
+      "kind": "method",
+      "name": "?.showingMapLoadWindow",
+      "args": "",
+      "line": 22620
+    },
+    {
+      "kind": "method",
+      "name": "?.closeMapLoadWindow",
+      "args": "",
+      "line": 22623
+    },
+    {
+      "kind": "method",
+      "name": "?.showingMapEditor",
+      "args": "",
+      "line": 22626
+    },
+    {
+      "kind": "method",
+      "name": "?.closeMapEditor",
+      "args": "",
+      "line": 22629
+    },
+    {
+      "kind": "method",
+      "name": "?.recvFriended",
+      "args": "f990a0",
+      "line": 22632
+    },
+    {
+      "kind": "method",
+      "name": "?.recvNewToken",
+      "args": "f993a0",
+      "line": 22655
+    },
+    {
+      "kind": "method",
+      "name": "?.returnFromTesting",
+      "args": "",
+      "line": 22658
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "",
+      "line": 22661
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 22694
+    },
+    {
+      "kind": "function",
+      "name": "f999",
+      "args": "f999a0",
+      "line": 22712
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 22721
+    },
+    {
+      "kind": "function",
+      "name": "getPageWidth",
+      "args": "",
+      "line": 22753
+    },
+    {
+      "kind": "function",
+      "name": "EnterFrameDispatcher",
+      "args": "",
+      "line": 22756
+    },
+    {
+      "kind": "method",
+      "name": "?.subscribe",
+      "args": "f1003a0, f1003a1",
+      "line": 22759
+    },
+    {
+      "kind": "method",
+      "name": "?.unsubscribe",
+      "args": "f1004a0",
+      "line": 22770
+    },
+    {
+      "kind": "method",
+      "name": "?.dispatch",
+      "args": "",
+      "line": 22781
+    },
+    {
+      "kind": "function",
+      "name": "ContainerSkinRenderer",
+      "args": "",
+      "line": 22791
+    },
+    {
+      "kind": "method",
+      "name": "?.setTeam",
+      "args": "f1007a0",
+      "line": 22812
+    },
+    {
+      "kind": "method",
+      "name": "?.completeRedraw",
+      "args": "f1008a0",
+      "line": 22815
+    },
+    {
+      "kind": "function",
+      "name": "f1009",
+      "args": "",
+      "line": 22831
+    },
+    {
+      "kind": "method",
+      "name": "?.redrawLayer",
+      "args": "f1011a0, f1011a1",
+      "line": 22921
+    },
+    {
+      "kind": "method",
+      "name": "?.changeLayerProperty",
+      "args": "f1013a0, f1013a1, f1013a2, f1013a3",
+      "line": 22974
+    },
+    {
+      "kind": "method",
+      "name": "?.clearMemory",
+      "args": "",
+      "line": 23017
+    },
+    {
+      "kind": "function",
+      "name": "ColorPicker",
+      "args": "",
+      "line": 23043
+    },
+    {
+      "kind": "function",
+      "name": "f1016",
+      "args": "f1016a0",
+      "line": 23044
+    },
+    {
+      "kind": "method",
+      "name": "f1016v8.onmousedown",
+      "args": "",
+      "line": 23083
+    },
+    {
+      "kind": "function",
+      "name": "f1019",
+      "args": "f1019a0, f1019a1, f1019a2",
+      "line": 23092
+    },
+    {
+      "kind": "function",
+      "name": "f1020",
+      "args": "f1020a0",
+      "line": 23130
+    },
+    {
+      "kind": "function",
+      "name": "f1021",
+      "args": "__, f1021a1, _, f1021a3",
+      "line": 23170
+    },
+    {
+      "kind": "function",
+      "name": "f1022",
+      "args": "",
+      "line": 23195
+    },
+    {
+      "kind": "function",
+      "name": "f1023",
+      "args": "",
+      "line": 23210
+    },
+    {
+      "kind": "function",
+      "name": "f1024",
+      "args": "",
+      "line": 23222
+    },
+    {
+      "kind": "function",
+      "name": "f1025",
+      "args": "f1025a0",
+      "line": 23226
+    },
+    {
+      "kind": "function",
+      "name": "f1026",
+      "args": "f1026a0, _, f1026a2",
+      "line": 23236
+    },
+    {
+      "kind": "function",
+      "name": "f1027",
+      "args": "f1027a0, f1027a1, f1027a2",
+      "line": 23248
+    },
+    {
+      "kind": "function",
+      "name": "f1028",
+      "args": "f1028a0",
+      "line": 23286
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_colorpicker_brightness_slider.onchange",
+      "args": "",
+      "line": 23295
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_colorpicker_brightness_slider.oninput",
+      "args": "",
+      "line": 23299
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_colorpicker_canvas.onmousedown",
+      "args": "f1031a0",
+      "line": 23303
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 23306
+    },
+    {
+      "kind": "method",
+      "name": "skineditor_colorpicker_canvas.onmousemove",
+      "args": "f1033a0",
+      "line": 23312
+    },
+    {
+      "kind": "method",
+      "name": "?.showColorPicker",
+      "args": "f1034a0, f1034a1, f1034a2, f1034a3",
+      "line": 23318
+    },
+    {
+      "kind": "method",
+      "name": "?.wipeColorHistory",
+      "args": "",
+      "line": 23331
+    },
+    {
+      "kind": "function",
+      "name": "MapEditor",
+      "args": "f1035a0, f1035a1",
+      "line": 23347
+    },
+    {
+      "kind": "function",
+      "name": "f1036",
+      "args": "",
+      "line": 23349
+    },
+    {
+      "kind": "function",
+      "name": "addEditorOption",
+      "args": "element, optionName, settings, value",
+      "line": 23378
+    },
+    {
+      "kind": "method",
+      "name": "f1037v0.onmouseover",
+      "args": "",
+      "line": 23381
+    },
+    {
+      "kind": "method",
+      "name": "f1037v3.oninput",
+      "args": "",
+      "line": 23404
+    },
+    {
+      "kind": "method",
+      "name": "f1037v4.oninput",
+      "args": "",
+      "line": 23422
+    },
+    {
+      "kind": "method",
+      "name": "f1037v6.oninput",
+      "args": "",
+      "line": 23443
+    },
+    {
+      "kind": "method",
+      "name": "f1037v7.onmousedown",
+      "args": "",
+      "line": 23457
+    },
+    {
+      "kind": "method",
+      "name": "f1037v8.onmousedown",
+      "args": "",
+      "line": 23479
+    },
+    {
+      "kind": "method",
+      "name": "f1037v9.onchange",
+      "args": "",
+      "line": 23527
+    },
+    {
+      "kind": "method",
+      "name": "f1037v14.onchange",
+      "args": "",
+      "line": 23557
+    },
+    {
+      "kind": "method",
+      "name": "f1037v16.onclick",
+      "args": "",
+      "line": 23581
+    },
+    {
+      "kind": "function",
+      "name": "f1051",
+      "args": "f1051a0",
+      "line": 23599
+    },
+    {
+      "kind": "function",
+      "name": "f1052",
+      "args": "",
+      "line": 23609
+    },
+    {
+      "kind": "function",
+      "name": "f1053",
+      "args": "f1053a0",
+      "line": 23622
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_cancel_drawing.onclick",
+      "args": "",
+      "line": 23625
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1054a0",
+      "line": 23631
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousemove",
+      "args": "f1055a0",
+      "line": 23651
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "",
+      "line": 23664
+    },
+    {
+      "kind": "function",
+      "name": "f1057",
+      "args": "f1057a0",
+      "line": 23679
+    },
+    {
+      "kind": "function",
+      "name": "f1058",
+      "args": "f1058a0",
+      "line": 23698
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_cancel_drawing.onclick",
+      "args": "",
+      "line": 23701
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1059a0",
+      "line": 23707
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousemove",
+      "args": "f1060a0",
+      "line": 23730
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1061a0",
+      "line": 23759
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousemove",
+      "args": "f1062a0",
+      "line": 23762
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "",
+      "line": 23778
+    },
+    {
+      "kind": "function",
+      "name": "f1064",
+      "args": "",
+      "line": 23802
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1064v1",
+      "args": "f1065a0",
+      "line": 23841
+    },
+    {
+      "kind": "method",
+      "name": "f1065v0.onclick",
+      "args": "",
+      "line": 23844
+    },
+    {
+      "kind": "method",
+      "name": "f1065v0.onmouseover",
+      "args": "",
+      "line": 23848
+    },
+    {
+      "kind": "method",
+      "name": "f1065v0.onmouseout",
+      "args": "",
+      "line": 23851
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1064v4",
+      "args": "f1068a0",
+      "line": 23892
+    },
+    {
+      "kind": "method",
+      "name": "f1068v0.onclick",
+      "args": "",
+      "line": 23906
+    },
+    {
+      "kind": "method",
+      "name": "f1068v0.onmouseover",
+      "args": "",
+      "line": 23910
+    },
+    {
+      "kind": "method",
+      "name": "f1068v0.onmouseout",
+      "args": "",
+      "line": 23913
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1064v7",
+      "args": "f1069a0",
+      "line": 23942
+    },
+    {
+      "kind": "method",
+      "name": "f1069v0.onclick",
+      "args": "",
+      "line": 23956
+    },
+    {
+      "kind": "method",
+      "name": "f1069v0.onmouseover",
+      "args": "",
+      "line": 23960
+    },
+    {
+      "kind": "method",
+      "name": "f1069v0.onmouseout",
+      "args": "",
+      "line": 23962
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1064v12",
+      "args": "f1070a0",
+      "line": 23999
+    },
+    {
+      "kind": "method",
+      "name": "f1070v0.onclick",
+      "args": "",
+      "line": 24013
+    },
+    {
+      "kind": "method",
+      "name": "f1070v0.onmouseover",
+      "args": "",
+      "line": 24017
+    },
+    {
+      "kind": "method",
+      "name": "f1070v0.onmouseout",
+      "args": "",
+      "line": 24019
+    },
+    {
+      "kind": "function",
+      "name": "f1072",
+      "args": "",
+      "line": 24038
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_newcolorbox.onclick",
+      "args": "",
+      "line": 24057
+    },
+    {
+      "kind": "function",
+      "name": "f1075",
+      "args": "",
+      "line": 24063
+    },
+    {
+      "kind": "function",
+      "name": "f1076",
+      "args": "",
+      "line": 24158
+    },
+    {
+      "kind": "function",
+      "name": "f1077",
+      "args": "",
+      "line": 24169
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_testbutton.onclick",
+      "args": "",
+      "line": 24179
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_newbutton.onclick",
+      "args": "",
+      "line": 24193
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_newbutton.onmouseout",
+      "args": "",
+      "line": 24208
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_loadbutton.onclick",
+      "args": "",
+      "line": 24211
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_savebutton.onclick",
+      "args": "",
+      "line": 24218
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_save_window_cancel.onclick",
+      "args": "",
+      "line": 24233
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_save_overwrite_window_cancel.onclick",
+      "args": "",
+      "line": 24236
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_save_window_save.onclick",
+      "args": "",
+      "line": 24239
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_save_overwrite_window_save.onclick",
+      "args": "",
+      "line": 24276
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24301
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24304
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24307
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24310
+    },
+    {
+      "kind": "function",
+      "name": "f1088",
+      "args": "",
+      "line": 24313
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24319
+    },
+    {
+      "kind": "function",
+      "name": "f1090",
+      "args": "",
+      "line": 24322
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24421
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24424
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24427
+    },
+    {
+      "kind": "function",
+      "name": "f1091",
+      "args": "",
+      "line": 24430
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24434
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24437
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24440
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24443
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24446
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24449
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24452
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24455
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24458
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24461
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24464
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24467
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24470
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24473
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24476
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24479
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24482
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24485
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24488
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24491
+    },
+    {
+      "kind": "function",
+      "name": "f1092",
+      "args": "f1092a0",
+      "line": 24494
+    },
+    {
+      "kind": "method",
+      "name": "?.onmouseover",
+      "args": "",
+      "line": 24511
+    },
+    {
+      "kind": "function",
+      "name": "f1093",
+      "args": "",
+      "line": 24514
+    },
+    {
+      "kind": "function",
+      "name": "f1094",
+      "args": "",
+      "line": 24519
+    },
+    {
+      "kind": "function",
+      "name": "f1095",
+      "args": "f1095a0",
+      "line": 24539
+    },
+    {
+      "kind": "function",
+      "name": "f1096",
+      "args": "",
+      "line": 24598
+    },
+    {
+      "kind": "function",
+      "name": "f1097",
+      "args": "f1097a0",
+      "line": 24610
+    },
+    {
+      "kind": "function",
+      "name": "f1098",
+      "args": "",
+      "line": 24753
+    },
+    {
+      "kind": "function",
+      "name": "f1099",
+      "args": "",
+      "line": 24757
+    },
+    {
+      "kind": "function",
+      "name": "f1100",
+      "args": "f1100a0, f1100a1",
+      "line": 24842
+    },
+    {
+      "kind": "function",
+      "name": "f1101",
+      "args": "",
+      "line": 24897
+    },
+    {
+      "kind": "function",
+      "name": "f1102",
+      "args": "",
+      "line": 24920
+    },
+    {
+      "kind": "function",
+      "name": "f1103",
+      "args": "f1103a0, f1103a1, f1103a2",
+      "line": 24952
+    },
+    {
+      "kind": "function",
+      "name": "f1104",
+      "args": "",
+      "line": 25009
+    },
+    {
+      "kind": "function",
+      "name": "f1105",
+      "args": "",
+      "line": 25031
+    },
+    {
+      "kind": "function",
+      "name": "f1106",
+      "args": "",
+      "line": 25042
+    },
+    {
+      "kind": "function",
+      "name": "f1107",
+      "args": "",
+      "line": 25065
+    },
+    {
+      "kind": "function",
+      "name": "f1108",
+      "args": "f1108a0",
+      "line": 25135
+    },
+    {
+      "kind": "function",
+      "name": "f1109",
+      "args": "",
+      "line": 25141
+    },
+    {
+      "kind": "function",
+      "name": "f1110",
+      "args": "f1110a0",
+      "line": 25204
+    },
+    {
+      "kind": "function",
+      "name": "f1111",
+      "args": "",
+      "line": 25218
+    },
+    {
+      "kind": "function",
+      "name": "f1112",
+      "args": "f1112a0",
+      "line": 25271
+    },
+    {
+      "kind": "function",
+      "name": "f1113",
+      "args": "f1113a0",
+      "line": 25322
+    },
+    {
+      "kind": "method",
+      "name": "f1035v109.onchange",
+      "args": "",
+      "line": 25354
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_modebox.onmouseover",
+      "args": "",
+      "line": 25359
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_deletebutton.onmouseover",
+      "args": "",
+      "line": 25366
+    },
+    {
+      "kind": "function",
+      "name": "f1116",
+      "args": "f1116a0",
+      "line": 25374
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_deletebutton.onmouseout",
+      "args": "",
+      "line": 25380
+    },
+    {
+      "kind": "function",
+      "name": "f1118",
+      "args": "",
+      "line": 25390
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_cancel_drawing.onclick",
+      "args": "",
+      "line": 25391
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1119a0",
+      "line": 25396
+    },
+    {
+      "kind": "function",
+      "name": "f1120",
+      "args": "",
+      "line": 25431
+    },
+    {
+      "kind": "function",
+      "name": "f1121",
+      "args": "",
+      "line": 25445
+    },
+    {
+      "kind": "function",
+      "name": "f1122",
+      "args": "",
+      "line": 25452
+    },
+    {
+      "kind": "function",
+      "name": "f1123",
+      "args": "",
+      "line": 25456
+    },
+    {
+      "kind": "function",
+      "name": "f1124",
+      "args": "",
+      "line": 25461
+    },
+    {
+      "kind": "function",
+      "name": "f1125",
+      "args": "f1125a0",
+      "line": 25478
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_newjointbutton.onclick",
+      "args": "",
+      "line": 25524
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_newjointmenu_rv.onclick",
+      "args": "",
+      "line": 25531
+    },
+    {
+      "kind": "function",
+      "name": "f1128",
+      "args": "f1128a0",
+      "line": 25536
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_newjointmenu_lpj.onclick",
+      "args": "",
+      "line": 25539
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_newjointmenu_lsj.onclick",
+      "args": "",
+      "line": 25544
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_newjointmenu_rod.onclick",
+      "args": "",
+      "line": 25549
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_circle.onclick",
+      "args": "",
+      "line": 25554
+    },
+    {
+      "kind": "function",
+      "name": "f1129",
+      "args": "f1129a0",
+      "line": 25558
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_rectangle.onclick",
+      "args": "",
+      "line": 25566
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_polygon.onclick",
+      "args": "",
+      "line": 25570
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_spawn.onclick",
+      "args": "",
+      "line": 25575
+    },
+    {
+      "kind": "function",
+      "name": "f1130",
+      "args": "",
+      "line": 25579
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_capzone.onclick",
+      "args": "",
+      "line": 25583
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_gear.onclick",
+      "args": "",
+      "line": 25593
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_s.onclick",
+      "args": "",
+      "line": 25604
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_d.onclick",
+      "args": "",
+      "line": 25609
+    },
+    {
+      "kind": "function",
+      "name": "f1133",
+      "args": "",
+      "line": 25614
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_createmenu_platform_np.onclick",
+      "args": "",
+      "line": 25621
+    },
+    {
+      "kind": "function",
+      "name": "f1134",
+      "args": "",
+      "line": 25627
+    },
+    {
+      "kind": "function",
+      "name": "f1135",
+      "args": "",
+      "line": 25650
+    },
+    {
+      "kind": "function",
+      "name": "f1136",
+      "args": "",
+      "line": 25749
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_copywindow_rminus90.onchange",
+      "args": "",
+      "line": 25755
+    },
+    {
+      "kind": "function",
+      "name": "f1138",
+      "args": "",
+      "line": 25759
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_copywindow_r180.onchange",
+      "args": "",
+      "line": 25774
+    },
+    {
+      "kind": "function",
+      "name": "f1140",
+      "args": "f1140a0, f1140a1",
+      "line": 25778
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_copywindow_r90.onchange",
+      "args": "",
+      "line": 25795
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_leftbox_copywindowbutton.onclick",
+      "args": "",
+      "line": 25799
+    },
+    {
+      "kind": "function",
+      "name": "f1143",
+      "args": "",
+      "line": 25844
+    },
+    {
+      "kind": "function",
+      "name": "f1144",
+      "args": "f1144a0, f1144a1, f1144a2",
+      "line": 25853
+    },
+    {
+      "kind": "function",
+      "name": "f1145",
+      "args": "f1145a0",
+      "line": 25870
+    },
+    {
+      "kind": "function",
+      "name": "f1146",
+      "args": "f1146a0",
+      "line": 25878
+    },
+    {
+      "kind": "function",
+      "name": "f1147",
+      "args": "f1147a0",
+      "line": 25890
+    },
+    {
+      "kind": "function",
+      "name": "f1148",
+      "args": "",
+      "line": 25906
+    },
+    {
+      "kind": "function",
+      "name": "f1149",
+      "args": "f1149a0",
+      "line": 25934
+    },
+    {
+      "kind": "function",
+      "name": "f1150",
+      "args": "?",
+      "line": 25938
+    },
+    {
+      "kind": "function",
+      "name": "f1151",
+      "args": "",
+      "line": 25958
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_addnewshapebutton.onclick",
+      "args": "",
+      "line": 25999
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_shapeaddmenu_circle.onclick",
+      "args": "",
+      "line": 26006
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_shapeaddmenu_rectangle.onclick",
+      "args": "",
+      "line": 26010
+    },
+    {
+      "kind": "function",
+      "name": "f1155",
+      "args": "f1155a0, f1155a1, f1155a2",
+      "line": 26014
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_shapeaddmenu_polygon.onclick",
+      "args": "",
+      "line": 26044
+    },
+    {
+      "kind": "function",
+      "name": "f1157",
+      "args": "f1157a0",
+      "line": 26050
+    },
+    {
+      "kind": "function",
+      "name": "f1158",
+      "args": "",
+      "line": 26061
+    },
+    {
+      "kind": "function",
+      "name": "f1159",
+      "args": "f1159a0",
+      "line": 26070
+    },
+    {
+      "kind": "function",
+      "name": "f1160",
+      "args": "f1160a0, f1160a1",
+      "line": 26091
+    },
+    {
+      "kind": "function",
+      "name": "f1161",
+      "args": "f1161a0, f1161a1, f1161a2",
+      "line": 26120
+    },
+    {
+      "kind": "function",
+      "name": "f1162",
+      "args": "",
+      "line": 26157
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 26162
+    },
+    {
+      "kind": "function",
+      "name": "f1164",
+      "args": "f1164a0",
+      "line": 26170
+    },
+    {
+      "kind": "function",
+      "name": "f1165",
+      "args": "",
+      "line": 26188
+    },
+    {
+      "kind": "function",
+      "name": "f1166",
+      "args": "",
+      "line": 26201
+    },
+    {
+      "kind": "function",
+      "name": "f1167",
+      "args": "f1167a0, f1167a1, f1167a2, f1167a3, f1167a4",
+      "line": 26348
+    },
+    {
+      "kind": "function",
+      "name": "f1168",
+      "args": "",
+      "line": 26372
+    },
+    {
+      "kind": "function",
+      "name": "f1169",
+      "args": "",
+      "line": 26386
+    },
+    {
+      "kind": "function",
+      "name": "f1170",
+      "args": "",
+      "line": 26395
+    },
+    {
+      "kind": "function",
+      "name": "f1171",
+      "args": "",
+      "line": 26408
+    },
+    {
+      "kind": "function",
+      "name": "f1172",
+      "args": "",
+      "line": 26411
+    },
+    {
+      "kind": "function",
+      "name": "f1173",
+      "args": "f1173a0",
+      "line": 26429
+    },
+    {
+      "kind": "method",
+      "name": "window.onmouseup",
+      "args": "",
+      "line": 26434
+    },
+    {
+      "kind": "function",
+      "name": "f1175",
+      "args": "f1175a0",
+      "line": 26440
+    },
+    {
+      "kind": "function",
+      "name": "f1176",
+      "args": "",
+      "line": 26457
+    },
+    {
+      "kind": "function",
+      "name": "f1177",
+      "args": "f1177a0, f1177a1",
+      "line": 26470
+    },
+    {
+      "kind": "function",
+      "name": "f1178",
+      "args": "",
+      "line": 26478
+    },
+    {
+      "kind": "function",
+      "name": "f1179",
+      "args": "f1179a0",
+      "line": 26492
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1179v5",
+      "args": "f1180a0",
+      "line": 26579
+    },
+    {
+      "kind": "method",
+      "name": "f1180v2.onmouseover",
+      "args": "",
+      "line": 26589
+    },
+    {
+      "kind": "method",
+      "name": "f1180v2.onmouseout",
+      "args": "",
+      "line": 26593
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1179v8",
+      "args": "f1184a0",
+      "line": 26952
+    },
+    {
+      "kind": "method",
+      "name": "f1184v5.oninput",
+      "args": "",
+      "line": 26970
+    },
+    {
+      "kind": "method",
+      "name": "f1184v5.onmouseover",
+      "args": "",
+      "line": 26973
+    },
+    {
+      "kind": "method",
+      "name": "f1184v5.onmouseout",
+      "args": "",
+      "line": 26979
+    },
+    {
+      "kind": "method",
+      "name": "f1184v9.onclick",
+      "args": "",
+      "line": 27008
+    },
+    {
+      "kind": "method",
+      "name": "f1184v10.onclick",
+      "args": "",
+      "line": 27021
+    },
+    {
+      "kind": "function",
+      "name": "f1197",
+      "args": "f1197a0",
+      "line": 27334
+    },
+    {
+      "kind": "function",
+      "name": "f1198",
+      "args": "f1198a0",
+      "line": 27358
+    },
+    {
+      "kind": "function",
+      "name": "f1199",
+      "args": "",
+      "line": 27383
+    },
+    {
+      "kind": "function",
+      "name": "f1201",
+      "args": "",
+      "line": 27538
+    },
+    {
+      "kind": "function",
+      "name": "f1202",
+      "args": "",
+      "line": 27545
+    },
+    {
+      "kind": "function",
+      "name": "f1203",
+      "args": "",
+      "line": 27550
+    },
+    {
+      "kind": "function",
+      "name": "f1204",
+      "args": "f1204a0",
+      "line": 27555
+    },
+    {
+      "kind": "function",
+      "name": "f1205",
+      "args": "f1205a0, f1205a1, f1205a2, f1205a3",
+      "line": 27631
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_grid.onclick",
+      "args": "",
+      "line": 27642
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_settingsbutton.onclick",
+      "args": "",
+      "line": 27647
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_zoom_reset.onclick",
+      "args": "",
+      "line": 27657
+    },
+    {
+      "kind": "function",
+      "name": "f1207",
+      "args": "f1207a0, f1207a1",
+      "line": 27676
+    },
+    {
+      "kind": "function",
+      "name": "f1208",
+      "args": "",
+      "line": 27687
+    },
+    {
+      "kind": "function",
+      "name": "f1209",
+      "args": "",
+      "line": 27700
+    },
+    {
+      "kind": "function",
+      "name": "f1210",
+      "args": "f1210a0, f1210a1",
+      "line": 27706
+    },
+    {
+      "kind": "function",
+      "name": "f1211",
+      "args": "f1211a0",
+      "line": 27745
+    },
+    {
+      "kind": "function",
+      "name": "f1212",
+      "args": "",
+      "line": 27764
+    },
+    {
+      "kind": "function",
+      "name": "f1213",
+      "args": "f1213a0",
+      "line": 27769
+    },
+    {
+      "kind": "function",
+      "name": "f1214",
+      "args": "f1214a0",
+      "line": 27798
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_midbox_cancel_drawing.onclick",
+      "args": "",
+      "line": 27801
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1215a0",
+      "line": 27807
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousedown",
+      "args": "f1216a0",
+      "line": 27832
+    },
+    {
+      "kind": "method",
+      "name": "?.onmousemove",
+      "args": "f1217a0",
+      "line": 27833
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_collideP.onchange",
+      "args": "",
+      "line": 27891
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_collideA.onchange",
+      "args": "",
+      "line": 27894
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_collideB.onchange",
+      "args": "",
+      "line": 27897
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_collideC.onchange",
+      "args": "",
+      "line": 27900
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_collideD.onchange",
+      "args": "",
+      "line": 27903
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezone.onchange",
+      "args": "",
+      "line": 27906
+    },
+    {
+      "kind": "function",
+      "name": "f1224",
+      "args": "f1224a0, f1224a1, f1224a2",
+      "line": 27933
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezonetype.onchange",
+      "args": "",
+      "line": 27944
+    },
+    {
+      "kind": "function",
+      "name": "f1226",
+      "args": "e",
+      "line": 27962
+    },
+    {
+      "kind": "function",
+      "name": "f1227",
+      "args": "",
+      "line": 27968
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezone_centerforce.onchange",
+      "args": "",
+      "line": 27972
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezone_d.onchange",
+      "args": "",
+      "line": 27978
+    },
+    {
+      "kind": "function",
+      "name": "f1230",
+      "args": "",
+      "line": 27981
+    },
+    {
+      "kind": "function",
+      "name": "f1231",
+      "args": "f1231a0, f1231a1",
+      "line": 27985
+    },
+    {
+      "kind": "function",
+      "name": "f1232",
+      "args": "",
+      "line": 28015
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezone_p.onchange",
+      "args": "",
+      "line": 28023
+    },
+    {
+      "kind": "method",
+      "name": "mapeditor_rightbox_table_forcezone_a.onchange",
+      "args": "",
+      "line": 28026
+    },
+    {
+      "kind": "function",
+      "name": "f1235",
+      "args": "",
+      "line": 28029
+    },
+    {
+      "kind": "method",
+      "name": "?.getShowing",
+      "args": "",
+      "line": 28035
+    },
+    {
+      "kind": "method",
+      "name": "?.show",
+      "args": "f1236a0",
+      "line": 28038
+    },
+    {
+      "kind": "method",
+      "name": "?.hide",
+      "args": "",
+      "line": 28091
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f1238a0, f1238a1",
+      "line": 28104
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 28110
+    },
+    {
+      "kind": "method",
+      "name": "game.disableClassic",
+      "args": "",
+      "line": 28145
+    },
+    {
+      "kind": "method",
+      "name": "game.enableClassic",
+      "args": "",
+      "line": 28150
+    },
+    {
+      "kind": "method",
+      "name": "game.rotatePoint",
+      "args": "f1242a0, f1242a1, f1242a2",
+      "line": 28157
+    },
+    {
+      "kind": "method",
+      "name": "game.encodeInputs",
+      "args": "f1243a0",
+      "line": 28168
+    },
+    {
+      "kind": "method",
+      "name": "game.decodeInputs",
+      "args": "f1244a0",
+      "line": 28190
+    },
+    {
+      "kind": "method",
+      "name": "game.HSLToHex",
+      "args": "f1245a0, f1245a1, f1245a2",
+      "line": 28200
+    },
+    {
+      "kind": "method",
+      "name": "game.hexToHSL",
+      "args": "f1246a0",
+      "line": 28242
+    },
+    {
+      "kind": "method",
+      "name": "game.hueify",
+      "args": "f1247a0, f1247a1",
+      "line": 28287
+    },
+    {
+      "kind": "method",
+      "name": "game.teamify",
+      "args": "f1248a0, f1248a1",
+      "line": 28294
+    },
+    {
+      "kind": "method",
+      "name": "game.playChatSound",
+      "args": "",
+      "line": 28357
+    },
+    {
+      "kind": "method",
+      "name": "game.playCountdownSound",
+      "args": "",
+      "line": 28363
+    },
+    {
+      "kind": "method",
+      "name": "game.rlh",
+      "args": "f1251a0",
+      "line": 28369
+    },
+    {
+      "kind": "method",
+      "name": "game.rlc",
+      "args": "",
+      "line": 28379
+    },
+    {
+      "kind": "method",
+      "name": "game.bhs",
+      "args": "",
+      "line": 28385
+    },
+    {
+      "kind": "method",
+      "name": "game.bcs",
+      "args": "",
+      "line": 28394
+    },
+    {
+      "kind": "method",
+      "name": "game.bbs",
+      "args": "",
+      "line": 28403
+    },
+    {
+      "kind": "method",
+      "name": "game.setButtonSounds",
+      "args": "button",
+      "line": 28412
+    },
+    {
+      "kind": "method",
+      "name": "game.getLatLngDistance",
+      "args": "lat1, long1, lat2, long2, useMiles",
+      "line": 28418
+    },
+    {
+      "kind": "method",
+      "name": "game.numToHex",
+      "args": "f1258a0",
+      "line": 28431
+    },
+    {
+      "kind": "method",
+      "name": "game.setCookie",
+      "args": "name, value, daysToExpire",
+      "line": 28446
+    },
+    {
+      "kind": "function",
+      "name": "getPageHeight",
+      "args": "",
+      "line": 28452
+    },
+    {
+      "kind": "method",
+      "name": "game.getCookie",
+      "args": "f1261a0",
+      "line": 28455
+    },
+    {
+      "kind": "method",
+      "name": "game.setRollFunctions",
+      "args": "f1262a0",
+      "line": 28469
+    },
+    {
+      "kind": "function",
+      "name": "FootballCanvasHandler",
+      "args": "f1263a0",
+      "line": 28473
+    },
+    {
+      "kind": "function",
+      "name": "f1264",
+      "args": "f1264a0, f1264a1, f1264a2",
+      "line": 28501
+    },
+    {
+      "kind": "function",
+      "name": "f1265",
+      "args": "f1265a0",
+      "line": 28553
+    },
+    {
+      "kind": "function",
+      "name": "f1266",
+      "args": "f1266a0, f1266a1",
+      "line": 28568
+    },
+    {
+      "kind": "function",
+      "name": "f1267",
+      "args": "",
+      "line": 28582
+    },
+    {
+      "kind": "function",
+      "name": "f1268",
+      "args": "f1268a0",
+      "line": 28588
+    },
+    {
+      "kind": "function",
+      "name": "f1269",
+      "args": "f1269a0, f1269a1, f1269a2, f1269a3",
+      "line": 28641
+    },
+    {
+      "kind": "arrow/expr",
+      "name": "f1269v3",
+      "args": "f1270a0",
+      "line": 28652
+    },
+    {
+      "kind": "method",
+      "name": "?.resizeRenderer",
+      "args": "",
+      "line": 28784
+    },
+    {
+      "kind": "function",
+      "name": "f1273",
+      "args": "f1273a0, f1273a1",
+      "line": 28811
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 28892
+    },
+    {
+      "kind": "method",
+      "name": "?.setPlayerArray",
+      "args": "f1275a0",
+      "line": 28899
+    },
+    {
+      "kind": "method",
+      "name": "?.setLocalPlayerID",
+      "args": "f1276a0",
+      "line": 28902
+    },
+    {
+      "kind": "method",
+      "name": "?.enableTutorialText",
+      "args": "",
+      "line": 28905
+    },
+    {
+      "kind": "method",
+      "name": "?.clearAfkWarn",
+      "args": "",
+      "line": 28907
+    },
+    {
+      "kind": "method",
+      "name": "?.showAfkWarn",
+      "args": "",
+      "line": 28909
+    },
+    {
+      "kind": "method",
+      "name": "?.render",
+      "args": "prevStep, currentStep, t, gameSettings, inputs, stepIndex",
+      "line": 28911
+    },
+    {
+      "kind": "method",
+      "name": "game.animateButtonOver",
+      "args": "",
+      "line": 29215
+    },
+    {
+      "kind": "method",
+      "name": "game.animateButtonOut",
+      "args": "",
+      "line": 29226
+    },
+    {
+      "kind": "function",
+      "name": "LobbyHandler",
+      "args": "_room, _quickMaps",
+      "line": 29241
+    },
+    {
+      "kind": "function",
+      "name": "f1280",
+      "args": "",
+      "line": 29243
+    },
+    {
+      "kind": "function",
+      "name": "f1282",
+      "args": "",
+      "line": 29324
+    },
+    {
+      "kind": "function",
+      "name": "gameEvent",
+      "args": "?",
+      "line": 29401
+    },
+    {
+      "kind": "function",
+      "name": "performStep",
+      "args": "stepLength, remainingTime",
+      "line": 29410
+    },
+    {
+      "kind": "function",
+      "name": "getInputs",
+      "args": "step",
+      "line": 29431
+    },
+    {
+      "kind": "function",
+      "name": "f1287",
+      "args": "f1287a0",
+      "line": 29449
+    },
+    {
+      "kind": "function",
+      "name": "f1288",
+      "args": "f1288a0",
+      "line": 29481
+    },
+    {
+      "kind": "method",
+      "name": "?.go",
+      "args": "f1289a0, f1289a1, f1289a2, f1289a3, f1289a4, f1289a5, f1289a6",
+      "line": 29497
+    },
+    {
+      "kind": "method",
+      "name": "?.goInProgress",
+      "args": "map, step, f1290a2, f1290a3, f1290a4, f1290a5, f1290a6, f1290a7, f1290a8",
+      "line": 29538
+    },
+    {
+      "kind": "function",
+      "name": "chatStatus",
+      "args": "f1291a0, f1291a1",
+      "line": 29584
+    },
+    {
+      "kind": "method",
+      "name": "?.destroy",
+      "args": "",
+      "line": 29606
+    },
+    {
+      "kind": "method",
+      "name": "?.recvArmRecord",
+      "args": "f1293a0",
+      "line": 29644
+    },
+    {
+      "kind": "method",
+      "name": "?.recvInputs",
+      "args": "f1294a0, f1294a1, f1294a2",
+      "line": 29677
+    },
+    {
+      "kind": "method",
+      "name": "?.recvRevert",
+      "args": "f1295a0, f1295a1",
+      "line": 29707
+    },
+    {
+      "kind": "method",
+      "name": "?.recvAdmin",
+      "args": "f1296a0",
+      "line": 29715
+    },
+    {
+      "kind": "method",
+      "name": "?.recvAfkWarn",
+      "args": "",
+      "line": 29730
+    },
+    {
+      "kind": "function",
+      "name": "f1298",
+      "args": "",
+      "line": 29733
+    },
+    {
+      "kind": "method",
+      "name": "?.sendNewPlayerState",
+      "args": "f1299a0",
+      "line": 29736
+    },
+    {
+      "kind": "function",
+      "name": "f1300",
+      "args": "",
+      "line": 29798
+    },
+    {
+      "kind": "function",
+      "name": "f1301",
+      "args": "f1301a0, f1301a1, f1301a2",
+      "line": 29908
+    },
+    {
+      "kind": "function",
+      "name": "f1302",
+      "args": "_, f1302a1, f1302a2",
+      "line": 29929
+    },
+    {
+      "kind": "function",
+      "name": "f1303",
+      "args": "f1303a0, f1303a1",
+      "line": 29940
+    },
+    {
+      "kind": "method",
+      "name": "?.allHandlePlayerLeft",
+      "args": "f1304a0, f1304a1, f1304a2",
+      "line": 29994
+    },
+    {
+      "kind": "method",
+      "name": "?.hostHandlePlayerLeft",
+      "args": "f1305a0",
+      "line": 30009
+    },
+    {
+      "kind": "method",
+      "name": "?.hostHandlePlayerJoined",
+      "args": "f1306a0, f1306a1, f1306a2",
+      "line": 30027
+    },
+    {
+      "kind": "function",
+      "name": "f1307",
+      "args": "",
+      "line": 30051
+    },
+    {
+      "kind": "method",
+      "name": "?.increaseAccumulator",
+      "args": "f1308a0",
+      "line": 30058
+    },
+    {
+      "kind": "method",
+      "name": "?.recvChatMessage",
+      "args": "f1309a0, f1309a1",
+      "line": 30061
+    },
+    {
+      "kind": "method",
+      "name": "?.wipeChatContent",
+      "args": "",
+      "line": 30085
+    },
+    {
+      "kind": "function",
+      "name": "f1311",
+      "args": "",
+      "line": 30091
+    },
+    {
+      "kind": "function",
+      "name": "f1312",
+      "args": "f1312a0, f1312a1",
+      "line": 30093
+    },
+    {
+      "kind": "function",
+      "name": "f1313",
+      "args": "f1313a0",
+      "line": 30100
+    },
+    {
+      "kind": "method",
+      "name": "?.hostLeftChat",
+      "args": "f1314a0, f1314a1",
+      "line": 30121
+    },
+    {
+      "kind": "method",
+      "name": "?.playerLeftChat",
+      "args": "f1315a0",
+      "line": 30139
+    },
+    {
+      "kind": "method",
+      "name": "?.playerJoinedChat",
+      "args": "f1316a0",
+      "line": 30144
+    },
+    {
+      "kind": "method",
+      "name": "?.enableTutorial",
+      "args": "",
+      "line": 30149
+    },
+    {
+      "kind": "method",
+      "name": "?.updateLocalInputKeys",
+      "args": "",
+      "line": 30152
+    },
+    {
+      "kind": "method",
+      "name": "?.on",
+      "args": "f1318a0, f1318a1",
+      "line": 30159
+    },
+    {
+      "kind": "function",
+      "name": "f1319",
+      "args": "",
+      "line": 30165
+    },
+    {
+      "kind": "function",
+      "name": "f1320",
+      "args": "",
+      "line": 30171
+    },
+    {
+      "kind": "function",
+      "name": "f1321",
+      "args": "",
+      "line": 30191
+    },
+    {
+      "kind": "function",
+      "name": "Physics",
+      "args": "",
+      "line": 30205
+    },
+    {
+      "kind": "method",
+      "name": "document.body.onclick",
+      "args": "",
+      "line": 30207
+    },
+    {
+      "kind": "method",
+      "name": "game.level",
+      "args": "",
+      "line": 30211
+    },
+    {
+      "kind": "method",
+      "name": "game.xpToLevel",
+      "args": "xp",
+      "line": 30214
+    },
+    {
+      "kind": "method",
+      "name": "game.levelToXP",
+      "args": "level",
+      "line": 30217
+    },
+    {
+      "kind": "method",
+      "name": "game.areWeFriends",
+      "args": "username",
+      "line": 30223
+    },
+    {
+      "kind": "method",
+      "name": "game.friendNameToID",
+      "args": "username",
+      "line": 30235
+    },
+    {
+      "kind": "method",
+      "name": "game.updateFriends",
+      "args": "token",
+      "line": 30247
+    },
+    {
+      "kind": "method",
+      "name": "game.locallyRemoveFriend",
+      "args": "username",
+      "line": 30257
+    },
+    {
+      "kind": "method",
+      "name": "game.stringReplaceAll",
+      "args": "string, from, to",
+      "line": 30468
+    },
+    {
+      "kind": "method",
+      "name": "game.profanityCheck",
+      "args": "string, badWordList",
+      "line": 30568
+    },
+    {
+      "kind": "method",
+      "name": "game.sanitizeString",
+      "args": "string",
+      "line": 30589
+    },
+    {
+      "kind": "method",
+      "name": "game.censorString",
+      "args": "string, startIndex, endIndex",
+      "line": 30600
+    },
+    {
+      "kind": "method",
+      "name": "window.onresize",
+      "args": "",
+      "line": 30607
+    },
+    {
+      "kind": "method",
+      "name": "game.resizeGame",
+      "args": "",
+      "line": 30610
+    },
+    {
+      "kind": "method",
+      "name": "game.setAr",
+      "args": "on",
+      "line": 30667
+    }
+  ]
+}
